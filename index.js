@@ -11,7 +11,7 @@ jQuery(async () => {
   try {
     console.log(`[${extensionName}] loaded`);
     console.log(`[${extensionName}] Game State`, $state);
-    let foo = setvar("anothertest", "a value");
+    let foo = await setvar("anothertest", "a value");
     console.log('what foo returned panopticon', foo);
 
   } catch (error) {

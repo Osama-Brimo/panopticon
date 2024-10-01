@@ -1,6 +1,7 @@
 import { $state } from "./src/instances/Game/State.js";
-import { characters, chat_metadata, event_types, eventSource, saveSettingsDebounced, selectCharacterById, setActiveCharacter, setActiveGroup, this_chid, delay } from '../../../../script.js';
+import { characters, chat_metadata, event_types, eventSource, saveSettingsDebounced, selectCharacterById, setActiveCharacter, setActiveGroup, this_chid } from '../../../../script.js';
 import { executeSlashCommandsWithOptions } from '../../../slash-commands.js';
+import { delay } from '../../../utils.js';
 
 const extensionName = "panopticon";
 

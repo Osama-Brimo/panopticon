@@ -224,8 +224,8 @@ const Item_Camera = new Item("Camera", "A regular camera.", "It's a camera.", ()
 
 const $inventory = new Inventory([Item_Camera], 6);
 
-const Area_Mansion_Entrance = new Area("Mansion Entrance", false, null, null, false, null, [Area_Foyer], [], [], [], null, null, false);
 const Area_Foyer = new Area("Foyer", false, null, null, false, null, [], [], [], [], [Event_Enter_Mansion], null, false);
+const Area_Mansion_Entrance = new Area("Mansion Entrance", false, null, null, false, null, [Area_Foyer], [], [], [], null, null, false);
 
 const DID_FIRST_TUTORIAL = new Flag("FIRST_TUTORIAL", false);
 const all_flags = [DID_FIRST_TUTORIAL];

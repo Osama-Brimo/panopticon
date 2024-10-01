@@ -2,13 +2,33 @@
 
 import { extension_settings, getContext } from "../../../extensions.js";
 import { characters, chat_metadata, event_types, eventSource, saveSettingsDebounced, selectCharacterById, setActiveCharacter, setActiveGroup, this_chid } from '../../../../script.js';
-import { executeSlashCommandsWithOptions } from '../../../slash-commands.js';
+import { executeSlashCommandsWithOptions, SlashCommandParser, SlashCommand } from '../../../slash-commands.js';
 import { delay } from '../../../utils.js';
 
-import { setvar } from "./src/utils/st.js";
+import { setvar, getvar } from "./src/utils/st.js";
 import { $state } from "./src/instances/Game/State.js";
 
 const extensionName = "panopticon";
+
+function st_emitEvent (event) {
+  const context = getContext();
+  context.eventSource.emit(event);
+}
+
+SlashCommandParser.addCommandObject(SlashCommand.fromProps({
+  name: 'emit',
+  callback: st_emitEvent,
+  aliases: ['e'],
+  namedArgumentList: [
+    SlashCommandNamedArgument.fromProps({
+        name: 'event',
+        description: 'Name of custom event',
+        typeList: [ARGUMENT_TYPE.STRING],
+        isRequired: true,
+    }),
+],
+  helpString: 'Emit a custom event.',
+}))
 
 // This function is called when the extension is loaded
 jQuery(async () => {
@@ -26,3 +46,7 @@ jQuery(async () => {
     console.error('panopticon error', error);
   }
 });
+
+
+
+// Game | state > ST | CMD > Game | state > ST...

@@ -14,7 +14,7 @@ const extensionName = "panopticon";
 jQuery(async () => {
   const ctx = getContext();
   try {
-    getContext.eventSource.on(context.event_types.CHAT_CHANGED, async () => {
+    ctx.eventSource.on(context.event_types.CHAT_CHANGED, async () => {
       console.log('panopticon chat changed triggered...')
       let foo = await setvar("anothertest", "a value");
       console.log('what foo returned panopticon', foo);

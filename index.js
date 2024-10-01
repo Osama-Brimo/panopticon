@@ -56,13 +56,13 @@ SlashCommandParser.addCommandObject(
   })
 );
 
-cmd_types = {
+const cmd_types = {
   GO: "GO",
   INSPECT: "INSPECT",
   TALK: "TALK",
   USE: "USE",
   DO: "DO"
-}
+};
 
 SlashCommandParser.addCommandObject(
   SlashCommand.fromProps({

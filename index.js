@@ -1,5 +1,5 @@
 import { $state } from "./src/instances/Game/State.js";
-import { characters, chat_metadata, event_types, eventSource, saveSettingsDebounced, selectCharacterById, setActiveCharacter, setActiveGroup, this_chid } from '../../../../script.js';
+import { characters, chat_metadata, event_types, eventSource, saveSettingsDebounced, selectCharacterById, setActiveCharacter, setActiveGroup, this_chid, delay } from '../../../../script.js';
 import { executeSlashCommandsWithOptions } from '../../../slash-commands.js';
 
 const extensionName = "panopticon";
@@ -13,7 +13,10 @@ jQuery(async () => {
   try {
     console.log(`[${extensionName}] loaded`);
     console.log(`[${extensionName}] Game State`, $state);
+    await delay(200);
+    console.log('delayed!');
     executeSlashCommandsWithOptions(`/setvar key="foobartest_b" ${$state.area.name}`); 
+
   } catch (error) {
     console.error('panopticon error', error);
   }

@@ -1,4 +1,6 @@
 import { delay } from '../../../../../utils.js';
+import { executeSlashCommandsWithOptions } from '../../../../../slash-commands.js';
+
 
 export async function setvar(key, value, scope_local = true, parserOptions={}) {
     await delay(1);

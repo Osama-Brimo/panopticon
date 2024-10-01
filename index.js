@@ -2,8 +2,9 @@
 
 import { extension_settings, getContext } from "../../../extensions.js";
 import { characters, chat_metadata, event_types, eventSource, saveSettingsDebounced, selectCharacterById, setActiveCharacter, setActiveGroup, this_chid } from '../../../../script.js';
-import { executeSlashCommandsWithOptions, SlashCommand } from '../../../slash-commands.js';
+import { executeSlashCommandsWithOptions } from '../../../slash-commands.js';
 import { SlashCommandParser } from '../../../slash-commands/SlashCommandParser.js';
+import { SlashCommand } from '../../../slash-commands/SlashCommand.js';
 
 import { delay } from '../../../utils.js';
 

@@ -14,10 +14,10 @@ import { $state } from "./src/instances/Game/State.js";
 
 const extensionName = "panopticon";
 
-function st_emitEvent (event) {
-  console.log(event, 'event from st_emitEvent');
+async function st_emitEvent (pipe) {
+  console.log(pipe.event, 'event from st_emitEvent');
   // const context = getContext();
- eventSource.emit(event);
+ await eventSource.emit(pipe.event);
 }
 
 SlashCommandParser.addCommandObject(SlashCommand.fromProps({

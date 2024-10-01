@@ -12,9 +12,9 @@ const extensionName = "panopticon";
 
 // This function is called when the extension is loaded
 jQuery(async () => {
-  const ctx = getContext();
+  const context = getContext();
   try {
-    ctx.eventSource.on(context.event_types.CHAT_CHANGED, async () => {
+    context.eventSource.on(context.event_types.CHAT_CHANGED, async () => {
       console.log('panopticon chat changed triggered...')
       let foo = await setvar("anothertest", "a value");
       console.log('what foo returned panopticon', foo);

@@ -37,6 +37,9 @@ async function st_emitEvent(pipe) {
 async function st_processCMD(type, target) {
   console.log(`TYPE:`, type);
   console.log(`TARGET:`, target);
+  delay(500)
+  console.log('game-cmd delayed!');
+  return 'YOOOO!!!!!';
 };
 
 SlashCommandParser.addCommandObject(

@@ -15,12 +15,12 @@ export function registerListeners() {
     gameLog('chatLoaded Fired');
   });
   // e: game-state-save
-  context.eventSource.on("chatLoaded", async () => {
+  context.eventSource.on("game-state-save", async () => {
     gameLog('Request for game save')
     saveGameState($state);
   });
   // e: game-state-load
-  context.eventSource.on("chatLoaded", async () => {
+  context.eventSource.on("game-state-load", async () => {
     gameLog('Request for game load')
     loadGameState();
   });

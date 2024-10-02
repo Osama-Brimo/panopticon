@@ -16,11 +16,16 @@ import {
 import { addCommandObjects } from "./src/st/slash-commands.js";
 // Game
 import { registerListeners } from "./src/game/st/listeners.js";
+import { gameLog } from "src/utils/utils.js";
 
 addCommandObjects();
 
 jQuery(async () => {
-  registerListeners();
+  try {
+    registerListeners();
+  } catch (error) {
+    console.error(`[Panopticon] ERROR:`, error);
+  }
 });
 
 // Game | state > ST | CMD > Game | state > ST...

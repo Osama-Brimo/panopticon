@@ -12,11 +12,9 @@ import {
   this_chid,
 } from "../../../../script.js";
 // Utils
-import { setvar, getvar } from "./src/utils/st.js";
 // Extension
 import { addCommandObjects } from "./src/st/slash-commands.js";
 // Game
-import { $state } from "./src/game/template/instances/Game/State.js";
 import { registerListeners } from "./src/game/st/listeners.js";
 
 addCommandObjects();

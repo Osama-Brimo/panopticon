@@ -1,5 +1,5 @@
-import { State } from "../../classes/Game/State.js";
-import { Inventory } from "../../classes/Mechanics/Inventory.js";
+import { State } from "../../game/classes/Game/State.js";
+import { Inventory } from "../../game/classes/Mechanics/Inventory.js";
 import { Area_MansionExterior } from "../Area/MansionExterior.js";
 import { Item_Camera } from "../Item/Camera.js";
 import { $char } from "../NPC/Char.js";

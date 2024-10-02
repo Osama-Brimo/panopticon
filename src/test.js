@@ -1,5 +1,3 @@
-// game classes
-
 {/* <game>
 <game_premise>
 PROTAGS are trapped in a mansion where time and space are distorted. The mansion exists in a repeating time loop, with each death/save creating a new timeline. The protagonists encounter doppelgangers who are actually themselves from different cycles. As they progress, they inadvertently become either allies and enemies to their past and future selves. Actions taken to advance in one cycle may hinder or help other iterations. 

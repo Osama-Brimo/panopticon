@@ -1,7 +1,7 @@
 {
     "display_name": "panopticon",
     "loading_order": 9,
-    "requires": ["LALib"],
+    "requires": [],
     "optional": [],
     "js": "index.js",
     "css": "style.css",

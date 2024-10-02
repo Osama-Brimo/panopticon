@@ -3,7 +3,7 @@
     "loading_order": 9,
     "requires": [],
     "optional": [],
-    "js": "index.js",
+    "js": "./dist/panopticon.js",
     "css": "style.css",
     "author": "Osama-Brimo",
     "version": "1.0.0",

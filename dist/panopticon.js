@@ -1,41 +1,6 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./index.ts":
-/*!******************!*\
-  !*** ./index.ts ***!
-  \******************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-const slash_commands_1 = __webpack_require__(/*! ./src/st/slash-commands */ "./src/st/slash-commands.ts");
-// Game
-const listeners_1 = __webpack_require__(/*! ./src/game/st/listeners */ "./src/game/st/listeners.ts");
-(0, slash_commands_1.registerSlashCommands)();
-jQuery(() => __awaiter(void 0, void 0, void 0, function* () {
-    try {
-        (0, listeners_1.registerListeners)();
-    }
-    catch (error) {
-        console.error('[Panopticon] ERROR:', error);
-    }
-}));
-// Game | state > ST | CMD > Game | state > ST...
-
-
-/***/ }),
-
 /***/ "./src/game/features/saveLoad.ts":
 /*!***************************************!*\
   !*** ./src/game/features/saveLoad.ts ***!
@@ -470,6 +435,41 @@ exports.Goable = Goable;
 
 /***/ }),
 
+/***/ "./src/index.ts":
+/*!**********************!*\
+  !*** ./src/index.ts ***!
+  \**********************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const slash_commands_1 = __webpack_require__(/*! ./st/slash-commands */ "./src/st/slash-commands.ts");
+// Game
+const listeners_1 = __webpack_require__(/*! ./game/st/listeners */ "./src/game/st/listeners.ts");
+(0, slash_commands_1.registerSlashCommands)();
+jQuery(() => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        (0, listeners_1.registerListeners)();
+    }
+    catch (error) {
+        console.error('[Panopticon] ERROR:', error);
+    }
+}));
+// Game | state > ST | CMD > Game | state > ST...
+
+
+/***/ }),
+
 /***/ "./src/st/slash-commands.ts":
 /*!**********************************!*\
   !*** ./src/st/slash-commands.ts ***!
@@ -699,7 +699,7 @@ throw new Error("Module parse failed: 'import' and 'export' may appear only with
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
-/******/ 	var __webpack_exports__ = __webpack_require__("./index.ts");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.ts");
 /******/ 	var __webpack_export_target__ = exports;
 /******/ 	var __webpack_exports_export__ = __webpack_exports__["default"];
 /******/ 	for(var i in __webpack_exports_export__) __webpack_export_target__[i] = __webpack_exports_export__[i];

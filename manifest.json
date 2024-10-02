@@ -1,9 +1,9 @@
 {
     "display_name": "panopticon",
-    "loading_order": 9,
+    "loading_order": 1,
     "requires": [],
     "optional": [],
-    "js": "./dist/panopticon.js",
+    "js": "dist/panopticon.js",
     "css": "style.css",
     "author": "Osama-Brimo",
     "version": "1.0.0",

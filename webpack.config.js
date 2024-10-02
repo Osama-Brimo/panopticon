@@ -4,7 +4,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const extensionConfig = {
     devtool: false,
     target: 'node',
-    entry: './index.ts',
+    entry: path.join(__dirname, 'src/index.ts'),
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'panopticon.js',

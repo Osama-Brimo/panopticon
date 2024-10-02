@@ -1,6 +1,6 @@
-import { registerSlashCommands } from './src/st/slash-commands';
+import { registerSlashCommands } from './st/slash-commands';
 // Game
-import { registerListeners } from './src/game/st/listeners';
+import { registerListeners } from './game/st/listeners';
 
 registerSlashCommands();
 

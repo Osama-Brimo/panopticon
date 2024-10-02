@@ -5,11 +5,9 @@ import {
   SlashCommandArgument,
   SlashCommandNamedArgument,
 } from "../../../../../slash-commands/SlashCommandArgument.js";
-import {
-  SlashCommandEnumValue,
-  enumTypes,
-} from "../../../slash-commands/SlashCommandEnumValue.js";
 import { delay } from "../../../../../utils.js";
+import { eventSource } from "../../../../../../script.js";
+import { enumTypes, SlashCommandEnumValue } from "../../../../../slash-commands/SlashCommandEnumValue.js";
 
 const cmd_types = {
   GO: "GO",
@@ -22,21 +20,24 @@ const cmd_types = {
 async function st_emitEvent(pipe) {
   console.log(pipe.event, "event from st_emitEvent");
   await eventSource.emit(pipe.event);
+  return '';
 }
 
 async function st_processCMD(type, target) {
   console.log(`TYPE:`, type);
   console.log(`TARGET:`, target);
   console.log("game-cmd delayed!");
-  return "YOOOO!!!!!";
+  return '';
 }
 
 async function st_emitEvent_gameStateSave() {
   await eventSource.emit('game-state-save');
+  return '';
 }
 
 async function st_emitEvent_gameStateLoad() {
   await eventSource.emit('game-state-load');
+  return '';
 }
 
 export function addCommandObjects() {
@@ -119,7 +120,7 @@ export function addCommandObjects() {
     })
   );
 
-  // > /@load 
+  // > /@load
   SlashCommandParser.addCommandObject(
     SlashCommand.fromProps({
       name: "@load",

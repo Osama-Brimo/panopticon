@@ -1,7 +1,7 @@
-import { getContext } from "../../../../../../extensions";
-import { gameLog } from "../../utils/utils";
-import { loadGameState, saveGameState } from "../features/saveLoad";
-import { $state } from "../template/instances/Game/State";
+import { getContext } from "../../../../../../extensions.js";
+import { gameLog } from "../../utils/utils.js";
+import { loadGameState, saveGameState } from "../features/saveLoad.js";
+import { $state } from "../template/instances/Game/State.js";
 
 export function registerListeners() {
   const context = getContext();

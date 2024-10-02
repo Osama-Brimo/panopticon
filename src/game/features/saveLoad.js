@@ -1,4 +1,4 @@
-import { gameLog } from "../../utils/utils";
+import { gameLog } from "../../utils/utils.js";
 
 export function saveGameState(state) {
     const serializedState = JSON.stringify(state);

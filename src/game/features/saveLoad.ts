@@ -1,6 +1,7 @@
 import { gameLog } from "../../utils/utils";
+import { State } from "../template/classes/Game/State";
 
-export function saveGameState(state) {
+export function saveGameState(state: State) {
     const serializedState = JSON.stringify(state);
     gameLog('saveGameState', serializedState);
     localStorage.setItem('panopticon_gameState', serializedState);

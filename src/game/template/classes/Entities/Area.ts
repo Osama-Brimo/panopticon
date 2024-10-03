@@ -1,6 +1,7 @@
 import { Goable } from "../../interfaces/Ables/Goable";
 
 export class Area extends Goable {
+
   constructor(
     name,
     is_godel,
@@ -31,5 +32,6 @@ export class Area extends Goable {
       on_exit
     );
     this.is_saferoom = is_saferoom;
+
   }
 }

@@ -1,5 +1,3 @@
-import { event_types } from "../../../../../../../../../script";
-
 export class State {
   constructor(
     user,
@@ -41,7 +39,6 @@ export class State {
   processCmdQueue() {
     this.cmd_queue.forEach((CMD) => {
       let { type, target } = CMD;
-
     });
   }
 }

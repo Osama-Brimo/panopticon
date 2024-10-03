@@ -1,29 +1,22 @@
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/game/features/saveLoad.ts":
 /*!***************************************!*\
   !*** ./src/game/features/saveLoad.ts ***!
   \***************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.saveGameState = saveGameState;
-exports.loadGameState = loadGameState;
-const utils_1 = __webpack_require__(/*! ../../utils/utils */ "./src/utils/utils.ts");
-function saveGameState(state) {
-    const serializedState = JSON.stringify(state);
-    (0, utils_1.gameLog)('saveGameState', serializedState);
-    localStorage.setItem('panopticon_gameState', serializedState);
-}
-function loadGameState() {
-    const serializedState = localStorage.getItem('panopticon_gameState');
-    (0, utils_1.gameLog)('loadGameState', serializedState);
-    return serializedState ? JSON.parse(serializedState) : null;
-}
-
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   loadGameState: () => (/* binding */ loadGameState),\n/* harmony export */   saveGameState: () => (/* binding */ saveGameState)\n/* harmony export */ });\n/* harmony import */ var _utils_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../utils/utils */ \"./src/utils/utils.ts\");\n\nfunction saveGameState(state) {\n  const serializedState = JSON.stringify(state);\n  (0,_utils_utils__WEBPACK_IMPORTED_MODULE_0__.gameLog)('saveGameState', serializedState);\n  localStorage.setItem('panopticon_gameState', serializedState);\n}\nfunction loadGameState() {\n  const serializedState = localStorage.getItem('panopticon_gameState');\n  (0,_utils_utils__WEBPACK_IMPORTED_MODULE_0__.gameLog)('loadGameState', serializedState);\n  return serializedState ? JSON.parse(serializedState) : null;\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvZ2FtZS9mZWF0dXJlcy9zYXZlTG9hZC50cyIsIm1hcHBpbmdzIjoiOzs7Ozs7QUFBNEM7QUFHdEMsU0FBVUMsYUFBYUEsQ0FBQ0MsS0FBWTtFQUN0QyxNQUFNQyxlQUFlLEdBQUdDLElBQUksQ0FBQ0MsU0FBUyxDQUFDSCxLQUFLLENBQUM7RUFDN0NGLHFEQUFPLENBQUMsZUFBZSxFQUFFRyxlQUFlLENBQUM7RUFDekNHLFlBQVksQ0FBQ0MsT0FBTyxDQUFDLHNCQUFzQixFQUFFSixlQUFlLENBQUM7QUFDakU7QUFFTSxTQUFVSyxhQUFhQSxDQUFBO0VBQ3pCLE1BQU1MLGVBQWUsR0FBR0csWUFBWSxDQUFDRyxPQUFPLENBQUMsc0JBQXNCLENBQUM7RUFDcEVULHFEQUFPLENBQUMsZUFBZSxFQUFFRyxlQUFlLENBQUM7RUFDekMsT0FBT0EsZUFBZSxHQUFHQyxJQUFJLENBQUNNLEtBQUssQ0FBQ1AsZUFBZSxDQUFDLEdBQUcsSUFBSTtBQUMvRCIsInNvdXJjZXMiOlsid2VicGFjazovL3Bhbm9wdGljb24vLi9zcmMvZ2FtZS9mZWF0dXJlcy9zYXZlTG9hZC50cz9iNmM5Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGdhbWVMb2cgfSBmcm9tIFwiLi4vLi4vdXRpbHMvdXRpbHNcIjtcbmltcG9ydCB7IFN0YXRlIH0gZnJvbSBcIi4uL3RlbXBsYXRlL2NsYXNzZXMvR2FtZS9TdGF0ZVwiO1xuXG5leHBvcnQgZnVuY3Rpb24gc2F2ZUdhbWVTdGF0ZShzdGF0ZTogU3RhdGUpIHtcbiAgICBjb25zdCBzZXJpYWxpemVkU3RhdGUgPSBKU09OLnN0cmluZ2lmeShzdGF0ZSk7XG4gICAgZ2FtZUxvZygnc2F2ZUdhbWVTdGF0ZScsIHNlcmlhbGl6ZWRTdGF0ZSk7XG4gICAgbG9jYWxTdG9yYWdlLnNldEl0ZW0oJ3Bhbm9wdGljb25fZ2FtZVN0YXRlJywgc2VyaWFsaXplZFN0YXRlKTtcbn1cblxuZXhwb3J0IGZ1bmN0aW9uIGxvYWRHYW1lU3RhdGUoKSB7XG4gICAgY29uc3Qgc2VyaWFsaXplZFN0YXRlID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ3Bhbm9wdGljb25fZ2FtZVN0YXRlJyk7XG4gICAgZ2FtZUxvZygnbG9hZEdhbWVTdGF0ZScsIHNlcmlhbGl6ZWRTdGF0ZSk7XG4gICAgcmV0dXJuIHNlcmlhbGl6ZWRTdGF0ZSA/IEpTT04ucGFyc2Uoc2VyaWFsaXplZFN0YXRlKSA6IG51bGw7XG59XG4iXSwibmFtZXMiOlsiZ2FtZUxvZyIsInNhdmVHYW1lU3RhdGUiLCJzdGF0ZSIsInNlcmlhbGl6ZWRTdGF0ZSIsIkpTT04iLCJzdHJpbmdpZnkiLCJsb2NhbFN0b3JhZ2UiLCJzZXRJdGVtIiwibG9hZEdhbWVTdGF0ZSIsImdldEl0ZW0iLCJwYXJzZSJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/game/features/saveLoad.ts\n");
 
 /***/ }),
 
@@ -31,46 +24,9 @@ function loadGameState() {
 /*!**********************************!*\
   !*** ./src/game/st/listeners.ts ***!
   \**********************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.registerListeners = registerListeners;
-const extensions_1 = __webpack_require__(/*! ../../../../../../extensions */ "../../../extensions.js");
-const utils_1 = __webpack_require__(/*! ../../utils/utils */ "./src/utils/utils.ts");
-const saveLoad_1 = __webpack_require__(/*! ../features/saveLoad */ "./src/game/features/saveLoad.ts");
-const State_1 = __webpack_require__(/*! ../template/instances/Game/State */ "./src/game/template/instances/Game/State.ts");
-function registerListeners() {
-    const context = (0, extensions_1.getContext)();
-    // Extension load
-    (0, utils_1.gameLog)('loaded');
-    (0, utils_1.gameLog)('Game State', State_1.$state);
-    // e: chatLoaded
-    context.eventSource.on('chatLoaded', () => __awaiter(this, void 0, void 0, function* () {
-        (0, utils_1.gameLog)('chatLoaded Fired');
-    }));
-    // e: game-state-save
-    context.eventSource.on('game-state-save', () => __awaiter(this, void 0, void 0, function* () {
-        (0, utils_1.gameLog)('Request for game save');
-        (0, saveLoad_1.saveGameState)(State_1.$state);
-    }));
-    // e: game-state-load
-    context.eventSource.on('game-state-load', () => __awaiter(this, void 0, void 0, function* () {
-        (0, utils_1.gameLog)('Request for game load');
-        (0, saveLoad_1.loadGameState)();
-    }));
-}
-
+eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   registerListeners: () => (/* binding */ registerListeners)\n/* harmony export */ });\n/* harmony import */ var _st_st_imports__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../st/st-imports */ \"./src/st/st-imports.ts\");\n/* harmony import */ var _utils_utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/utils */ \"./src/utils/utils.ts\");\n/* harmony import */ var _features_saveLoad__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../features/saveLoad */ \"./src/game/features/saveLoad.ts\");\n/* harmony import */ var _template_instances_Game_State__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../template/instances/Game/State */ \"./src/game/template/instances/Game/State.ts\");\nvar __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_st_st_imports__WEBPACK_IMPORTED_MODULE_0__]);\n_st_st_imports__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];\n\n\n\n\nfunction registerListeners() {\n  const context = (0,_st_st_imports__WEBPACK_IMPORTED_MODULE_0__.getContext)();\n  // Extension load\n  (0,_utils_utils__WEBPACK_IMPORTED_MODULE_1__.gameLog)('loaded');\n  (0,_utils_utils__WEBPACK_IMPORTED_MODULE_1__.gameLog)('Game State', _template_instances_Game_State__WEBPACK_IMPORTED_MODULE_3__.$state);\n  // e: chatLoaded\n  context.eventSource.on('chatLoaded', async () => {\n    (0,_utils_utils__WEBPACK_IMPORTED_MODULE_1__.gameLog)('chatLoaded Fired');\n  });\n  // e: game-state-save\n  context.eventSource.on('game-state-save', async () => {\n    (0,_utils_utils__WEBPACK_IMPORTED_MODULE_1__.gameLog)('Request for game save');\n    (0,_features_saveLoad__WEBPACK_IMPORTED_MODULE_2__.saveGameState)(_template_instances_Game_State__WEBPACK_IMPORTED_MODULE_3__.$state);\n  });\n  // e: game-state-load\n  context.eventSource.on('game-state-load', async () => {\n    (0,_utils_utils__WEBPACK_IMPORTED_MODULE_1__.gameLog)('Request for game load');\n    (0,_features_saveLoad__WEBPACK_IMPORTED_MODULE_2__.loadGameState)();\n  });\n}\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvZ2FtZS9zdC9saXN0ZW5lcnMudHMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7QUFBaUQ7QUFDTDtBQUN3QjtBQUNWO0FBRXBELFNBQVVLLGlCQUFpQkEsQ0FBQTtFQUM3QixNQUFNQyxPQUFPLEdBQUdOLDBEQUFVLEVBQUU7RUFFNUI7RUFDQUMscURBQU8sQ0FBQyxRQUFRLENBQUM7RUFDakJBLHFEQUFPLENBQUMsWUFBWSxFQUFFRyxrRUFBTSxDQUFDO0VBRTdCO0VBQ0FFLE9BQU8sQ0FBQ0MsV0FBVyxDQUFDQyxFQUFFLENBQUMsWUFBWSxFQUFFLFlBQVc7SUFDNUNQLHFEQUFPLENBQUMsa0JBQWtCLENBQUM7RUFDL0IsQ0FBQyxDQUFDO0VBQ0Y7RUFDQUssT0FBTyxDQUFDQyxXQUFXLENBQUNDLEVBQUUsQ0FBQyxpQkFBaUIsRUFBRSxZQUFVO0lBQ2hEUCxxREFBTyxDQUFDLHVCQUF1QixDQUFDO0lBQ2hDRSxpRUFBYSxDQUFDQyxrRUFBTSxDQUFDO0VBQ3pCLENBQUMsQ0FBQztFQUNGO0VBQ0FFLE9BQU8sQ0FBQ0MsV0FBVyxDQUFDQyxFQUFFLENBQUMsaUJBQWlCLEVBQUUsWUFBVztJQUNqRFAscURBQU8sQ0FBQyx1QkFBdUIsQ0FBQztJQUNoQ0MsaUVBQWEsRUFBRTtFQUNuQixDQUFDLENBQUM7QUFDTixDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vcGFub3B0aWNvbi8uL3NyYy9nYW1lL3N0L2xpc3RlbmVycy50cz9iYWIzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGdldENvbnRleHQgfSBmcm9tICcuLi8uLi9zdC9zdC1pbXBvcnRzJztcbmltcG9ydCB7IGdhbWVMb2cgfSBmcm9tICcuLi8uLi91dGlscy91dGlscyc7XG5pbXBvcnQgeyBsb2FkR2FtZVN0YXRlLCBzYXZlR2FtZVN0YXRlIH0gZnJvbSAnLi4vZmVhdHVyZXMvc2F2ZUxvYWQnO1xuaW1wb3J0IHsgJHN0YXRlIH0gZnJvbSAnLi4vdGVtcGxhdGUvaW5zdGFuY2VzL0dhbWUvU3RhdGUnO1xuXG5leHBvcnQgZnVuY3Rpb24gcmVnaXN0ZXJMaXN0ZW5lcnMoKSB7XG4gICAgY29uc3QgY29udGV4dCA9IGdldENvbnRleHQoKTtcblxuICAgIC8vIEV4dGVuc2lvbiBsb2FkXG4gICAgZ2FtZUxvZygnbG9hZGVkJyk7XG4gICAgZ2FtZUxvZygnR2FtZSBTdGF0ZScsICRzdGF0ZSk7XG5cbiAgICAvLyBlOiBjaGF0TG9hZGVkXG4gICAgY29udGV4dC5ldmVudFNvdXJjZS5vbignY2hhdExvYWRlZCcsIGFzeW5jICgpID0+IHtcbiAgICAgICAgZ2FtZUxvZygnY2hhdExvYWRlZCBGaXJlZCcpO1xuICAgIH0pO1xuICAgIC8vIGU6IGdhbWUtc3RhdGUtc2F2ZVxuICAgIGNvbnRleHQuZXZlbnRTb3VyY2Uub24oJ2dhbWUtc3RhdGUtc2F2ZScsIGFzeW5jKCkgPT4ge1xuICAgICAgICBnYW1lTG9nKCdSZXF1ZXN0IGZvciBnYW1lIHNhdmUnKTtcbiAgICAgICAgc2F2ZUdhbWVTdGF0ZSgkc3RhdGUpO1xuICAgIH0pO1xuICAgIC8vIGU6IGdhbWUtc3RhdGUtbG9hZFxuICAgIGNvbnRleHQuZXZlbnRTb3VyY2Uub24oJ2dhbWUtc3RhdGUtbG9hZCcsIGFzeW5jICgpID0+IHtcbiAgICAgICAgZ2FtZUxvZygnUmVxdWVzdCBmb3IgZ2FtZSBsb2FkJyk7XG4gICAgICAgIGxvYWRHYW1lU3RhdGUoKTtcbiAgICB9KTtcbn1cbiJdLCJuYW1lcyI6WyJnZXRDb250ZXh0IiwiZ2FtZUxvZyIsImxvYWRHYW1lU3RhdGUiLCJzYXZlR2FtZVN0YXRlIiwiJHN0YXRlIiwicmVnaXN0ZXJMaXN0ZW5lcnMiLCJjb250ZXh0IiwiZXZlbnRTb3VyY2UiLCJvbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/game/st/listeners.ts\n");
 
 /***/ }),
 
@@ -78,21 +34,9 @@ function registerListeners() {
 /*!****************************************************!*\
   !*** ./src/game/template/classes/Entities/Area.ts ***!
   \****************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Area = void 0;
-const Goable_1 = __webpack_require__(/*! ../../interfaces/Ables/Goable */ "./src/game/template/interfaces/Ables/Goable.ts");
-class Area extends Goable_1.Goable {
-    constructor(name, is_godel, godel_type, godel_cycle_num, is_locked, unlocked_by, goables, inspectables, doables, npcs, on_enter, on_exit, is_saferoom) {
-        super(name, is_godel, godel_type, godel_cycle_num, is_locked, unlocked_by, goables, inspectables, doables, npcs, on_enter, on_exit);
-        this.is_saferoom = is_saferoom;
-    }
-}
-exports.Area = Area;
-
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   Area: () => (/* binding */ Area)\n/* harmony export */ });\n/* harmony import */ var _interfaces_Ables_Goable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../interfaces/Ables/Goable */ \"./src/game/template/interfaces/Ables/Goable.ts\");\n\nclass Area extends _interfaces_Ables_Goable__WEBPACK_IMPORTED_MODULE_0__.Goable {\n  constructor(name, is_godel, godel_type, godel_cycle_num, is_locked, unlocked_by, goables, inspectables, doables, npcs, on_enter, on_exit, is_saferoom) {\n    super(name, is_godel, godel_type, godel_cycle_num, is_locked, unlocked_by, goables, inspectables, doables, npcs, on_enter, on_exit);\n    this.is_saferoom = is_saferoom;\n  }\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvZ2FtZS90ZW1wbGF0ZS9jbGFzc2VzL0VudGl0aWVzL0FyZWEudHMiLCJtYXBwaW5ncyI6Ijs7Ozs7QUFBdUQ7QUFFakQsTUFBT0MsSUFBSyxTQUFRRCw0REFBTTtFQUU5QkUsWUFDRUMsSUFBSSxFQUNKQyxRQUFRLEVBQ1JDLFVBQVUsRUFDVkMsZUFBZSxFQUNmQyxTQUFTLEVBQ1RDLFdBQVcsRUFDWEMsT0FBTyxFQUNQQyxZQUFZLEVBQ1pDLE9BQU8sRUFDUEMsSUFBSSxFQUNKQyxRQUFRLEVBQ1JDLE9BQU8sRUFDUEMsV0FBVztJQUVYLEtBQUssQ0FDSFosSUFBSSxFQUNKQyxRQUFRLEVBQ1JDLFVBQVUsRUFDVkMsZUFBZSxFQUNmQyxTQUFTLEVBQ1RDLFdBQVcsRUFDWEMsT0FBTyxFQUNQQyxZQUFZLEVBQ1pDLE9BQU8sRUFDUEMsSUFBSSxFQUNKQyxRQUFRLEVBQ1JDLE9BQU8sQ0FDUjtJQUNELElBQUksQ0FBQ0MsV0FBVyxHQUFHQSxXQUFXO0VBRWhDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vcGFub3B0aWNvbi8uL3NyYy9nYW1lL3RlbXBsYXRlL2NsYXNzZXMvRW50aXRpZXMvQXJlYS50cz9lNGM5Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEdvYWJsZSB9IGZyb20gXCIuLi8uLi9pbnRlcmZhY2VzL0FibGVzL0dvYWJsZVwiO1xuXG5leHBvcnQgY2xhc3MgQXJlYSBleHRlbmRzIEdvYWJsZSB7XG5cbiAgY29uc3RydWN0b3IoXG4gICAgbmFtZSxcbiAgICBpc19nb2RlbCxcbiAgICBnb2RlbF90eXBlLFxuICAgIGdvZGVsX2N5Y2xlX251bSxcbiAgICBpc19sb2NrZWQsXG4gICAgdW5sb2NrZWRfYnksXG4gICAgZ29hYmxlcyxcbiAgICBpbnNwZWN0YWJsZXMsXG4gICAgZG9hYmxlcyxcbiAgICBucGNzLFxuICAgIG9uX2VudGVyLFxuICAgIG9uX2V4aXQsXG4gICAgaXNfc2FmZXJvb21cbiAgKSB7XG4gICAgc3VwZXIoXG4gICAgICBuYW1lLFxuICAgICAgaXNfZ29kZWwsXG4gICAgICBnb2RlbF90eXBlLFxuICAgICAgZ29kZWxfY3ljbGVfbnVtLFxuICAgICAgaXNfbG9ja2VkLFxuICAgICAgdW5sb2NrZWRfYnksXG4gICAgICBnb2FibGVzLFxuICAgICAgaW5zcGVjdGFibGVzLFxuICAgICAgZG9hYmxlcyxcbiAgICAgIG5wY3MsXG4gICAgICBvbl9lbnRlcixcbiAgICAgIG9uX2V4aXRcbiAgICApO1xuICAgIHRoaXMuaXNfc2FmZXJvb20gPSBpc19zYWZlcm9vbTtcblxuICB9XG59XG4iXSwibmFtZXMiOlsiR29hYmxlIiwiQXJlYSIsImNvbnN0cnVjdG9yIiwibmFtZSIsImlzX2dvZGVsIiwiZ29kZWxfdHlwZSIsImdvZGVsX2N5Y2xlX251bSIsImlzX2xvY2tlZCIsInVubG9ja2VkX2J5IiwiZ29hYmxlcyIsImluc3BlY3RhYmxlcyIsImRvYWJsZXMiLCJucGNzIiwib25fZW50ZXIiLCJvbl9leGl0IiwiaXNfc2FmZXJvb20iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/game/template/classes/Entities/Area.ts\n");
 
 /***/ }),
 
@@ -100,22 +44,9 @@ exports.Area = Area;
 /*!****************************************************!*\
   !*** ./src/game/template/classes/Entities/Item.ts ***!
   \****************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Item = void 0;
-const Usable_js_1 = __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../interfaces/Ables/Usable.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-class Item extends Usable_js_1.Usable {
-    constructor(name, description, effect, on_use, kangaeru_comment, count = 0) {
-        super(name, description, effect, on_use);
-        this.kangaeru_comment = kangaeru_comment;
-        this.count = count;
-    }
-}
-exports.Item = Item;
-
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   Item: () => (/* binding */ Item)\n/* harmony export */ });\nObject(function webpackMissingModule() { var e = new Error(\"Cannot find module '../../interfaces/Ables/Usable.js'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n\nclass Item extends Object(function webpackMissingModule() { var e = new Error(\"Cannot find module '../../interfaces/Ables/Usable.js'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }()) {\n  constructor(name, description, effect, on_use, kangaeru_comment) {\n    let count = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 0;\n    super(name, description, effect, on_use);\n    this.kangaeru_comment = kangaeru_comment;\n    this.count = count;\n  }\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvZ2FtZS90ZW1wbGF0ZS9jbGFzc2VzL0VudGl0aWVzL0l0ZW0udHMiLCJtYXBwaW5ncyI6Ijs7Ozs7QUFBMEQ7QUFFcEQsTUFBT0MsSUFBSyxTQUFRRCwrSkFBTTtFQUM1QkUsWUFBWUMsSUFBSSxFQUFFQyxXQUFXLEVBQUVDLE1BQU0sRUFBRUMsTUFBTSxFQUFFQyxnQkFBZ0IsRUFBUztJQUFBLElBQVBDLEtBQUssR0FBQUMsU0FBQSxDQUFBQyxNQUFBLFFBQUFELFNBQUEsUUFBQUUsU0FBQSxHQUFBRixTQUFBLE1BQUMsQ0FBQztJQUNwRSxLQUFLLENBQUNOLElBQUksRUFBRUMsV0FBVyxFQUFFQyxNQUFNLEVBQUVDLE1BQU0sQ0FBQztJQUN4QyxJQUFJLENBQUNDLGdCQUFnQixHQUFHQSxnQkFBZ0I7SUFDeEMsSUFBSSxDQUFDQyxLQUFLLEdBQUdBLEtBQUs7RUFDbEIiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9wYW5vcHRpY29uLy4vc3JjL2dhbWUvdGVtcGxhdGUvY2xhc3Nlcy9FbnRpdGllcy9JdGVtLnRzPzQzM2QiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgVXNhYmxlIH0gZnJvbSAnLi4vLi4vaW50ZXJmYWNlcy9BYmxlcy9Vc2FibGUuanMnO1xuXG5leHBvcnQgY2xhc3MgSXRlbSBleHRlbmRzIFVzYWJsZSB7XG4gICAgY29uc3RydWN0b3IobmFtZSwgZGVzY3JpcHRpb24sIGVmZmVjdCwgb25fdXNlLCBrYW5nYWVydV9jb21tZW50LCBjb3VudD0wKSB7XG4gICAgICAgIHN1cGVyKG5hbWUsIGRlc2NyaXB0aW9uLCBlZmZlY3QsIG9uX3VzZSk7XG4gICAgICAgIHRoaXMua2FuZ2FlcnVfY29tbWVudCA9IGthbmdhZXJ1X2NvbW1lbnQ7XG4gICAgICAgIHRoaXMuY291bnQgPSBjb3VudDtcbiAgICAgICAgfVxufVxuIl0sIm5hbWVzIjpbIlVzYWJsZSIsIkl0ZW0iLCJjb25zdHJ1Y3RvciIsIm5hbWUiLCJkZXNjcmlwdGlvbiIsImVmZmVjdCIsIm9uX3VzZSIsImthbmdhZXJ1X2NvbW1lbnQiLCJjb3VudCIsImFyZ3VtZW50cyIsImxlbmd0aCIsInVuZGVmaW5lZCJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/game/template/classes/Entities/Item.ts\n");
 
 /***/ }),
 
@@ -123,22 +54,9 @@ exports.Item = Item;
 /*!***************************************************!*\
   !*** ./src/game/template/classes/Entities/NPC.ts ***!
   \***************************************************/
-/***/ ((__unused_webpack_module, exports) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.NPC = void 0;
-// NPC is always an AI assistant.
-class NPC {
-    constructor(name, description, onTalk) {
-        this.name = name;
-        this.description = description;
-        this.onTalk = onTalk;
-    }
-}
-exports.NPC = NPC;
-
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   NPC: () => (/* binding */ NPC)\n/* harmony export */ });\n// NPC is always an AI assistant.\nclass NPC {\n  description;\n  name;\n  onTalk;\n  constructor(name, description, onTalk) {\n    this.name = name;\n    this.description = description;\n    this.onTalk = onTalk;\n  }\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvZ2FtZS90ZW1wbGF0ZS9jbGFzc2VzL0VudGl0aWVzL05QQy50cyIsIm1hcHBpbmdzIjoiOzs7O0FBRUE7QUFDTSxNQUFPQSxHQUFHO0VBQ1pDLFdBQVc7RUFDWEMsSUFBSTtFQUNKQyxNQUFNO0VBRU5DLFlBQVlGLElBQUksRUFBRUQsV0FBVyxFQUFFRSxNQUFNO0lBQ2pDLElBQUksQ0FBQ0QsSUFBSSxHQUFHQSxJQUFJO0lBQ2hCLElBQUksQ0FBQ0QsV0FBVyxHQUFHQSxXQUFXO0lBQzlCLElBQUksQ0FBQ0UsTUFBTSxHQUFHQSxNQUFNO0VBQ3hCIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vcGFub3B0aWNvbi8uL3NyYy9nYW1lL3RlbXBsYXRlL2NsYXNzZXMvRW50aXRpZXMvTlBDLnRzP2Y4MDMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgVGFsa2FibGUgfSBmcm9tIFwiLi4vLi4vaW50ZXJmYWNlcy9BYmxlcy9UYWxrYWJsZVwiO1xuXG4vLyBOUEMgaXMgYWx3YXlzIGFuIEFJIGFzc2lzdGFudC5cbmV4cG9ydCBjbGFzcyBOUEMgaW1wbGVtZW50cyBUYWxrYWJsZSB7XG4gICAgZGVzY3JpcHRpb246IHN0cmluZztcbiAgICBuYW1lOiBzdHJpbmc7XG4gICAgb25UYWxrOiAoKSA9PiB7fTtcblxuICAgIGNvbnN0cnVjdG9yKG5hbWUsIGRlc2NyaXB0aW9uLCBvblRhbGspIHtcbiAgICAgICAgdGhpcy5uYW1lID0gbmFtZTtcbiAgICAgICAgdGhpcy5kZXNjcmlwdGlvbiA9IGRlc2NyaXB0aW9uO1xuICAgICAgICB0aGlzLm9uVGFsayA9IG9uVGFsaztcbiAgICB9XG59XG4iXSwibmFtZXMiOlsiTlBDIiwiZGVzY3JpcHRpb24iLCJuYW1lIiwib25UYWxrIiwiY29uc3RydWN0b3IiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/game/template/classes/Entities/NPC.ts\n");
 
 /***/ }),
 
@@ -146,20 +64,9 @@ exports.NPC = NPC;
 /*!******************************************************!*\
   !*** ./src/game/template/classes/Entities/Player.ts ***!
   \******************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Player = void 0;
-const Human_js_1 = __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../Participants/Human.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-class Player extends Human_js_1.Human {
-    constructor(name) {
-        super(name);
-    }
-}
-exports.Player = Player;
-
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   Player: () => (/* binding */ Player)\n/* harmony export */ });\nObject(function webpackMissingModule() { var e = new Error(\"Cannot find module '../Participants/Human.js'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n\nclass Player extends Object(function webpackMissingModule() { var e = new Error(\"Cannot find module '../Participants/Human.js'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }()) {\n  constructor(name) {\n    super(name);\n  }\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvZ2FtZS90ZW1wbGF0ZS9jbGFzc2VzL0VudGl0aWVzL1BsYXllci50cyIsIm1hcHBpbmdzIjoiOzs7OztBQUFpRDtBQUUzQyxNQUFPQyxNQUFPLFNBQVFELHVKQUFLO0VBQzdCRSxZQUFZQyxJQUFJO0lBQ1osS0FBSyxDQUFDQSxJQUFJLENBQUM7RUFDZiIsInNvdXJjZXMiOlsid2VicGFjazovL3Bhbm9wdGljb24vLi9zcmMvZ2FtZS90ZW1wbGF0ZS9jbGFzc2VzL0VudGl0aWVzL1BsYXllci50cz81ODFkIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEh1bWFuIH0gZnJvbSBcIi4uL1BhcnRpY2lwYW50cy9IdW1hbi5qc1wiO1xuXG5leHBvcnQgY2xhc3MgUGxheWVyIGV4dGVuZHMgSHVtYW4ge1xuICAgIGNvbnN0cnVjdG9yKG5hbWUpIHtcbiAgICAgICAgc3VwZXIobmFtZSk7XG4gICAgfVxufVxuIl0sIm5hbWVzIjpbIkh1bWFuIiwiUGxheWVyIiwiY29uc3RydWN0b3IiLCJuYW1lIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/game/template/classes/Entities/Player.ts\n");
 
 /***/ }),
 
@@ -167,21 +74,9 @@ exports.Player = Player;
 /*!*************************************************!*\
   !*** ./src/game/template/classes/Game/Event.ts ***!
   \*************************************************/
-/***/ ((__unused_webpack_module, exports) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Event = void 0;
-class Event {
-    constructor(name, description, on_event) {
-        this.name = name;
-        this.description = description;
-        this.on_event = on_event;
-    }
-}
-exports.Event = Event;
-
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   Event: () => (/* binding */ Event)\n/* harmony export */ });\nclass Event {\n  constructor(name, description, on_event) {\n    this.name = name;\n    this.description = description;\n    this.on_event = on_event;\n  }\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvZ2FtZS90ZW1wbGF0ZS9jbGFzc2VzL0dhbWUvRXZlbnQudHMiLCJtYXBwaW5ncyI6Ijs7OztBQUFNLE1BQU9BLEtBQUs7RUFDZEMsWUFBWUMsSUFBSSxFQUFFQyxXQUFXLEVBQUVDLFFBQVE7SUFDbkMsSUFBSSxDQUFDRixJQUFJLEdBQUdBLElBQUk7SUFDaEIsSUFBSSxDQUFDQyxXQUFXLEdBQUdBLFdBQVc7SUFDOUIsSUFBSSxDQUFDQyxRQUFRLEdBQUdBLFFBQVE7RUFDNUIiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9wYW5vcHRpY29uLy4vc3JjL2dhbWUvdGVtcGxhdGUvY2xhc3Nlcy9HYW1lL0V2ZW50LnRzPzk3ZmIiXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGNsYXNzIEV2ZW50IHtcbiAgICBjb25zdHJ1Y3RvcihuYW1lLCBkZXNjcmlwdGlvbiwgb25fZXZlbnQpIHtcbiAgICAgICAgdGhpcy5uYW1lID0gbmFtZTtcbiAgICAgICAgdGhpcy5kZXNjcmlwdGlvbiA9IGRlc2NyaXB0aW9uO1xuICAgICAgICB0aGlzLm9uX2V2ZW50ID0gb25fZXZlbnQ7XG4gICAgfVxufSJdLCJuYW1lcyI6WyJFdmVudCIsImNvbnN0cnVjdG9yIiwibmFtZSIsImRlc2NyaXB0aW9uIiwib25fZXZlbnQiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/game/template/classes/Game/Event.ts\n");
 
 /***/ }),
 
@@ -189,20 +84,9 @@ exports.Event = Event;
 /*!************************************************!*\
   !*** ./src/game/template/classes/Game/Flag.ts ***!
   \************************************************/
-/***/ ((__unused_webpack_module, exports) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Flag = void 0;
-class Flag {
-    constructor(name, value) {
-        this.name = name;
-        this.value = value;
-    }
-}
-exports.Flag = Flag;
-
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   Flag: () => (/* binding */ Flag)\n/* harmony export */ });\nclass Flag {\n  constructor(name, value) {\n    this.name = name;\n    this.value = value;\n  }\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvZ2FtZS90ZW1wbGF0ZS9jbGFzc2VzL0dhbWUvRmxhZy50cyIsIm1hcHBpbmdzIjoiOzs7O0FBQU0sTUFBT0EsSUFBSTtFQUNiQyxZQUFZQyxJQUFJLEVBQUVDLEtBQUs7SUFDbkIsSUFBSSxDQUFDRCxJQUFJLEdBQUdBLElBQUk7SUFDaEIsSUFBSSxDQUFDQyxLQUFLLEdBQUdBLEtBQUs7RUFDdEIiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9wYW5vcHRpY29uLy4vc3JjL2dhbWUvdGVtcGxhdGUvY2xhc3Nlcy9HYW1lL0ZsYWcudHM/YmNmOSJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgY2xhc3MgRmxhZyB7XG4gICAgY29uc3RydWN0b3IobmFtZSwgdmFsdWUpIHtcbiAgICAgICAgdGhpcy5uYW1lID0gbmFtZTtcbiAgICAgICAgdGhpcy52YWx1ZSA9IHZhbHVlO1xuICAgIH1cbn0iXSwibmFtZXMiOlsiRmxhZyIsImNvbnN0cnVjdG9yIiwibmFtZSIsInZhbHVlIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/game/template/classes/Game/Flag.ts\n");
 
 /***/ }),
 
@@ -210,37 +94,9 @@ exports.Flag = Flag;
 /*!*************************************************!*\
   !*** ./src/game/template/classes/Game/State.ts ***!
   \*************************************************/
-/***/ ((__unused_webpack_module, exports) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.State = void 0;
-class State {
-    constructor(user, char, area, inventory, frozen_tear_count, inspectables, goables, doables, talkables, cycle, time, flags, event_queue, cmd_queue) {
-        this.user = user;
-        this.char = char;
-        this.area = area;
-        this.inventory = inventory;
-        this.frozen_tear_count = frozen_tear_count;
-        this.inspectables = inspectables;
-        this.goables = goables;
-        this.doables = doables;
-        this.talkables = talkables;
-        this.cycle = cycle;
-        this.time = time;
-        this.flags = flags;
-        this.event_queue = event_queue;
-        this.cmd_queue = cmd_queue;
-    }
-    processCmdQueue() {
-        this.cmd_queue.forEach((CMD) => {
-            let { type, target } = CMD;
-        });
-    }
-}
-exports.State = State;
-
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   State: () => (/* binding */ State)\n/* harmony export */ });\nclass State {\n  constructor(user, char, area, inventory, frozen_tear_count, inspectables, goables, doables, talkables, cycle, time, flags, event_queue, cmd_queue) {\n    this.user = user;\n    this.char = char;\n    this.area = area;\n    this.inventory = inventory;\n    this.frozen_tear_count = frozen_tear_count;\n    this.inspectables = inspectables;\n    this.goables = goables;\n    this.doables = doables;\n    this.talkables = talkables;\n    this.cycle = cycle;\n    this.time = time;\n    this.flags = flags;\n    this.event_queue = event_queue;\n    this.cmd_queue = cmd_queue;\n  }\n  processCmdQueue() {\n    this.cmd_queue.forEach(CMD => {\n      let {\n        type,\n        target\n      } = CMD;\n    });\n  }\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvZ2FtZS90ZW1wbGF0ZS9jbGFzc2VzL0dhbWUvU3RhdGUudHMiLCJtYXBwaW5ncyI6Ijs7OztBQUFNLE1BQU9BLEtBQUs7RUFDaEJDLFlBQ0VDLElBQUksRUFDSkMsSUFBSSxFQUNKQyxJQUFJLEVBQ0pDLFNBQVMsRUFDVEMsaUJBQWlCLEVBQ2pCQyxZQUFZLEVBQ1pDLE9BQU8sRUFDUEMsT0FBTyxFQUNQQyxTQUFTLEVBQ1RDLEtBQUssRUFDTEMsSUFBSSxFQUNKQyxLQUFLLEVBQ0xDLFdBQVcsRUFDWEMsU0FBUztJQUVULElBQUksQ0FBQ2IsSUFBSSxHQUFHQSxJQUFJO0lBQ2hCLElBQUksQ0FBQ0MsSUFBSSxHQUFHQSxJQUFJO0lBQ2hCLElBQUksQ0FBQ0MsSUFBSSxHQUFHQSxJQUFJO0lBRWhCLElBQUksQ0FBQ0MsU0FBUyxHQUFHQSxTQUFTO0lBQzFCLElBQUksQ0FBQ0MsaUJBQWlCLEdBQUdBLGlCQUFpQjtJQUUxQyxJQUFJLENBQUNDLFlBQVksR0FBR0EsWUFBWTtJQUNoQyxJQUFJLENBQUNDLE9BQU8sR0FBR0EsT0FBTztJQUN0QixJQUFJLENBQUNDLE9BQU8sR0FBR0EsT0FBTztJQUN0QixJQUFJLENBQUNDLFNBQVMsR0FBR0EsU0FBUztJQUUxQixJQUFJLENBQUNDLEtBQUssR0FBR0EsS0FBSztJQUNsQixJQUFJLENBQUNDLElBQUksR0FBR0EsSUFBSTtJQUVoQixJQUFJLENBQUNDLEtBQUssR0FBR0EsS0FBSztJQUVsQixJQUFJLENBQUNDLFdBQVcsR0FBR0EsV0FBVztJQUM5QixJQUFJLENBQUNDLFNBQVMsR0FBR0EsU0FBUztFQUM1QjtFQUVBQyxlQUFlQSxDQUFBO0lBQ2IsSUFBSSxDQUFDRCxTQUFTLENBQUNFLE9BQU8sQ0FBRUMsR0FBRyxJQUFJO01BQzdCLElBQUk7UUFBRUMsSUFBSTtRQUFFQztNQUFNLENBQUUsR0FBR0YsR0FBRztJQUM1QixDQUFDLENBQUM7RUFDSiIsInNvdXJjZXMiOlsid2VicGFjazovL3Bhbm9wdGljb24vLi9zcmMvZ2FtZS90ZW1wbGF0ZS9jbGFzc2VzL0dhbWUvU3RhdGUudHM/Y2U0OCJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgY2xhc3MgU3RhdGUge1xuICBjb25zdHJ1Y3RvcihcbiAgICB1c2VyLFxuICAgIGNoYXIsXG4gICAgYXJlYSxcbiAgICBpbnZlbnRvcnksXG4gICAgZnJvemVuX3RlYXJfY291bnQsXG4gICAgaW5zcGVjdGFibGVzLFxuICAgIGdvYWJsZXMsXG4gICAgZG9hYmxlcyxcbiAgICB0YWxrYWJsZXMsXG4gICAgY3ljbGUsXG4gICAgdGltZSxcbiAgICBmbGFncyxcbiAgICBldmVudF9xdWV1ZSxcbiAgICBjbWRfcXVldWVcbiAgKSB7XG4gICAgdGhpcy51c2VyID0gdXNlcjtcbiAgICB0aGlzLmNoYXIgPSBjaGFyO1xuICAgIHRoaXMuYXJlYSA9IGFyZWE7XG5cbiAgICB0aGlzLmludmVudG9yeSA9IGludmVudG9yeTtcbiAgICB0aGlzLmZyb3plbl90ZWFyX2NvdW50ID0gZnJvemVuX3RlYXJfY291bnQ7XG5cbiAgICB0aGlzLmluc3BlY3RhYmxlcyA9IGluc3BlY3RhYmxlcztcbiAgICB0aGlzLmdvYWJsZXMgPSBnb2FibGVzO1xuICAgIHRoaXMuZG9hYmxlcyA9IGRvYWJsZXM7XG4gICAgdGhpcy50YWxrYWJsZXMgPSB0YWxrYWJsZXM7XG5cbiAgICB0aGlzLmN5Y2xlID0gY3ljbGU7XG4gICAgdGhpcy50aW1lID0gdGltZTtcblxuICAgIHRoaXMuZmxhZ3MgPSBmbGFncztcblxuICAgIHRoaXMuZXZlbnRfcXVldWUgPSBldmVudF9xdWV1ZTtcbiAgICB0aGlzLmNtZF9xdWV1ZSA9IGNtZF9xdWV1ZTtcbiAgfVxuXG4gIHByb2Nlc3NDbWRRdWV1ZSgpIHtcbiAgICB0aGlzLmNtZF9xdWV1ZS5mb3JFYWNoKChDTUQpID0+IHtcbiAgICAgIGxldCB7IHR5cGUsIHRhcmdldCB9ID0gQ01EO1xuICAgIH0pO1xuICB9XG59XG4iXSwibmFtZXMiOlsiU3RhdGUiLCJjb25zdHJ1Y3RvciIsInVzZXIiLCJjaGFyIiwiYXJlYSIsImludmVudG9yeSIsImZyb3plbl90ZWFyX2NvdW50IiwiaW5zcGVjdGFibGVzIiwiZ29hYmxlcyIsImRvYWJsZXMiLCJ0YWxrYWJsZXMiLCJjeWNsZSIsInRpbWUiLCJmbGFncyIsImV2ZW50X3F1ZXVlIiwiY21kX3F1ZXVlIiwicHJvY2Vzc0NtZFF1ZXVlIiwiZm9yRWFjaCIsIkNNRCIsInR5cGUiLCJ0YXJnZXQiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/game/template/classes/Game/State.ts\n");
 
 /***/ }),
 
@@ -248,20 +104,9 @@ exports.State = State;
 /*!**********************************************************!*\
   !*** ./src/game/template/classes/Mechanics/Inventory.ts ***!
   \**********************************************************/
-/***/ ((__unused_webpack_module, exports) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Inventory = void 0;
-class Inventory {
-    constructor(items, size) {
-        this.items = items;
-        this.size = size;
-    }
-}
-exports.Inventory = Inventory;
-
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   Inventory: () => (/* binding */ Inventory)\n/* harmony export */ });\nclass Inventory {\n  constructor(items, size) {\n    this.items = items;\n    this.size = size;\n  }\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvZ2FtZS90ZW1wbGF0ZS9jbGFzc2VzL01lY2hhbmljcy9JbnZlbnRvcnkudHMiLCJtYXBwaW5ncyI6Ijs7OztBQUFNLE1BQU9BLFNBQVM7RUFDbEJDLFlBQVlDLEtBQUssRUFBRUMsSUFBSTtJQUNuQixJQUFJLENBQUNELEtBQUssR0FBR0EsS0FBSztJQUNsQixJQUFJLENBQUNDLElBQUksR0FBR0EsSUFBSTtFQUNwQiIsInNvdXJjZXMiOlsid2VicGFjazovL3Bhbm9wdGljb24vLi9zcmMvZ2FtZS90ZW1wbGF0ZS9jbGFzc2VzL01lY2hhbmljcy9JbnZlbnRvcnkudHM/MGRlMiJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgY2xhc3MgSW52ZW50b3J5IHtcbiAgICBjb25zdHJ1Y3RvcihpdGVtcywgc2l6ZSkge1xuICAgICAgICB0aGlzLml0ZW1zID0gaXRlbXM7XG4gICAgICAgIHRoaXMuc2l6ZSA9IHNpemU7XG4gICAgfVxufSJdLCJuYW1lcyI6WyJJbnZlbnRvcnkiLCJjb25zdHJ1Y3RvciIsIml0ZW1zIiwic2l6ZSJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/game/template/classes/Mechanics/Inventory.ts\n");
 
 /***/ }),
 
@@ -269,16 +114,9 @@ exports.Inventory = Inventory;
 /*!***************************************************!*\
   !*** ./src/game/template/instances/Area/Foyer.ts ***!
   \***************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Area_Foyer = void 0;
-const Area_1 = __webpack_require__(/*! ../../classes/Entities/Area */ "./src/game/template/classes/Entities/Area.ts");
-const Events_1 = __webpack_require__(/*! ../Game/Events */ "./src/game/template/instances/Game/Events.ts");
-exports.Area_Foyer = new Area_1.Area("Foyer", false, null, null, false, null, [], [], [], [], [Events_1.Event_EnterMansion], null, false);
-
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   Area_Foyer: () => (/* binding */ Area_Foyer)\n/* harmony export */ });\n/* harmony import */ var _classes_Entities_Area__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../classes/Entities/Area */ \"./src/game/template/classes/Entities/Area.ts\");\n/* harmony import */ var _Game_Events__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Game/Events */ \"./src/game/template/instances/Game/Events.ts\");\n\n\nconst Area_Foyer = new _classes_Entities_Area__WEBPACK_IMPORTED_MODULE_0__.Area(\"Foyer\", false, null, null, false, null, [], [], [], [], [_Game_Events__WEBPACK_IMPORTED_MODULE_1__.Event_EnterMansion], null, false);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvZ2FtZS90ZW1wbGF0ZS9pbnN0YW5jZXMvQXJlYS9Gb3llci50cyIsIm1hcHBpbmdzIjoiOzs7Ozs7QUFBbUQ7QUFDQztBQUU3QyxNQUFNRSxVQUFVLEdBQUcsSUFBSUYsd0RBQUksQ0FBQyxPQUFPLEVBQUUsS0FBSyxFQUFFLElBQUksRUFBRSxJQUFJLEVBQUUsS0FBSyxFQUFFLElBQUksRUFBRSxFQUFFLEVBQUUsRUFBRSxFQUFFLEVBQUUsRUFBRSxFQUFFLEVBQUUsQ0FBQ0MsNERBQWtCLENBQUMsRUFBRSxJQUFJLEVBQUUsS0FBSyxDQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vcGFub3B0aWNvbi8uL3NyYy9nYW1lL3RlbXBsYXRlL2luc3RhbmNlcy9BcmVhL0ZveWVyLnRzP2IwOTgiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQXJlYSB9IGZyb20gJy4uLy4uL2NsYXNzZXMvRW50aXRpZXMvQXJlYSc7XG5pbXBvcnQgeyBFdmVudF9FbnRlck1hbnNpb24gfSBmcm9tICcuLi9HYW1lL0V2ZW50cyc7XG5cbmV4cG9ydCBjb25zdCBBcmVhX0ZveWVyID0gbmV3IEFyZWEoXCJGb3llclwiLCBmYWxzZSwgbnVsbCwgbnVsbCwgZmFsc2UsIG51bGwsIFtdLCBbXSwgW10sIFtdLCBbRXZlbnRfRW50ZXJNYW5zaW9uXSwgbnVsbCwgZmFsc2UpO1xuIl0sIm5hbWVzIjpbIkFyZWEiLCJFdmVudF9FbnRlck1hbnNpb24iLCJBcmVhX0ZveWVyIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/game/template/instances/Area/Foyer.ts\n");
 
 /***/ }),
 
@@ -286,16 +124,9 @@ exports.Area_Foyer = new Area_1.Area("Foyer", false, null, null, false, null, []
 /*!*************************************************************!*\
   !*** ./src/game/template/instances/Area/MansionExterior.ts ***!
   \*************************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Area_MansionExterior = void 0;
-const Area_1 = __webpack_require__(/*! ../../classes/Entities/Area */ "./src/game/template/classes/Entities/Area.ts");
-const Foyer_1 = __webpack_require__(/*! ./Foyer */ "./src/game/template/instances/Area/Foyer.ts");
-exports.Area_MansionExterior = new Area_1.Area("Mansion Exterior", false, null, null, false, null, [Foyer_1.Area_Foyer], [], [], [], null, null, false);
-
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   Area_MansionExterior: () => (/* binding */ Area_MansionExterior)\n/* harmony export */ });\n/* harmony import */ var _classes_Entities_Area__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../classes/Entities/Area */ \"./src/game/template/classes/Entities/Area.ts\");\n/* harmony import */ var _Foyer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Foyer */ \"./src/game/template/instances/Area/Foyer.ts\");\n\n\nconst Area_MansionExterior = new _classes_Entities_Area__WEBPACK_IMPORTED_MODULE_0__.Area(\"Mansion Exterior\", false, null, null, false, null, [_Foyer__WEBPACK_IMPORTED_MODULE_1__.Area_Foyer], [], [], [], null, null, false);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvZ2FtZS90ZW1wbGF0ZS9pbnN0YW5jZXMvQXJlYS9NYW5zaW9uRXh0ZXJpb3IudHMiLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQ21EO0FBQ2Q7QUFFOUIsTUFBTUUsb0JBQW9CLEdBQUcsSUFBSUYsd0RBQUksQ0FBQyxrQkFBa0IsRUFBRSxLQUFLLEVBQUUsSUFBSSxFQUFFLElBQUksRUFBRSxLQUFLLEVBQUUsSUFBSSxFQUFFLENBQUNDLDhDQUFVLENBQUMsRUFBRSxFQUFFLEVBQUUsRUFBRSxFQUFFLEVBQUUsRUFBRSxJQUFJLEVBQUUsSUFBSSxFQUFFLEtBQUssQ0FBQyIsInNvdXJjZXMiOlsid2VicGFjazovL3Bhbm9wdGljb24vLi9zcmMvZ2FtZS90ZW1wbGF0ZS9pbnN0YW5jZXMvQXJlYS9NYW5zaW9uRXh0ZXJpb3IudHM/OGIwYSJdLCJzb3VyY2VzQ29udGVudCI6WyJcbmltcG9ydCB7IEFyZWEgfSBmcm9tIFwiLi4vLi4vY2xhc3Nlcy9FbnRpdGllcy9BcmVhXCI7XG5pbXBvcnQgeyBBcmVhX0ZveWVyIH0gZnJvbSBcIi4vRm95ZXJcIjtcblxuZXhwb3J0IGNvbnN0IEFyZWFfTWFuc2lvbkV4dGVyaW9yID0gbmV3IEFyZWEoXCJNYW5zaW9uIEV4dGVyaW9yXCIsIGZhbHNlLCBudWxsLCBudWxsLCBmYWxzZSwgbnVsbCwgW0FyZWFfRm95ZXJdLCBbXSwgW10sIFtdLCBudWxsLCBudWxsLCBmYWxzZSk7XG4iXSwibmFtZXMiOlsiQXJlYSIsIkFyZWFfRm95ZXIiLCJBcmVhX01hbnNpb25FeHRlcmlvciJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/game/template/instances/Area/MansionExterior.ts\n");
 
 /***/ }),
 
@@ -303,15 +134,9 @@ exports.Area_MansionExterior = new Area_1.Area("Mansion Exterior", false, null, 
 /*!****************************************************!*\
   !*** ./src/game/template/instances/Game/Events.ts ***!
   \****************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Event_EnterMansion = void 0;
-const Event_1 = __webpack_require__(/*! ../../classes/Game/Event */ "./src/game/template/classes/Game/Event.ts");
-exports.Event_EnterMansion = new Event_1.Event("Enter Mansion", "You enter the mansion.", () => { });
-
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   Event_EnterMansion: () => (/* binding */ Event_EnterMansion)\n/* harmony export */ });\n/* harmony import */ var _classes_Game_Event__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../classes/Game/Event */ \"./src/game/template/classes/Game/Event.ts\");\n\nconst Event_EnterMansion = new _classes_Game_Event__WEBPACK_IMPORTED_MODULE_0__.Event(\"Enter Mansion\", \"You enter the mansion.\", () => {});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvZ2FtZS90ZW1wbGF0ZS9pbnN0YW5jZXMvR2FtZS9FdmVudHMudHMiLCJtYXBwaW5ncyI6Ijs7Ozs7QUFBaUQ7QUFFMUMsTUFBTUMsa0JBQWtCLEdBQUcsSUFBSUQsc0RBQUssQ0FBQyxlQUFlLEVBQUUsd0JBQXdCLEVBQUUsTUFBSyxDQUFFLENBQUMsQ0FBQyIsInNvdXJjZXMiOlsid2VicGFjazovL3Bhbm9wdGljb24vLi9zcmMvZ2FtZS90ZW1wbGF0ZS9pbnN0YW5jZXMvR2FtZS9FdmVudHMudHM/NWQxZSJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBFdmVudCB9IGZyb20gXCIuLi8uLi9jbGFzc2VzL0dhbWUvRXZlbnRcIjtcblxuZXhwb3J0IGNvbnN0IEV2ZW50X0VudGVyTWFuc2lvbiA9IG5ldyBFdmVudChcIkVudGVyIE1hbnNpb25cIiwgXCJZb3UgZW50ZXIgdGhlIG1hbnNpb24uXCIsICgpID0+IHt9KTtcbiJdLCJuYW1lcyI6WyJFdmVudCIsIkV2ZW50X0VudGVyTWFuc2lvbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/game/template/instances/Game/Events.ts\n");
 
 /***/ }),
 
@@ -319,15 +144,9 @@ exports.Event_EnterMansion = new Event_1.Event("Enter Mansion", "You enter the m
 /*!***************************************************!*\
   !*** ./src/game/template/instances/Game/Flags.ts ***!
   \***************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.DID_FIRST_TUTORIAL = void 0;
-const Flag_1 = __webpack_require__(/*! ../../classes/Game/Flag */ "./src/game/template/classes/Game/Flag.ts");
-exports.DID_FIRST_TUTORIAL = new Flag_1.Flag("FIRST_TUTORIAL", false);
-
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   DID_FIRST_TUTORIAL: () => (/* binding */ DID_FIRST_TUTORIAL)\n/* harmony export */ });\n/* harmony import */ var _classes_Game_Flag__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../classes/Game/Flag */ \"./src/game/template/classes/Game/Flag.ts\");\n\nconst DID_FIRST_TUTORIAL = new _classes_Game_Flag__WEBPACK_IMPORTED_MODULE_0__.Flag(\"FIRST_TUTORIAL\", false);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvZ2FtZS90ZW1wbGF0ZS9pbnN0YW5jZXMvR2FtZS9GbGFncy50cyIsIm1hcHBpbmdzIjoiOzs7OztBQUErQztBQUV4QyxNQUFNQyxrQkFBa0IsR0FBRyxJQUFJRCxvREFBSSxDQUFDLGdCQUFnQixFQUFFLEtBQUssQ0FBQyIsInNvdXJjZXMiOlsid2VicGFjazovL3Bhbm9wdGljb24vLi9zcmMvZ2FtZS90ZW1wbGF0ZS9pbnN0YW5jZXMvR2FtZS9GbGFncy50cz84MmViIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEZsYWcgfSBmcm9tIFwiLi4vLi4vY2xhc3Nlcy9HYW1lL0ZsYWdcIjtcblxuZXhwb3J0IGNvbnN0IERJRF9GSVJTVF9UVVRPUklBTCA9IG5ldyBGbGFnKFwiRklSU1RfVFVUT1JJQUxcIiwgZmFsc2UpO1xuIl0sIm5hbWVzIjpbIkZsYWciLCJESURfRklSU1RfVFVUT1JJQUwiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/game/template/instances/Game/Flags.ts\n");
 
 /***/ }),
 
@@ -335,24 +154,9 @@ exports.DID_FIRST_TUTORIAL = new Flag_1.Flag("FIRST_TUTORIAL", false);
 /*!***************************************************!*\
   !*** ./src/game/template/instances/Game/State.ts ***!
   \***************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.$state = void 0;
-const State_1 = __webpack_require__(/*! ../../classes/Game/State */ "./src/game/template/classes/Game/State.ts");
-const Inventory_1 = __webpack_require__(/*! ../../classes/Mechanics/Inventory */ "./src/game/template/classes/Mechanics/Inventory.ts");
-const MansionExterior_1 = __webpack_require__(/*! ../Area/MansionExterior */ "./src/game/template/instances/Area/MansionExterior.ts");
-const Camera_1 = __webpack_require__(/*! ../Item/Camera */ "./src/game/template/instances/Item/Camera.ts");
-const Char_1 = __webpack_require__(/*! ../NPC/Char */ "./src/game/template/instances/NPC/Char.ts");
-const Player_1 = __webpack_require__(/*! ../Player/Player */ "./src/game/template/instances/Player/Player.ts");
-const Flags_1 = __webpack_require__(/*! ./Flags */ "./src/game/template/instances/Game/Flags.ts");
-const startingArea = MansionExterior_1.Area_MansionExterior;
-const startingInventory = new Inventory_1.Inventory([Camera_1.Item_Camera], 5);
-const startingTime = "16:31";
-exports.$state = new State_1.State(Player_1.$player, Char_1.$char, startingArea, startingInventory, 0, startingArea.inspectables, startingArea.goables, startingArea.doables, [Char_1.$char], 0, startingTime, [Flags_1.DID_FIRST_TUTORIAL], [], []);
-
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   $state: () => (/* binding */ $state)\n/* harmony export */ });\n/* harmony import */ var _classes_Game_State__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../classes/Game/State */ \"./src/game/template/classes/Game/State.ts\");\n/* harmony import */ var _classes_Mechanics_Inventory__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../classes/Mechanics/Inventory */ \"./src/game/template/classes/Mechanics/Inventory.ts\");\n/* harmony import */ var _Area_MansionExterior__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Area/MansionExterior */ \"./src/game/template/instances/Area/MansionExterior.ts\");\n/* harmony import */ var _Item_Camera__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Item/Camera */ \"./src/game/template/instances/Item/Camera.ts\");\n/* harmony import */ var _NPC_Char__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../NPC/Char */ \"./src/game/template/instances/NPC/Char.ts\");\n/* harmony import */ var _Player_Player__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Player/Player */ \"./src/game/template/instances/Player/Player.ts\");\n/* harmony import */ var _Flags__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Flags */ \"./src/game/template/instances/Game/Flags.ts\");\n\n\n\n\n\n\n\nconst startingArea = _Area_MansionExterior__WEBPACK_IMPORTED_MODULE_2__.Area_MansionExterior;\nconst startingInventory = new _classes_Mechanics_Inventory__WEBPACK_IMPORTED_MODULE_1__.Inventory([_Item_Camera__WEBPACK_IMPORTED_MODULE_3__.Item_Camera], 5);\nconst startingTime = \"16:31\";\nconst $state = new _classes_Game_State__WEBPACK_IMPORTED_MODULE_0__.State(_Player_Player__WEBPACK_IMPORTED_MODULE_5__.$player, _NPC_Char__WEBPACK_IMPORTED_MODULE_4__.$char, startingArea, startingInventory, 0, startingArea.inspectables, startingArea.goables, startingArea.doables, [_NPC_Char__WEBPACK_IMPORTED_MODULE_4__.$char], 0, startingTime, [_Flags__WEBPACK_IMPORTED_MODULE_6__.DID_FIRST_TUTORIAL], [], []);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvZ2FtZS90ZW1wbGF0ZS9pbnN0YW5jZXMvR2FtZS9TdGF0ZS50cyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7OztBQUFpRDtBQUNhO0FBQ0M7QUFDbEI7QUFDVDtBQUNPO0FBQ0U7QUFFN0MsTUFBTU8sWUFBWSxHQUFHTCx1RUFBb0I7QUFDekMsTUFBTU0saUJBQWlCLEdBQUcsSUFBSVAsbUVBQVMsQ0FBQyxDQUFDRSxxREFBVyxDQUFDLEVBQUUsQ0FBQyxDQUFDO0FBQ3pELE1BQU1NLFlBQVksR0FBRyxPQUFPO0FBRXJCLE1BQU1DLE1BQU0sR0FBRyxJQUFJVixzREFBSyxDQUM3QkssbURBQU8sRUFDUEQsNENBQUssRUFDTEcsWUFBWSxFQUNaQyxpQkFBaUIsRUFDakIsQ0FBQyxFQUNERCxZQUFZLENBQUNJLFlBQVksRUFDekJKLFlBQVksQ0FBQ0ssT0FBTyxFQUNwQkwsWUFBWSxDQUFDTSxPQUFPLEVBQ3BCLENBQUNULDRDQUFLLENBQUMsRUFDUCxDQUFDLEVBQ0RLLFlBQVksRUFDWixDQUFDSCxzREFBa0IsQ0FBQyxFQUNwQixFQUFFLEVBQ0YsRUFBRSxDQUNIIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vcGFub3B0aWNvbi8uL3NyYy9nYW1lL3RlbXBsYXRlL2luc3RhbmNlcy9HYW1lL1N0YXRlLnRzPzI0YjkiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgU3RhdGUgfSBmcm9tIFwiLi4vLi4vY2xhc3Nlcy9HYW1lL1N0YXRlXCI7XG5pbXBvcnQgeyBJbnZlbnRvcnkgfSBmcm9tIFwiLi4vLi4vY2xhc3Nlcy9NZWNoYW5pY3MvSW52ZW50b3J5XCI7XG5pbXBvcnQgeyBBcmVhX01hbnNpb25FeHRlcmlvciB9IGZyb20gXCIuLi9BcmVhL01hbnNpb25FeHRlcmlvclwiO1xuaW1wb3J0IHsgSXRlbV9DYW1lcmEgfSBmcm9tIFwiLi4vSXRlbS9DYW1lcmFcIjtcbmltcG9ydCB7ICRjaGFyIH0gZnJvbSBcIi4uL05QQy9DaGFyXCI7XG5pbXBvcnQgeyAkcGxheWVyIH0gZnJvbSBcIi4uL1BsYXllci9QbGF5ZXJcIjtcbmltcG9ydCB7IERJRF9GSVJTVF9UVVRPUklBTCB9IGZyb20gXCIuL0ZsYWdzXCI7XG5cbmNvbnN0IHN0YXJ0aW5nQXJlYSA9IEFyZWFfTWFuc2lvbkV4dGVyaW9yO1xuY29uc3Qgc3RhcnRpbmdJbnZlbnRvcnkgPSBuZXcgSW52ZW50b3J5KFtJdGVtX0NhbWVyYV0sIDUpO1xuY29uc3Qgc3RhcnRpbmdUaW1lID0gXCIxNjozMVwiO1xuXG5leHBvcnQgY29uc3QgJHN0YXRlID0gbmV3IFN0YXRlKFxuICAkcGxheWVyLFxuICAkY2hhcixcbiAgc3RhcnRpbmdBcmVhLFxuICBzdGFydGluZ0ludmVudG9yeSxcbiAgMCxcbiAgc3RhcnRpbmdBcmVhLmluc3BlY3RhYmxlcyxcbiAgc3RhcnRpbmdBcmVhLmdvYWJsZXMsXG4gIHN0YXJ0aW5nQXJlYS5kb2FibGVzLFxuICBbJGNoYXJdLFxuICAwLFxuICBzdGFydGluZ1RpbWUsXG4gIFtESURfRklSU1RfVFVUT1JJQUxdLFxuICBbXSxcbiAgW11cbik7XG4iXSwibmFtZXMiOlsiU3RhdGUiLCJJbnZlbnRvcnkiLCJBcmVhX01hbnNpb25FeHRlcmlvciIsIkl0ZW1fQ2FtZXJhIiwiJGNoYXIiLCIkcGxheWVyIiwiRElEX0ZJUlNUX1RVVE9SSUFMIiwic3RhcnRpbmdBcmVhIiwic3RhcnRpbmdJbnZlbnRvcnkiLCJzdGFydGluZ1RpbWUiLCIkc3RhdGUiLCJpbnNwZWN0YWJsZXMiLCJnb2FibGVzIiwiZG9hYmxlcyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/game/template/instances/Game/State.ts\n");
 
 /***/ }),
 
@@ -360,15 +164,9 @@ exports.$state = new State_1.State(Player_1.$player, Char_1.$char, startingArea,
 /*!****************************************************!*\
   !*** ./src/game/template/instances/Item/Camera.ts ***!
   \****************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Item_Camera = void 0;
-const Item_1 = __webpack_require__(/*! ../../classes/Entities/Item */ "./src/game/template/classes/Entities/Item.ts");
-exports.Item_Camera = new Item_1.Item("Camera", "A regular camera.", "It's a camera.", () => { }, "You take a picture.", 1);
-
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   Item_Camera: () => (/* binding */ Item_Camera)\n/* harmony export */ });\n/* harmony import */ var _classes_Entities_Item__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../classes/Entities/Item */ \"./src/game/template/classes/Entities/Item.ts\");\n\nconst Item_Camera = new _classes_Entities_Item__WEBPACK_IMPORTED_MODULE_0__.Item(\"Camera\", \"A regular camera.\", \"It's a camera.\", () => {}, \"You take a picture.\", 1);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvZ2FtZS90ZW1wbGF0ZS9pbnN0YW5jZXMvSXRlbS9DYW1lcmEudHMiLCJtYXBwaW5ncyI6Ijs7Ozs7QUFBbUQ7QUFFNUMsTUFBTUMsV0FBVyxHQUFHLElBQUlELHdEQUFJLENBQUMsUUFBUSxFQUFFLG1CQUFtQixFQUFFLGdCQUFnQixFQUFFLE1BQUssQ0FBRSxDQUFDLEVBQUUscUJBQXFCLEVBQUUsQ0FBQyxDQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vcGFub3B0aWNvbi8uL3NyYy9nYW1lL3RlbXBsYXRlL2luc3RhbmNlcy9JdGVtL0NhbWVyYS50cz9lYWQyIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEl0ZW0gfSBmcm9tIFwiLi4vLi4vY2xhc3Nlcy9FbnRpdGllcy9JdGVtXCI7XG5cbmV4cG9ydCBjb25zdCBJdGVtX0NhbWVyYSA9IG5ldyBJdGVtKFwiQ2FtZXJhXCIsIFwiQSByZWd1bGFyIGNhbWVyYS5cIiwgXCJJdCdzIGEgY2FtZXJhLlwiLCAoKSA9PiB7fSwgXCJZb3UgdGFrZSBhIHBpY3R1cmUuXCIsIDEpO1xuIl0sIm5hbWVzIjpbIkl0ZW0iLCJJdGVtX0NhbWVyYSJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/game/template/instances/Item/Camera.ts\n");
 
 /***/ }),
 
@@ -376,15 +174,9 @@ exports.Item_Camera = new Item_1.Item("Camera", "A regular camera.", "It's a cam
 /*!*************************************************!*\
   !*** ./src/game/template/instances/NPC/Char.ts ***!
   \*************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.$char = void 0;
-const NPC_1 = __webpack_require__(/*! ../../classes/Entities/NPC */ "./src/game/template/classes/Entities/NPC.ts");
-exports.$char = new NPC_1.NPC("char's name from ST", "char is... something.", () => { console.log("you talked to char."); });
-
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   $char: () => (/* binding */ $char)\n/* harmony export */ });\n/* harmony import */ var _classes_Entities_NPC__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../classes/Entities/NPC */ \"./src/game/template/classes/Entities/NPC.ts\");\n\nconst $char = new _classes_Entities_NPC__WEBPACK_IMPORTED_MODULE_0__.NPC(\"char's name from ST\", \"char is... something.\", () => {\n  console.log(\"you talked to char.\");\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvZ2FtZS90ZW1wbGF0ZS9pbnN0YW5jZXMvTlBDL0NoYXIudHMiLCJtYXBwaW5ncyI6Ijs7Ozs7QUFBaUQ7QUFFMUMsTUFBTUMsS0FBSyxHQUFHLElBQUlELHNEQUFHLENBQUMscUJBQXFCLEVBQUUsdUJBQXVCLEVBQUUsTUFBSztFQUFHRSxPQUFPLENBQUNDLEdBQUcsQ0FBQyxxQkFBcUIsQ0FBQztBQUFDLENBQUMsQ0FBQyIsInNvdXJjZXMiOlsid2VicGFjazovL3Bhbm9wdGljb24vLi9zcmMvZ2FtZS90ZW1wbGF0ZS9pbnN0YW5jZXMvTlBDL0NoYXIudHM/NDMyOSJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBOUEMgfSBmcm9tIFwiLi4vLi4vY2xhc3Nlcy9FbnRpdGllcy9OUENcIjtcblxuZXhwb3J0IGNvbnN0ICRjaGFyID0gbmV3IE5QQyhcImNoYXIncyBuYW1lIGZyb20gU1RcIiwgXCJjaGFyIGlzLi4uIHNvbWV0aGluZy5cIiwgKCkgPT4geyBjb25zb2xlLmxvZyhcInlvdSB0YWxrZWQgdG8gY2hhci5cIikgfSk7XG4iXSwibmFtZXMiOlsiTlBDIiwiJGNoYXIiLCJjb25zb2xlIiwibG9nIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/game/template/instances/NPC/Char.ts\n");
 
 /***/ }),
 
@@ -392,15 +184,9 @@ exports.$char = new NPC_1.NPC("char's name from ST", "char is... something.", ()
 /*!******************************************************!*\
   !*** ./src/game/template/instances/Player/Player.ts ***!
   \******************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.$player = void 0;
-const Player_1 = __webpack_require__(/*! ../../classes/Entities/Player */ "./src/game/template/classes/Entities/Player.ts");
-exports.$player = new Player_1.Player("st {{user}}");
-
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   $player: () => (/* binding */ $player)\n/* harmony export */ });\n/* harmony import */ var _classes_Entities_Player__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../classes/Entities/Player */ \"./src/game/template/classes/Entities/Player.ts\");\n\nconst $player = new _classes_Entities_Player__WEBPACK_IMPORTED_MODULE_0__.Player(\"st {{user}}\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvZ2FtZS90ZW1wbGF0ZS9pbnN0YW5jZXMvUGxheWVyL1BsYXllci50cyIsIm1hcHBpbmdzIjoiOzs7OztBQUF1RDtBQUVoRCxNQUFNQyxPQUFPLEdBQUcsSUFBSUQsNERBQU0sQ0FBQyxhQUFhLENBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9wYW5vcHRpY29uLy4vc3JjL2dhbWUvdGVtcGxhdGUvaW5zdGFuY2VzL1BsYXllci9QbGF5ZXIudHM/MWNjNiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBQbGF5ZXIgfSBmcm9tIFwiLi4vLi4vY2xhc3Nlcy9FbnRpdGllcy9QbGF5ZXJcIjtcblxuZXhwb3J0IGNvbnN0ICRwbGF5ZXIgPSBuZXcgUGxheWVyKFwic3Qge3t1c2VyfX1cIik7XG4iXSwibmFtZXMiOlsiUGxheWVyIiwiJHBsYXllciJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/game/template/instances/Player/Player.ts\n");
 
 /***/ }),
 
@@ -408,30 +194,9 @@ exports.$player = new Player_1.Player("st {{user}}");
 /*!******************************************************!*\
   !*** ./src/game/template/interfaces/Ables/Goable.ts ***!
   \******************************************************/
-/***/ ((__unused_webpack_module, exports) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Goable = void 0;
-class Goable {
-    constructor(name, is_godel, godel_type, godel_cycle_num, is_locked, unlocked_by, goables, inspectables, doables, npcs, on_enter, on_exit) {
-        this.name = name;
-        this.is_godel = is_godel;
-        this.godel_type = godel_type;
-        this.godel_cycle_num = godel_cycle_num;
-        this.is_locked = is_locked;
-        this.unlocked_by = unlocked_by;
-        this.goables = goables;
-        this.inspectables = inspectables;
-        this.doables = doables;
-        this.npcs = npcs;
-        this.on_enter = on_enter;
-        this.on_exit = on_exit;
-    }
-}
-exports.Goable = Goable;
-
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   Goable: () => (/* binding */ Goable)\n/* harmony export */ });\nclass Goable {\n  constructor(name, is_godel, godel_type, godel_cycle_num, is_locked, unlocked_by, goables, inspectables, doables, npcs, on_enter, on_exit) {\n    this.name = name;\n    this.is_godel = is_godel;\n    this.godel_type = godel_type;\n    this.godel_cycle_num = godel_cycle_num;\n    this.is_locked = is_locked;\n    this.unlocked_by = unlocked_by;\n    this.goables = goables;\n    this.inspectables = inspectables;\n    this.doables = doables;\n    this.npcs = npcs;\n    this.on_enter = on_enter;\n    this.on_exit = on_exit;\n  }\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvZ2FtZS90ZW1wbGF0ZS9pbnRlcmZhY2VzL0FibGVzL0dvYWJsZS50cyIsIm1hcHBpbmdzIjoiOzs7O0FBQU0sTUFBT0EsTUFBTTtFQUNmQyxZQUFZQyxJQUFJLEVBQUVDLFFBQVEsRUFBRUMsVUFBVSxFQUFFQyxlQUFlLEVBQUVDLFNBQVMsRUFBRUMsV0FBVyxFQUFFQyxPQUFPLEVBQUVDLFlBQVksRUFBRUMsT0FBTyxFQUFFQyxJQUFJLEVBQUVDLFFBQVEsRUFBRUMsT0FBTztJQUNwSSxJQUFJLENBQUNYLElBQUksR0FBR0EsSUFBSTtJQUNoQixJQUFJLENBQUNDLFFBQVEsR0FBR0EsUUFBUTtJQUN4QixJQUFJLENBQUNDLFVBQVUsR0FBR0EsVUFBVTtJQUM1QixJQUFJLENBQUNDLGVBQWUsR0FBR0EsZUFBZTtJQUN0QyxJQUFJLENBQUNDLFNBQVMsR0FBR0EsU0FBUztJQUMxQixJQUFJLENBQUNDLFdBQVcsR0FBR0EsV0FBVztJQUM5QixJQUFJLENBQUNDLE9BQU8sR0FBR0EsT0FBTztJQUN0QixJQUFJLENBQUNDLFlBQVksR0FBR0EsWUFBWTtJQUNoQyxJQUFJLENBQUNDLE9BQU8sR0FBR0EsT0FBTztJQUN0QixJQUFJLENBQUNDLElBQUksR0FBR0EsSUFBSTtJQUNoQixJQUFJLENBQUNDLFFBQVEsR0FBR0EsUUFBUTtJQUN4QixJQUFJLENBQUNDLE9BQU8sR0FBR0EsT0FBTztFQUMxQiIsInNvdXJjZXMiOlsid2VicGFjazovL3Bhbm9wdGljb24vLi9zcmMvZ2FtZS90ZW1wbGF0ZS9pbnRlcmZhY2VzL0FibGVzL0dvYWJsZS50cz84NThmIl0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBjbGFzcyBHb2FibGUge1xuICAgIGNvbnN0cnVjdG9yKG5hbWUsIGlzX2dvZGVsLCBnb2RlbF90eXBlLCBnb2RlbF9jeWNsZV9udW0sIGlzX2xvY2tlZCwgdW5sb2NrZWRfYnksIGdvYWJsZXMsIGluc3BlY3RhYmxlcywgZG9hYmxlcywgbnBjcywgb25fZW50ZXIsIG9uX2V4aXQpIHtcbiAgICAgICAgdGhpcy5uYW1lID0gbmFtZTtcbiAgICAgICAgdGhpcy5pc19nb2RlbCA9IGlzX2dvZGVsO1xuICAgICAgICB0aGlzLmdvZGVsX3R5cGUgPSBnb2RlbF90eXBlO1xuICAgICAgICB0aGlzLmdvZGVsX2N5Y2xlX251bSA9IGdvZGVsX2N5Y2xlX251bTtcbiAgICAgICAgdGhpcy5pc19sb2NrZWQgPSBpc19sb2NrZWQ7XG4gICAgICAgIHRoaXMudW5sb2NrZWRfYnkgPSB1bmxvY2tlZF9ieTtcbiAgICAgICAgdGhpcy5nb2FibGVzID0gZ29hYmxlcztcbiAgICAgICAgdGhpcy5pbnNwZWN0YWJsZXMgPSBpbnNwZWN0YWJsZXM7XG4gICAgICAgIHRoaXMuZG9hYmxlcyA9IGRvYWJsZXM7XG4gICAgICAgIHRoaXMubnBjcyA9IG5wY3M7XG4gICAgICAgIHRoaXMub25fZW50ZXIgPSBvbl9lbnRlcjtcbiAgICAgICAgdGhpcy5vbl9leGl0ID0gb25fZXhpdDtcbiAgICB9XG59Il0sIm5hbWVzIjpbIkdvYWJsZSIsImNvbnN0cnVjdG9yIiwibmFtZSIsImlzX2dvZGVsIiwiZ29kZWxfdHlwZSIsImdvZGVsX2N5Y2xlX251bSIsImlzX2xvY2tlZCIsInVubG9ja2VkX2J5IiwiZ29hYmxlcyIsImluc3BlY3RhYmxlcyIsImRvYWJsZXMiLCJucGNzIiwib25fZW50ZXIiLCJvbl9leGl0Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/game/template/interfaces/Ables/Goable.ts\n");
 
 /***/ }),
 
@@ -439,34 +204,9 @@ exports.Goable = Goable;
 /*!**********************!*\
   !*** ./src/index.ts ***!
   \**********************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-const slash_commands_1 = __webpack_require__(/*! ./st/slash-commands */ "./src/st/slash-commands.ts");
-// Game
-const listeners_1 = __webpack_require__(/*! ./game/st/listeners */ "./src/game/st/listeners.ts");
-(0, slash_commands_1.registerSlashCommands)();
-jQuery(() => __awaiter(void 0, void 0, void 0, function* () {
-    try {
-        (0, listeners_1.registerListeners)();
-    }
-    catch (error) {
-        console.error('[Panopticon] ERROR:', error);
-    }
-}));
-// Game | state > ST | CMD > Game | state > ST...
-
+eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _st_slash_commands__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./st/slash-commands */ \"./src/st/slash-commands.ts\");\n/* harmony import */ var _game_st_listeners__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./game/st/listeners */ \"./src/game/st/listeners.ts\");\nvar __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_st_slash_commands__WEBPACK_IMPORTED_MODULE_0__, _game_st_listeners__WEBPACK_IMPORTED_MODULE_1__]);\n([_st_slash_commands__WEBPACK_IMPORTED_MODULE_0__, _game_st_listeners__WEBPACK_IMPORTED_MODULE_1__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);\n\n// Game\n\n(0,_st_slash_commands__WEBPACK_IMPORTED_MODULE_0__.registerSlashCommands)();\njQuery(async () => {\n  try {\n    (0,_game_st_listeners__WEBPACK_IMPORTED_MODULE_1__.registerListeners)();\n  } catch (error) {\n    console.error('[Panopticon] ERROR:', error);\n  }\n});\n// Game | state > ST | CMD > Game | state > ST...\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaW5kZXgudHMiLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQTREO0FBQzVEO0FBQ3dEO0FBRXhEQSx5RUFBcUIsRUFBRTtBQUV2QkUsTUFBTSxDQUFDLFlBQVc7RUFDZCxJQUFJO0lBQ0FELHFFQUFpQixFQUFFO0VBQ3ZCLENBQUMsQ0FBQyxPQUFPRSxLQUFLLEVBQUU7SUFDWkMsT0FBTyxDQUFDRCxLQUFLLENBQUMscUJBQXFCLEVBQUVBLEtBQUssQ0FBQztFQUMvQztBQUNKLENBQUMsQ0FBQztBQUVGLGlEIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vcGFub3B0aWNvbi8uL3NyYy9pbmRleC50cz9mZmI0Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHJlZ2lzdGVyU2xhc2hDb21tYW5kcyB9IGZyb20gJy4vc3Qvc2xhc2gtY29tbWFuZHMnO1xuLy8gR2FtZVxuaW1wb3J0IHsgcmVnaXN0ZXJMaXN0ZW5lcnMgfSBmcm9tICcuL2dhbWUvc3QvbGlzdGVuZXJzJztcblxucmVnaXN0ZXJTbGFzaENvbW1hbmRzKCk7XG5cbmpRdWVyeShhc3luYyAoKSA9PiB7XG4gICAgdHJ5IHtcbiAgICAgICAgcmVnaXN0ZXJMaXN0ZW5lcnMoKTtcbiAgICB9IGNhdGNoIChlcnJvcikge1xuICAgICAgICBjb25zb2xlLmVycm9yKCdbUGFub3B0aWNvbl0gRVJST1I6JywgZXJyb3IpO1xuICAgIH1cbn0pO1xuXG4vLyBHYW1lIHwgc3RhdGUgPiBTVCB8IENNRCA+IEdhbWUgfCBzdGF0ZSA+IFNULi4uXG4iXSwibmFtZXMiOlsicmVnaXN0ZXJTbGFzaENvbW1hbmRzIiwicmVnaXN0ZXJMaXN0ZW5lcnMiLCJqUXVlcnkiLCJlcnJvciIsImNvbnNvbGUiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/index.ts\n");
 
 /***/ }),
 
@@ -474,119 +214,19 @@ jQuery(() => __awaiter(void 0, void 0, void 0, function* () {
 /*!**********************************!*\
   !*** ./src/st/slash-commands.ts ***!
   \**********************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
+eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   registerSlashCommands: () => (/* binding */ registerSlashCommands)\n/* harmony export */ });\n/* harmony import */ var _st_imports__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./st-imports */ \"./src/st/st-imports.ts\");\nvar __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_st_imports__WEBPACK_IMPORTED_MODULE_0__]);\n_st_imports__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];\n\nconst cmd_types = {\n  GO: \"GO\",\n  INSPECT: \"INSPECT\",\n  TALK: \"TALK\",\n  USE: \"USE\",\n  DO: \"DO\"\n};\nasync function slash_emitEvent(pipe) {\n  console.log(pipe, \"event from slash_emitEvent\");\n  await _st_imports__WEBPACK_IMPORTED_MODULE_0__.eventSource.emit(pipe);\n  return \"\";\n}\nasync function slash_processCMD(pipe) {\n  const {\n    type,\n    target\n  } = pipe;\n  console.log(`TYPE:`, type);\n  console.log(`TARGET:`, target);\n  return \"\";\n}\nasync function slash_emitEvent_gameStateSave() {\n  await _st_imports__WEBPACK_IMPORTED_MODULE_0__.eventSource.emit(\"game-state-save\");\n  return \"\";\n}\nasync function slash_emitEvent_gameStateLoad() {\n  await _st_imports__WEBPACK_IMPORTED_MODULE_0__.eventSource.emit(\"game-state-load\");\n  return \"\";\n}\nfunction registerSlashCommands() {\n  // > /emit\n  _st_imports__WEBPACK_IMPORTED_MODULE_0__.SlashCommandParser.addCommandObject(_st_imports__WEBPACK_IMPORTED_MODULE_0__.SlashCommand.fromProps({\n    name: \"emit\",\n    callback: slash_emitEvent,\n    aliases: [\"e\", \"event\", \"emit-event\"],\n    unnamedArgumentList: [_st_imports__WEBPACK_IMPORTED_MODULE_0__.SlashCommandArgument.fromProps({\n      description: \"Name of custom event\",\n      typeList: [_st_imports__WEBPACK_IMPORTED_MODULE_0__.ARGUMENT_TYPE.STRING],\n      isRequired: true\n    })],\n    helpString: \"Emit a custom event.\"\n  }));\n  // > /@cmd\n  _st_imports__WEBPACK_IMPORTED_MODULE_0__.SlashCommandParser.addCommandObject(_st_imports__WEBPACK_IMPORTED_MODULE_0__.SlashCommand.fromProps({\n    name: \"@cmd\",\n    callback: slash_processCMD,\n    aliases: [\"game-cmd\"],\n    namedArgumentList: [_st_imports__WEBPACK_IMPORTED_MODULE_0__.SlashCommandNamedArgument.fromProps({\n      name: \"type\",\n      description: \"Type of command\",\n      typeList: [_st_imports__WEBPACK_IMPORTED_MODULE_0__.ARGUMENT_TYPE.STRING],\n      enumList: [new _st_imports__WEBPACK_IMPORTED_MODULE_0__.SlashCommandEnumValue(cmd_types.GO, cmd_types.GO, _st_imports__WEBPACK_IMPORTED_MODULE_0__.enumTypes.enum), new _st_imports__WEBPACK_IMPORTED_MODULE_0__.SlashCommandEnumValue(cmd_types.INSPECT, cmd_types.INSPECT, _st_imports__WEBPACK_IMPORTED_MODULE_0__.enumTypes.enum), new _st_imports__WEBPACK_IMPORTED_MODULE_0__.SlashCommandEnumValue(cmd_types.TALK, cmd_types.TALK, _st_imports__WEBPACK_IMPORTED_MODULE_0__.enumTypes.enum), new _st_imports__WEBPACK_IMPORTED_MODULE_0__.SlashCommandEnumValue(cmd_types.USE, cmd_types.USE, _st_imports__WEBPACK_IMPORTED_MODULE_0__.enumTypes.enum), new _st_imports__WEBPACK_IMPORTED_MODULE_0__.SlashCommandEnumValue(cmd_types.DO, cmd_types.DO, _st_imports__WEBPACK_IMPORTED_MODULE_0__.enumTypes.enum)],\n      isRequired: true\n    }), _st_imports__WEBPACK_IMPORTED_MODULE_0__.SlashCommandNamedArgument.fromProps({\n      name: \"target\",\n      description: \"Unique identifier indicating what the command is targeting.\",\n      typeList: [_st_imports__WEBPACK_IMPORTED_MODULE_0__.ARGUMENT_TYPE.STRING],\n      isRequired: true\n    })],\n    helpString: \"Send a request for a game command.\"\n  }));\n  // > /@save\n  _st_imports__WEBPACK_IMPORTED_MODULE_0__.SlashCommandParser.addCommandObject(_st_imports__WEBPACK_IMPORTED_MODULE_0__.SlashCommand.fromProps({\n    name: \"@save\",\n    callback: slash_emitEvent_gameStateSave,\n    aliases: [\"game-save\", \"game-state-save\"],\n    helpString: \"DEV: Shorthand to emit game-state-save event, which requests to save current game state into localStorage.\"\n  }));\n  // > /@load\n  _st_imports__WEBPACK_IMPORTED_MODULE_0__.SlashCommandParser.addCommandObject(_st_imports__WEBPACK_IMPORTED_MODULE_0__.SlashCommand.fromProps({\n    name: \"@load\",\n    callback: slash_emitEvent_gameStateLoad,\n    aliases: [\"game-load\", \"game-state-load\"],\n    helpString: \"DEV: Shorthand to emit game-state-load event, which requests to load current game state from localStorage.\"\n  }));\n}\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvc3Qvc2xhc2gtY29tbWFuZHMudHMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7QUFTc0I7QUFFdEIsTUFBTVEsU0FBUyxHQUFHO0VBQ2hCQyxFQUFFLEVBQUUsSUFBSTtFQUNSQyxPQUFPLEVBQUUsU0FBUztFQUNsQkMsSUFBSSxFQUFFLE1BQU07RUFDWkMsR0FBRyxFQUFFLEtBQUs7RUFDVkMsRUFBRSxFQUFFO0NBQ0w7QUFFRCxlQUFlQyxlQUFlQSxDQUFDQyxJQUFJO0VBQ2pDQyxPQUFPLENBQUNDLEdBQUcsQ0FBQ0YsSUFBSSxFQUFFLDRCQUE0QixDQUFDO0VBQy9DLE1BQU1iLG9EQUFXLENBQUNnQixJQUFJLENBQUNILElBQUksQ0FBQztFQUM1QixPQUFPLEVBQUU7QUFDWDtBQUVBLGVBQWVJLGdCQUFnQkEsQ0FBQ0osSUFBSTtFQUNsQyxNQUFNO0lBQUVLLElBQUk7SUFBRUM7RUFBTSxDQUFFLEdBQUdOLElBQUk7RUFFN0JDLE9BQU8sQ0FBQ0MsR0FBRyxDQUFDLE9BQU8sRUFBRUcsSUFBSSxDQUFDO0VBQzFCSixPQUFPLENBQUNDLEdBQUcsQ0FBQyxTQUFTLEVBQUVJLE1BQU0sQ0FBQztFQUU5QixPQUFPLEVBQUU7QUFDWDtBQUVBLGVBQWVDLDZCQUE2QkEsQ0FBQTtFQUMxQyxNQUFNcEIsb0RBQVcsQ0FBQ2dCLElBQUksQ0FBQyxpQkFBaUIsQ0FBQztFQUN6QyxPQUFPLEVBQUU7QUFDWDtBQUVBLGVBQWVLLDZCQUE2QkEsQ0FBQTtFQUMxQyxNQUFNckIsb0RBQVcsQ0FBQ2dCLElBQUksQ0FBQyxpQkFBaUIsQ0FBQztFQUN6QyxPQUFPLEVBQUU7QUFDWDtBQUVNLFNBQVVNLHFCQUFxQkEsQ0FBQTtFQUNuQztFQUNBakIsMkRBQWtCLENBQUNrQixnQkFBZ0IsQ0FDakN0QixxREFBWSxDQUFDdUIsU0FBUyxDQUFDO0lBQ3JCQyxJQUFJLEVBQUUsTUFBTTtJQUNaQyxRQUFRLEVBQUVkLGVBQWU7SUFDekJlLE9BQU8sRUFBRSxDQUFDLEdBQUcsRUFBRSxPQUFPLEVBQUUsWUFBWSxDQUFDO0lBQ3JDQyxtQkFBbUIsRUFBRSxDQUNuQjFCLDZEQUFvQixDQUFDc0IsU0FBUyxDQUFDO01BQzdCSyxXQUFXLEVBQUUsc0JBQXNCO01BQ25DQyxRQUFRLEVBQUUsQ0FBQ2hDLHNEQUFhLENBQUNpQyxNQUFNLENBQUM7TUFDaENDLFVBQVUsRUFBRTtLQUNiLENBQUMsQ0FDSDtJQUNEQyxVQUFVLEVBQUU7R0FDYixDQUFDLENBQ0g7RUFFRDtFQUNBNUIsMkRBQWtCLENBQUNrQixnQkFBZ0IsQ0FDakN0QixxREFBWSxDQUFDdUIsU0FBUyxDQUFDO0lBQ3JCQyxJQUFJLEVBQUUsTUFBTTtJQUNaQyxRQUFRLEVBQUVULGdCQUFnQjtJQUMxQlUsT0FBTyxFQUFFLENBQUMsVUFBVSxDQUFDO0lBQ3JCTyxpQkFBaUIsRUFBRSxDQUNqQjlCLGtFQUF5QixDQUFDb0IsU0FBUyxDQUFDO01BQ2xDQyxJQUFJLEVBQUUsTUFBTTtNQUNaSSxXQUFXLEVBQUUsaUJBQWlCO01BQzlCQyxRQUFRLEVBQUUsQ0FBQ2hDLHNEQUFhLENBQUNpQyxNQUFNLENBQUM7TUFDaENJLFFBQVEsRUFBRSxDQUNSLElBQUloQyw4REFBcUIsQ0FDdkJHLFNBQVMsQ0FBQ0MsRUFBRSxFQUNaRCxTQUFTLENBQUNDLEVBQUUsRUFDWlIsa0RBQVMsQ0FBQ3FDLElBQUksQ0FDZixFQUNELElBQUlqQyw4REFBcUIsQ0FDdkJHLFNBQVMsQ0FBQ0UsT0FBTyxFQUNqQkYsU0FBUyxDQUFDRSxPQUFPLEVBQ2pCVCxrREFBUyxDQUFDcUMsSUFBSSxDQUNmLEVBQ0QsSUFBSWpDLDhEQUFxQixDQUN2QkcsU0FBUyxDQUFDRyxJQUFJLEVBQ2RILFNBQVMsQ0FBQ0csSUFBSSxFQUNkVixrREFBUyxDQUFDcUMsSUFBSSxDQUNmLEVBQ0QsSUFBSWpDLDhEQUFxQixDQUN2QkcsU0FBUyxDQUFDSSxHQUFHLEVBQ2JKLFNBQVMsQ0FBQ0ksR0FBRyxFQUNiWCxrREFBUyxDQUFDcUMsSUFBSSxDQUNmLEVBQ0QsSUFBSWpDLDhEQUFxQixDQUN2QkcsU0FBUyxDQUFDSyxFQUFFLEVBQ1pMLFNBQVMsQ0FBQ0ssRUFBRSxFQUNaWixrREFBUyxDQUFDcUMsSUFBSSxDQUNmLENBQ0Y7TUFDREosVUFBVSxFQUFFO0tBQ2IsQ0FBQyxFQUNGNUIsa0VBQXlCLENBQUNvQixTQUFTLENBQUM7TUFDbENDLElBQUksRUFBRSxRQUFRO01BQ2RJLFdBQVcsRUFDVCw2REFBNkQ7TUFDL0RDLFFBQVEsRUFBRSxDQUFDaEMsc0RBQWEsQ0FBQ2lDLE1BQU0sQ0FBQztNQUNoQ0MsVUFBVSxFQUFFO0tBQ2IsQ0FBQyxDQUNIO0lBQ0RDLFVBQVUsRUFBRTtHQUNiLENBQUMsQ0FDSDtFQUVEO0VBQ0E1QiwyREFBa0IsQ0FBQ2tCLGdCQUFnQixDQUNqQ3RCLHFEQUFZLENBQUN1QixTQUFTLENBQUM7SUFDckJDLElBQUksRUFBRSxPQUFPO0lBQ2JDLFFBQVEsRUFBRU4sNkJBQTZCO0lBQ3ZDTyxPQUFPLEVBQUUsQ0FBQyxXQUFXLEVBQUUsaUJBQWlCLENBQUM7SUFDekNNLFVBQVUsRUFDUjtHQUNILENBQUMsQ0FDSDtFQUVEO0VBQ0E1QiwyREFBa0IsQ0FBQ2tCLGdCQUFnQixDQUNqQ3RCLHFEQUFZLENBQUN1QixTQUFTLENBQUM7SUFDckJDLElBQUksRUFBRSxPQUFPO0lBQ2JDLFFBQVEsRUFBRUwsNkJBQTZCO0lBQ3ZDTSxPQUFPLEVBQUUsQ0FBQyxXQUFXLEVBQUUsaUJBQWlCLENBQUM7SUFDekNNLFVBQVUsRUFDUjtHQUNILENBQUMsQ0FDSDtBQUNILEMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9wYW5vcHRpY29uLy4vc3JjL3N0L3NsYXNoLWNvbW1hbmRzLnRzPzNhMWYiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtcbiAgQVJHVU1FTlRfVFlQRSxcbiAgZW51bVR5cGVzLFxuICBldmVudFNvdXJjZSxcbiAgU2xhc2hDb21tYW5kLFxuICBTbGFzaENvbW1hbmRBcmd1bWVudCxcbiAgU2xhc2hDb21tYW5kRW51bVZhbHVlLFxuICBTbGFzaENvbW1hbmROYW1lZEFyZ3VtZW50LFxuICBTbGFzaENvbW1hbmRQYXJzZXIsXG59IGZyb20gXCIuL3N0LWltcG9ydHNcIjtcblxuY29uc3QgY21kX3R5cGVzID0ge1xuICBHTzogXCJHT1wiLFxuICBJTlNQRUNUOiBcIklOU1BFQ1RcIixcbiAgVEFMSzogXCJUQUxLXCIsXG4gIFVTRTogXCJVU0VcIixcbiAgRE86IFwiRE9cIixcbn07XG5cbmFzeW5jIGZ1bmN0aW9uIHNsYXNoX2VtaXRFdmVudChwaXBlKSB7XG4gIGNvbnNvbGUubG9nKHBpcGUsIFwiZXZlbnQgZnJvbSBzbGFzaF9lbWl0RXZlbnRcIik7XG4gIGF3YWl0IGV2ZW50U291cmNlLmVtaXQocGlwZSk7XG4gIHJldHVybiBcIlwiO1xufVxuXG5hc3luYyBmdW5jdGlvbiBzbGFzaF9wcm9jZXNzQ01EKHBpcGUpIHtcbiAgY29uc3QgeyB0eXBlLCB0YXJnZXQgfSA9IHBpcGU7XG5cbiAgY29uc29sZS5sb2coYFRZUEU6YCwgdHlwZSk7XG4gIGNvbnNvbGUubG9nKGBUQVJHRVQ6YCwgdGFyZ2V0KTtcblxuICByZXR1cm4gXCJcIjtcbn1cblxuYXN5bmMgZnVuY3Rpb24gc2xhc2hfZW1pdEV2ZW50X2dhbWVTdGF0ZVNhdmUoKSB7XG4gIGF3YWl0IGV2ZW50U291cmNlLmVtaXQoXCJnYW1lLXN0YXRlLXNhdmVcIik7XG4gIHJldHVybiBcIlwiO1xufVxuXG5hc3luYyBmdW5jdGlvbiBzbGFzaF9lbWl0RXZlbnRfZ2FtZVN0YXRlTG9hZCgpIHtcbiAgYXdhaXQgZXZlbnRTb3VyY2UuZW1pdChcImdhbWUtc3RhdGUtbG9hZFwiKTtcbiAgcmV0dXJuIFwiXCI7XG59XG5cbmV4cG9ydCBmdW5jdGlvbiByZWdpc3RlclNsYXNoQ29tbWFuZHMoKSB7XG4gIC8vID4gL2VtaXRcbiAgU2xhc2hDb21tYW5kUGFyc2VyLmFkZENvbW1hbmRPYmplY3QoXG4gICAgU2xhc2hDb21tYW5kLmZyb21Qcm9wcyh7XG4gICAgICBuYW1lOiBcImVtaXRcIixcbiAgICAgIGNhbGxiYWNrOiBzbGFzaF9lbWl0RXZlbnQsXG4gICAgICBhbGlhc2VzOiBbXCJlXCIsIFwiZXZlbnRcIiwgXCJlbWl0LWV2ZW50XCJdLFxuICAgICAgdW5uYW1lZEFyZ3VtZW50TGlzdDogW1xuICAgICAgICBTbGFzaENvbW1hbmRBcmd1bWVudC5mcm9tUHJvcHMoe1xuICAgICAgICAgIGRlc2NyaXB0aW9uOiBcIk5hbWUgb2YgY3VzdG9tIGV2ZW50XCIsXG4gICAgICAgICAgdHlwZUxpc3Q6IFtBUkdVTUVOVF9UWVBFLlNUUklOR10sXG4gICAgICAgICAgaXNSZXF1aXJlZDogdHJ1ZSxcbiAgICAgICAgfSksXG4gICAgICBdLFxuICAgICAgaGVscFN0cmluZzogXCJFbWl0IGEgY3VzdG9tIGV2ZW50LlwiLFxuICAgIH0pXG4gICk7XG5cbiAgLy8gPiAvQGNtZFxuICBTbGFzaENvbW1hbmRQYXJzZXIuYWRkQ29tbWFuZE9iamVjdChcbiAgICBTbGFzaENvbW1hbmQuZnJvbVByb3BzKHtcbiAgICAgIG5hbWU6IFwiQGNtZFwiLFxuICAgICAgY2FsbGJhY2s6IHNsYXNoX3Byb2Nlc3NDTUQsXG4gICAgICBhbGlhc2VzOiBbXCJnYW1lLWNtZFwiXSxcbiAgICAgIG5hbWVkQXJndW1lbnRMaXN0OiBbXG4gICAgICAgIFNsYXNoQ29tbWFuZE5hbWVkQXJndW1lbnQuZnJvbVByb3BzKHtcbiAgICAgICAgICBuYW1lOiBcInR5cGVcIixcbiAgICAgICAgICBkZXNjcmlwdGlvbjogXCJUeXBlIG9mIGNvbW1hbmRcIixcbiAgICAgICAgICB0eXBlTGlzdDogW0FSR1VNRU5UX1RZUEUuU1RSSU5HXSxcbiAgICAgICAgICBlbnVtTGlzdDogW1xuICAgICAgICAgICAgbmV3IFNsYXNoQ29tbWFuZEVudW1WYWx1ZShcbiAgICAgICAgICAgICAgY21kX3R5cGVzLkdPLFxuICAgICAgICAgICAgICBjbWRfdHlwZXMuR08sXG4gICAgICAgICAgICAgIGVudW1UeXBlcy5lbnVtXG4gICAgICAgICAgICApLFxuICAgICAgICAgICAgbmV3IFNsYXNoQ29tbWFuZEVudW1WYWx1ZShcbiAgICAgICAgICAgICAgY21kX3R5cGVzLklOU1BFQ1QsXG4gICAgICAgICAgICAgIGNtZF90eXBlcy5JTlNQRUNULFxuICAgICAgICAgICAgICBlbnVtVHlwZXMuZW51bVxuICAgICAgICAgICAgKSxcbiAgICAgICAgICAgIG5ldyBTbGFzaENvbW1hbmRFbnVtVmFsdWUoXG4gICAgICAgICAgICAgIGNtZF90eXBlcy5UQUxLLFxuICAgICAgICAgICAgICBjbWRfdHlwZXMuVEFMSyxcbiAgICAgICAgICAgICAgZW51bVR5cGVzLmVudW1cbiAgICAgICAgICAgICksXG4gICAgICAgICAgICBuZXcgU2xhc2hDb21tYW5kRW51bVZhbHVlKFxuICAgICAgICAgICAgICBjbWRfdHlwZXMuVVNFLFxuICAgICAgICAgICAgICBjbWRfdHlwZXMuVVNFLFxuICAgICAgICAgICAgICBlbnVtVHlwZXMuZW51bVxuICAgICAgICAgICAgKSxcbiAgICAgICAgICAgIG5ldyBTbGFzaENvbW1hbmRFbnVtVmFsdWUoXG4gICAgICAgICAgICAgIGNtZF90eXBlcy5ETyxcbiAgICAgICAgICAgICAgY21kX3R5cGVzLkRPLFxuICAgICAgICAgICAgICBlbnVtVHlwZXMuZW51bVxuICAgICAgICAgICAgKSxcbiAgICAgICAgICBdLFxuICAgICAgICAgIGlzUmVxdWlyZWQ6IHRydWUsXG4gICAgICAgIH0pLFxuICAgICAgICBTbGFzaENvbW1hbmROYW1lZEFyZ3VtZW50LmZyb21Qcm9wcyh7XG4gICAgICAgICAgbmFtZTogXCJ0YXJnZXRcIixcbiAgICAgICAgICBkZXNjcmlwdGlvbjpcbiAgICAgICAgICAgIFwiVW5pcXVlIGlkZW50aWZpZXIgaW5kaWNhdGluZyB3aGF0IHRoZSBjb21tYW5kIGlzIHRhcmdldGluZy5cIixcbiAgICAgICAgICB0eXBlTGlzdDogW0FSR1VNRU5UX1RZUEUuU1RSSU5HXSxcbiAgICAgICAgICBpc1JlcXVpcmVkOiB0cnVlLFxuICAgICAgICB9KSxcbiAgICAgIF0sXG4gICAgICBoZWxwU3RyaW5nOiBcIlNlbmQgYSByZXF1ZXN0IGZvciBhIGdhbWUgY29tbWFuZC5cIixcbiAgICB9KVxuICApO1xuXG4gIC8vID4gL0BzYXZlXG4gIFNsYXNoQ29tbWFuZFBhcnNlci5hZGRDb21tYW5kT2JqZWN0KFxuICAgIFNsYXNoQ29tbWFuZC5mcm9tUHJvcHMoe1xuICAgICAgbmFtZTogXCJAc2F2ZVwiLFxuICAgICAgY2FsbGJhY2s6IHNsYXNoX2VtaXRFdmVudF9nYW1lU3RhdGVTYXZlLFxuICAgICAgYWxpYXNlczogW1wiZ2FtZS1zYXZlXCIsIFwiZ2FtZS1zdGF0ZS1zYXZlXCJdLFxuICAgICAgaGVscFN0cmluZzpcbiAgICAgICAgXCJERVY6IFNob3J0aGFuZCB0byBlbWl0IGdhbWUtc3RhdGUtc2F2ZSBldmVudCwgd2hpY2ggcmVxdWVzdHMgdG8gc2F2ZSBjdXJyZW50IGdhbWUgc3RhdGUgaW50byBsb2NhbFN0b3JhZ2UuXCIsXG4gICAgfSlcbiAgKTtcblxuICAvLyA+IC9AbG9hZFxuICBTbGFzaENvbW1hbmRQYXJzZXIuYWRkQ29tbWFuZE9iamVjdChcbiAgICBTbGFzaENvbW1hbmQuZnJvbVByb3BzKHtcbiAgICAgIG5hbWU6IFwiQGxvYWRcIixcbiAgICAgIGNhbGxiYWNrOiBzbGFzaF9lbWl0RXZlbnRfZ2FtZVN0YXRlTG9hZCxcbiAgICAgIGFsaWFzZXM6IFtcImdhbWUtbG9hZFwiLCBcImdhbWUtc3RhdGUtbG9hZFwiXSxcbiAgICAgIGhlbHBTdHJpbmc6XG4gICAgICAgIFwiREVWOiBTaG9ydGhhbmQgdG8gZW1pdCBnYW1lLXN0YXRlLWxvYWQgZXZlbnQsIHdoaWNoIHJlcXVlc3RzIHRvIGxvYWQgY3VycmVudCBnYW1lIHN0YXRlIGZyb20gbG9jYWxTdG9yYWdlLlwiLFxuICAgIH0pXG4gICk7XG59XG4iXSwibmFtZXMiOlsiQVJHVU1FTlRfVFlQRSIsImVudW1UeXBlcyIsImV2ZW50U291cmNlIiwiU2xhc2hDb21tYW5kIiwiU2xhc2hDb21tYW5kQXJndW1lbnQiLCJTbGFzaENvbW1hbmRFbnVtVmFsdWUiLCJTbGFzaENvbW1hbmROYW1lZEFyZ3VtZW50IiwiU2xhc2hDb21tYW5kUGFyc2VyIiwiY21kX3R5cGVzIiwiR08iLCJJTlNQRUNUIiwiVEFMSyIsIlVTRSIsIkRPIiwic2xhc2hfZW1pdEV2ZW50IiwicGlwZSIsImNvbnNvbGUiLCJsb2ciLCJlbWl0Iiwic2xhc2hfcHJvY2Vzc0NNRCIsInR5cGUiLCJ0YXJnZXQiLCJzbGFzaF9lbWl0RXZlbnRfZ2FtZVN0YXRlU2F2ZSIsInNsYXNoX2VtaXRFdmVudF9nYW1lU3RhdGVMb2FkIiwicmVnaXN0ZXJTbGFzaENvbW1hbmRzIiwiYWRkQ29tbWFuZE9iamVjdCIsImZyb21Qcm9wcyIsIm5hbWUiLCJjYWxsYmFjayIsImFsaWFzZXMiLCJ1bm5hbWVkQXJndW1lbnRMaXN0IiwiZGVzY3JpcHRpb24iLCJ0eXBlTGlzdCIsIlNUUklORyIsImlzUmVxdWlyZWQiLCJoZWxwU3RyaW5nIiwibmFtZWRBcmd1bWVudExpc3QiLCJlbnVtTGlzdCIsImVudW0iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/st/slash-commands.ts\n");
 
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.registerSlashCommands = registerSlashCommands;
-const SlashCommandParser_1 = __webpack_require__(/*! ../../../../../slash-commands/SlashCommandParser */ "../../../slash-commands/SlashCommandParser.js");
-const SlashCommand_1 = __webpack_require__(/*! ../../../../../slash-commands/SlashCommand */ "../../../slash-commands/SlashCommand.js");
-const SlashCommandArgument_1 = __webpack_require__(/*! ../../../../../slash-commands/SlashCommandArgument */ "../../../slash-commands/SlashCommandArgument.js");
-const script_1 = __webpack_require__(/*! ../../../../../../script */ "../../../../script.js");
-const SlashCommandEnumValue_1 = __webpack_require__(/*! ../../../../../slash-commands/SlashCommandEnumValue */ "../../../slash-commands/SlashCommandEnumValue.js");
-const cmd_types = {
-    GO: "GO",
-    INSPECT: "INSPECT",
-    TALK: "TALK",
-    USE: "USE",
-    DO: "DO",
-};
-function slash_emitEvent(pipe) {
-    return __awaiter(this, void 0, void 0, function* () {
-        console.log(pipe, "event from slash_emitEvent");
-        yield script_1.eventSource.emit(pipe);
-        return "";
-    });
-}
-function slash_processCMD(pipe) {
-    return __awaiter(this, void 0, void 0, function* () {
-        const { type, target } = pipe;
-        console.log(`TYPE:`, type);
-        console.log(`TARGET:`, target);
-        return "";
-    });
-}
-function slash_emitEvent_gameStateSave() {
-    return __awaiter(this, void 0, void 0, function* () {
-        yield script_1.eventSource.emit("game-state-save");
-        return "";
-    });
-}
-function slash_emitEvent_gameStateLoad() {
-    return __awaiter(this, void 0, void 0, function* () {
-        yield script_1.eventSource.emit("game-state-load");
-        return "";
-    });
-}
-function registerSlashCommands() {
-    // > /emit
-    SlashCommandParser_1.SlashCommandParser.addCommandObject(SlashCommand_1.SlashCommand.fromProps({
-        name: "emit",
-        callback: slash_emitEvent,
-        aliases: ["e", "event", "emit-event"],
-        unnamedArgumentList: [
-            SlashCommandArgument_1.SlashCommandArgument.fromProps({
-                description: "Name of custom event",
-                typeList: [SlashCommandArgument_1.ARGUMENT_TYPE.STRING],
-                isRequired: true,
-            }),
-        ],
-        helpString: "Emit a custom event.",
-    }));
-    // > /@cmd
-    SlashCommandParser_1.SlashCommandParser.addCommandObject(SlashCommand_1.SlashCommand.fromProps({
-        name: "@cmd",
-        callback: slash_processCMD,
-        aliases: ["game-cmd"],
-        namedArgumentList: [
-            SlashCommandArgument_1.SlashCommandNamedArgument.fromProps({
-                name: "type",
-                description: "Type of command",
-                typeList: [SlashCommandArgument_1.ARGUMENT_TYPE.STRING],
-                enumList: [
-                    new SlashCommandEnumValue_1.SlashCommandEnumValue(cmd_types.GO, cmd_types.GO, SlashCommandEnumValue_1.enumTypes.enum),
-                    new SlashCommandEnumValue_1.SlashCommandEnumValue(cmd_types.INSPECT, cmd_types.INSPECT, SlashCommandEnumValue_1.enumTypes.enum),
-                    new SlashCommandEnumValue_1.SlashCommandEnumValue(cmd_types.TALK, cmd_types.TALK, SlashCommandEnumValue_1.enumTypes.enum),
-                    new SlashCommandEnumValue_1.SlashCommandEnumValue(cmd_types.USE, cmd_types.USE, SlashCommandEnumValue_1.enumTypes.enum),
-                    new SlashCommandEnumValue_1.SlashCommandEnumValue(cmd_types.DO, cmd_types.DO, SlashCommandEnumValue_1.enumTypes.enum),
-                ],
-                isRequired: true,
-            }),
-            SlashCommandArgument_1.SlashCommandNamedArgument.fromProps({
-                name: "target",
-                description: "Unique identifier indicating what the command is targeting.",
-                typeList: [SlashCommandArgument_1.ARGUMENT_TYPE.STRING],
-                isRequired: true,
-            }),
-        ],
-        helpString: "Send a request for a game command.",
-    }));
-    // > /@save
-    SlashCommandParser_1.SlashCommandParser.addCommandObject(SlashCommand_1.SlashCommand.fromProps({
-        name: "@save",
-        callback: slash_emitEvent_gameStateSave,
-        aliases: ["game-save", "game-state-save"],
-        helpString: "DEV: Shorthand to emit game-state-save event, which requests to save current game state into localStorage.",
-    }));
-    // > /@load
-    SlashCommandParser_1.SlashCommandParser.addCommandObject(SlashCommand_1.SlashCommand.fromProps({
-        name: "@load",
-        callback: slash_emitEvent_gameStateLoad,
-        aliases: ["game-load", "game-state-load"],
-        helpString: "DEV: Shorthand to emit game-state-load event, which requests to load current game state from localStorage.",
-    }));
-}
+/***/ }),
 
+/***/ "./src/st/st-imports.ts":
+/*!******************************!*\
+  !*** ./src/st/st-imports.ts ***!
+  \******************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   ARGUMENT_TYPE: () => (/* binding */ ARGUMENT_TYPE),\n/* harmony export */   SlashCommand: () => (/* binding */ SlashCommand),\n/* harmony export */   SlashCommandArgument: () => (/* binding */ SlashCommandArgument),\n/* harmony export */   SlashCommandEnumValue: () => (/* binding */ SlashCommandEnumValue),\n/* harmony export */   SlashCommandNamedArgument: () => (/* binding */ SlashCommandNamedArgument),\n/* harmony export */   SlashCommandParser: () => (/* binding */ SlashCommandParser),\n/* harmony export */   delay: () => (/* binding */ delay),\n/* harmony export */   enumTypes: () => (/* binding */ enumTypes),\n/* harmony export */   eventSource: () => (/* binding */ eventSource),\n/* harmony export */   event_types: () => (/* binding */ event_types),\n/* harmony export */   executeSlashCommandsWithOptions: () => (/* binding */ executeSlashCommandsWithOptions),\n/* harmony export */   getContext: () => (/* binding */ getContext)\n/* harmony export */ });\n/* harmony import */ var _utils_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/utils */ \"./src/utils/utils.ts\");\n\n// script\nconst {\n  event_types,\n  eventSource\n} = await (0,_utils_utils__WEBPACK_IMPORTED_MODULE_0__._import)([\"event_types\", \"eventSource\"], \"../../../../../../script.js\");\n// utils\nconst {\n  delay\n} = await (0,_utils_utils__WEBPACK_IMPORTED_MODULE_0__._import)([\"delay\"], \"../../../../../utils\");\n// SlashCommand\nconst {\n  executeSlashCommandsWithOptions\n} = await (0,_utils_utils__WEBPACK_IMPORTED_MODULE_0__._import)([\"executeSlashCommandsWithOptions\"], \"../../../../../slash-commands.js\");\nconst {\n  SlashCommand\n} = await (0,_utils_utils__WEBPACK_IMPORTED_MODULE_0__._import)([\"SlashCommand\"], \"../../../../../slash-commands/SlashCommand.js\");\nconst {\n  SlashCommandParser\n} = await (0,_utils_utils__WEBPACK_IMPORTED_MODULE_0__._import)([\"SlashCommandParser\"], \"../../../../../slash-commands/SlashCommandParser.js\");\nconst {\n  ARGUMENT_TYPE,\n  SlashCommandArgument,\n  SlashCommandNamedArgument\n} = await (0,_utils_utils__WEBPACK_IMPORTED_MODULE_0__._import)([\"ARGUMENT_TYPE\", \"SlashCommandArgument\", \"SlashCommandNamedArgument\"], \"../../../../../slash-commands/SlashCommandArgument.js\");\nconst {\n  enumTypes,\n  SlashCommandEnumValue\n} = await (0,_utils_utils__WEBPACK_IMPORTED_MODULE_0__._import)([\"enumTypes\", \"SlashCommandEnumValue\"], \"../../../../../slash-commands/SlashCommandEnumValue\");\n// extensions\nconst {\n  getContext\n} = await (0,_utils_utils__WEBPACK_IMPORTED_MODULE_0__._import)([\"getContext\"], \"../../../../../extensions.js\");\n\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } }, 1);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvc3Qvc3QtaW1wb3J0cy50cyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7OztBQUF5QztBQUV6QztBQUNBLE1BQU07RUFBRUMsV0FBVztFQUFFQztBQUFXLENBQUUsR0FBRyxNQUFNRixxREFBTyxDQUNoRCxDQUFDLGFBQWEsRUFBRSxhQUFhLENBQUMsRUFDOUIsNkJBQTZCLENBQzlCO0FBRUQ7QUFDQSxNQUFNO0VBQUVHO0FBQUssQ0FBRSxHQUFHLE1BQU1ILHFEQUFPLENBQUMsQ0FBQyxPQUFPLENBQUMsRUFBRSxzQkFBc0IsQ0FBQztBQUVsRTtBQUNBLE1BQU07RUFBRUk7QUFBK0IsQ0FBRSxHQUFHLE1BQU1KLHFEQUFPLENBQ3ZELENBQUMsaUNBQWlDLENBQUMsRUFDbkMsa0NBQWtDLENBQ25DO0FBQ0QsTUFBTTtFQUFFSztBQUFZLENBQUUsR0FBRyxNQUFNTCxxREFBTyxDQUNwQyxDQUFDLGNBQWMsQ0FBQyxFQUNoQiwrQ0FBK0MsQ0FDaEQ7QUFDRCxNQUFNO0VBQUVNO0FBQWtCLENBQUUsR0FBRyxNQUFNTixxREFBTyxDQUMxQyxDQUFDLG9CQUFvQixDQUFDLEVBQ3RCLHFEQUFxRCxDQUN0RDtBQUNELE1BQU07RUFBRU8sYUFBYTtFQUFFQyxvQkFBb0I7RUFBRUM7QUFBeUIsQ0FBRSxHQUN0RSxNQUFNVCxxREFBTyxDQUNYLENBQUMsZUFBZSxFQUFFLHNCQUFzQixFQUFFLDJCQUEyQixDQUFDLEVBQ3RFLHVEQUF1RCxDQUN4RDtBQUNILE1BQU07RUFBRVUsU0FBUztFQUFFQztBQUFxQixDQUFFLEdBQUcsTUFBTVgscURBQU8sQ0FDeEQsQ0FBQyxXQUFXLEVBQUUsdUJBQXVCLENBQUMsRUFDdEMscURBQXFELENBQ3REO0FBRUQ7QUFDQSxNQUFNO0VBQUVZO0FBQVUsQ0FBRSxHQUFHLE1BQU1aLHFEQUFPLENBQ2xDLENBQUMsWUFBWSxDQUFDLEVBQ2QsOEJBQThCLENBQy9CIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vcGFub3B0aWNvbi8uL3NyYy9zdC9zdC1pbXBvcnRzLnRzPzc2NmYiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgX2ltcG9ydCB9IGZyb20gXCIuLi91dGlscy91dGlsc1wiO1xuXG4vLyBzY3JpcHRcbmNvbnN0IHsgZXZlbnRfdHlwZXMsIGV2ZW50U291cmNlIH0gPSBhd2FpdCBfaW1wb3J0KFxuICBbXCJldmVudF90eXBlc1wiLCBcImV2ZW50U291cmNlXCJdLFxuICBcIi4uLy4uLy4uLy4uLy4uLy4uL3NjcmlwdC5qc1wiXG4pO1xuXG4vLyB1dGlsc1xuY29uc3QgeyBkZWxheSB9ID0gYXdhaXQgX2ltcG9ydChbXCJkZWxheVwiXSwgXCIuLi8uLi8uLi8uLi8uLi91dGlsc1wiKTtcblxuLy8gU2xhc2hDb21tYW5kXG5jb25zdCB7IGV4ZWN1dGVTbGFzaENvbW1hbmRzV2l0aE9wdGlvbnMgfSA9IGF3YWl0IF9pbXBvcnQoXG4gIFtcImV4ZWN1dGVTbGFzaENvbW1hbmRzV2l0aE9wdGlvbnNcIl0sXG4gIFwiLi4vLi4vLi4vLi4vLi4vc2xhc2gtY29tbWFuZHMuanNcIlxuKTtcbmNvbnN0IHsgU2xhc2hDb21tYW5kIH0gPSBhd2FpdCBfaW1wb3J0KFxuICBbXCJTbGFzaENvbW1hbmRcIl0sXG4gIFwiLi4vLi4vLi4vLi4vLi4vc2xhc2gtY29tbWFuZHMvU2xhc2hDb21tYW5kLmpzXCJcbik7XG5jb25zdCB7IFNsYXNoQ29tbWFuZFBhcnNlciB9ID0gYXdhaXQgX2ltcG9ydChcbiAgW1wiU2xhc2hDb21tYW5kUGFyc2VyXCJdLFxuICBcIi4uLy4uLy4uLy4uLy4uL3NsYXNoLWNvbW1hbmRzL1NsYXNoQ29tbWFuZFBhcnNlci5qc1wiXG4pO1xuY29uc3QgeyBBUkdVTUVOVF9UWVBFLCBTbGFzaENvbW1hbmRBcmd1bWVudCwgU2xhc2hDb21tYW5kTmFtZWRBcmd1bWVudCB9ID1cbiAgYXdhaXQgX2ltcG9ydChcbiAgICBbXCJBUkdVTUVOVF9UWVBFXCIsIFwiU2xhc2hDb21tYW5kQXJndW1lbnRcIiwgXCJTbGFzaENvbW1hbmROYW1lZEFyZ3VtZW50XCJdLFxuICAgIFwiLi4vLi4vLi4vLi4vLi4vc2xhc2gtY29tbWFuZHMvU2xhc2hDb21tYW5kQXJndW1lbnQuanNcIlxuICApO1xuY29uc3QgeyBlbnVtVHlwZXMsIFNsYXNoQ29tbWFuZEVudW1WYWx1ZSB9ID0gYXdhaXQgX2ltcG9ydChcbiAgW1wiZW51bVR5cGVzXCIsIFwiU2xhc2hDb21tYW5kRW51bVZhbHVlXCJdLFxuICBcIi4uLy4uLy4uLy4uLy4uL3NsYXNoLWNvbW1hbmRzL1NsYXNoQ29tbWFuZEVudW1WYWx1ZVwiXG4pO1xuXG4vLyBleHRlbnNpb25zXG5jb25zdCB7IGdldENvbnRleHQgfSA9IGF3YWl0IF9pbXBvcnQoXG4gIFtcImdldENvbnRleHRcIl0sXG4gIFwiLi4vLi4vLi4vLi4vLi4vZXh0ZW5zaW9ucy5qc1wiXG4pO1xuXG5leHBvcnQge1xuICAvLyBleHRlbnNpb25zLmpzXG4gIGdldENvbnRleHQsXG4gIC8vIHNjcmlwdC5qc1xuICBldmVudF90eXBlcyxcbiAgZXZlbnRTb3VyY2UsXG4gIC8vIHV0aWxzXG4gIGRlbGF5LFxuICAvLyBTbGFzaENvbW1hbmRcbiAgU2xhc2hDb21tYW5kLFxuICBTbGFzaENvbW1hbmRQYXJzZXIsXG4gIFNsYXNoQ29tbWFuZEFyZ3VtZW50LFxuICBTbGFzaENvbW1hbmROYW1lZEFyZ3VtZW50LFxuICBTbGFzaENvbW1hbmRFbnVtVmFsdWUsXG4gIGVudW1UeXBlcyxcbiAgQVJHVU1FTlRfVFlQRSxcbiAgZXhlY3V0ZVNsYXNoQ29tbWFuZHNXaXRoT3B0aW9ucyxcbn07XG4iXSwibmFtZXMiOlsiX2ltcG9ydCIsImV2ZW50X3R5cGVzIiwiZXZlbnRTb3VyY2UiLCJkZWxheSIsImV4ZWN1dGVTbGFzaENvbW1hbmRzV2l0aE9wdGlvbnMiLCJTbGFzaENvbW1hbmQiLCJTbGFzaENvbW1hbmRQYXJzZXIiLCJBUkdVTUVOVF9UWVBFIiwiU2xhc2hDb21tYW5kQXJndW1lbnQiLCJTbGFzaENvbW1hbmROYW1lZEFyZ3VtZW50IiwiZW51bVR5cGVzIiwiU2xhc2hDb21tYW5kRW51bVZhbHVlIiwiZ2V0Q29udGV4dCJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/st/st-imports.ts\n");
 
 /***/ }),
 
@@ -594,77 +234,9 @@ function registerSlashCommands() {
 /*!****************************!*\
   !*** ./src/utils/utils.ts ***!
   \****************************/
-/***/ ((__unused_webpack_module, exports) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.gameLog = gameLog;
-const extensionName = 'Panopticon';
-function gameLog(label, ...args) {
-    console.log(`[${extensionName}] ${label}`, ...args);
-}
-
-
-/***/ }),
-
-/***/ "../../../../script.js":
-/*!*****************************!*\
-  !*** ../../../../script.js ***!
-  \*****************************/
-/***/ (() => {
-
-throw new Error("Module parse failed: 'import' and 'export' may appear only with 'sourceType: module' (1:0)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n> import { humanizedDateTime, favsToHotswap, getMessageTimeStamp, dragElement, isMobile, initRossMods, shouldSendOnEnter, addSafariPatch } from './scripts/RossAscends-mods.js';\n| import { userStatsHandler, statMesProcess, initStats } from './scripts/stats.js';\n| import {");
-
-/***/ }),
-
-/***/ "../../../extensions.js":
-/*!******************************!*\
-  !*** ../../../extensions.js ***!
-  \******************************/
-/***/ (() => {
-
-throw new Error("Module parse failed: 'import' and 'export' may appear only with 'sourceType: module' (1:0)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n> import { eventSource, event_types, saveSettings, saveSettingsDebounced, getRequestHeaders, animation_duration } from '../script.js';\n| import { showLoader } from './loader.js';\n| import { POPUP_RESULT, POPUP_TYPE, Popup, callGenericPopup } from './popup.js';");
-
-/***/ }),
-
-/***/ "../../../slash-commands/SlashCommand.js":
-/*!***********************************************!*\
-  !*** ../../../slash-commands/SlashCommand.js ***!
-  \***********************************************/
-/***/ (() => {
-
-throw new Error("Module parse failed: 'import' and 'export' may appear only with 'sourceType: module' (1:0)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n> import { SlashCommandAbortController } from './SlashCommandAbortController.js';\n| import { SlashCommandArgument, SlashCommandNamedArgument } from './SlashCommandArgument.js';\n| import { SlashCommandClosure } from './SlashCommandClosure.js';");
-
-/***/ }),
-
-/***/ "../../../slash-commands/SlashCommandArgument.js":
-/*!*******************************************************!*\
-  !*** ../../../slash-commands/SlashCommandArgument.js ***!
-  \*******************************************************/
-/***/ (() => {
-
-throw new Error("Module parse failed: 'import' and 'export' may appear only with 'sourceType: module' (1:0)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n> import { SlashCommandClosure } from './SlashCommandClosure.js';\n| import { commonEnumProviders } from './SlashCommandCommonEnumsProvider.js';\n| import { SlashCommandEnumValue } from './SlashCommandEnumValue.js';");
-
-/***/ }),
-
-/***/ "../../../slash-commands/SlashCommandEnumValue.js":
-/*!********************************************************!*\
-  !*** ../../../slash-commands/SlashCommandEnumValue.js ***!
-  \********************************************************/
-/***/ (() => {
-
-throw new Error("Module parse failed: 'import' and 'export' may appear only with 'sourceType: module' (1:0)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n> import { SlashCommandExecutor } from './SlashCommandExecutor.js';\n| import { SlashCommandScope } from './SlashCommandScope.js';\n| ");
-
-/***/ }),
-
-/***/ "../../../slash-commands/SlashCommandParser.js":
-/*!*****************************************************!*\
-  !*** ../../../slash-commands/SlashCommandParser.js ***!
-  \*****************************************************/
-/***/ (() => {
-
-throw new Error("Module parse failed: 'import' and 'export' may appear only with 'sourceType: module' (1:0)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n> import { power_user } from '../power-user.js';\n| import { isTrueBoolean, uuidv4 } from '../utils.js';\n| import { SlashCommand } from './SlashCommand.js';");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   _import: () => (/* binding */ _import),\n/* harmony export */   gameLog: () => (/* binding */ gameLog)\n/* harmony export */ });\nconst extensionName = \"Panopticon\";\nasync function _import(what, where) {\n  const result = {};\n  try {\n    if (Array.isArray(what)) {\n      for (let i = 0; i < what.length; i++) {\n        const moduleName = what[i];\n        const module = await import(/* webpackIgnore: true */where);\n        result[moduleName] = module;\n      }\n    } else {\n      const moduleName = what;\n      const module = await import(/* webpackIgnore: true */where);\n      result[moduleName] = module;\n    }\n  } catch (error) {\n    gameLog('_import problem:', error);\n  } finally {\n    return result;\n  }\n}\n;\nfunction gameLog(label) {\n  for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {\n    args[_key - 1] = arguments[_key];\n  }\n  console.log(`[${extensionName}] ${label}`, ...args);\n}\n;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvdXRpbHMvdXRpbHMudHMiLCJtYXBwaW5ncyI6Ijs7Ozs7QUFBQSxNQUFNQSxhQUFhLEdBQUcsWUFBWTtBQUUzQixlQUFlQyxPQUFPQSxDQUFDQyxJQUF1QixFQUFFQyxLQUFhO0VBQ2xFLE1BQU1DLE1BQU0sR0FBRyxFQUFFO0VBRWpCLElBQUk7SUFDRixJQUFJQyxLQUFLLENBQUNDLE9BQU8sQ0FBQ0osSUFBSSxDQUFDLEVBQUU7TUFDdkIsS0FBSyxJQUFJSyxDQUFDLEdBQUcsQ0FBQyxFQUFFQSxDQUFDLEdBQUdMLElBQUksQ0FBQ00sTUFBTSxFQUFFRCxDQUFDLEVBQUUsRUFBRTtRQUNwQyxNQUFNRSxVQUFVLEdBQUdQLElBQUksQ0FBQ0ssQ0FBQyxDQUFDO1FBQzFCLE1BQU1HLE1BQU0sR0FBRyxNQUFNLE1BQU0sQ0FBQyx5QkFBMEJQLEtBQUssQ0FBQztRQUM1REMsTUFBTSxDQUFDSyxVQUFVLENBQUMsR0FBR0MsTUFBTTtNQUM3QjtJQUNGLENBQUMsTUFBTTtNQUNMLE1BQU1ELFVBQVUsR0FBR1AsSUFBSTtNQUN2QixNQUFNUSxNQUFNLEdBQUcsTUFBTSxNQUFNLENBQUMseUJBQTBCUCxLQUFLLENBQUM7TUFDNURDLE1BQU0sQ0FBQ0ssVUFBVSxDQUFDLEdBQUdDLE1BQU07SUFDN0I7RUFDRixDQUFDLENBQUMsT0FBT0MsS0FBSyxFQUFFO0lBQ2RDLE9BQU8sQ0FBQyxrQkFBa0IsRUFBRUQsS0FBSyxDQUFDO0VBQ3BDLENBQUMsU0FBUztJQUNSLE9BQU9QLE1BQU07RUFDZjtBQUNGO0FBQUM7QUFFSyxTQUFVUSxPQUFPQSxDQUFDQyxLQUFLLEVBQVM7RUFBQSxTQUFBQyxJQUFBLEdBQUFDLFNBQUEsQ0FBQVAsTUFBQSxFQUFKUSxJQUFJLE9BQUFYLEtBQUEsQ0FBQVMsSUFBQSxPQUFBQSxJQUFBLFdBQUFHLElBQUEsTUFBQUEsSUFBQSxHQUFBSCxJQUFBLEVBQUFHLElBQUE7SUFBSkQsSUFBSSxDQUFBQyxJQUFBLFFBQUFGLFNBQUEsQ0FBQUUsSUFBQTtFQUFBO0VBQ3BDQyxPQUFPLENBQUNDLEdBQUcsQ0FBQyxJQUFJbkIsYUFBYSxLQUFLYSxLQUFLLEVBQUUsRUFBRSxHQUFHRyxJQUFJLENBQUM7QUFDckQ7QUFBQyIsInNvdXJjZXMiOlsid2VicGFjazovL3Bhbm9wdGljb24vLi9zcmMvdXRpbHMvdXRpbHMudHM/NzNlYyJdLCJzb3VyY2VzQ29udGVudCI6WyJjb25zdCBleHRlbnNpb25OYW1lID0gXCJQYW5vcHRpY29uXCI7XG5cbmV4cG9ydCBhc3luYyBmdW5jdGlvbiBfaW1wb3J0KHdoYXQ6IHN0cmluZyB8IHN0cmluZ1tdLCB3aGVyZTogc3RyaW5nKSB7XG4gIGNvbnN0IHJlc3VsdCA9IHt9O1xuXG4gIHRyeSB7XG4gICAgaWYgKEFycmF5LmlzQXJyYXkod2hhdCkpIHtcbiAgICAgIGZvciAobGV0IGkgPSAwOyBpIDwgd2hhdC5sZW5ndGg7IGkrKykge1xuICAgICAgICBjb25zdCBtb2R1bGVOYW1lID0gd2hhdFtpXTtcbiAgICAgICAgY29uc3QgbW9kdWxlID0gYXdhaXQgaW1wb3J0KC8qIHdlYnBhY2tJZ25vcmU6IHRydWUgKi8gd2hlcmUpO1xuICAgICAgICByZXN1bHRbbW9kdWxlTmFtZV0gPSBtb2R1bGU7XG4gICAgICB9XG4gICAgfSBlbHNlIHtcbiAgICAgIGNvbnN0IG1vZHVsZU5hbWUgPSB3aGF0O1xuICAgICAgY29uc3QgbW9kdWxlID0gYXdhaXQgaW1wb3J0KC8qIHdlYnBhY2tJZ25vcmU6IHRydWUgKi8gd2hlcmUpO1xuICAgICAgcmVzdWx0W21vZHVsZU5hbWVdID0gbW9kdWxlO1xuICAgIH1cbiAgfSBjYXRjaCAoZXJyb3IpIHtcbiAgICBnYW1lTG9nKCdfaW1wb3J0IHByb2JsZW06JywgZXJyb3IpO1xuICB9IGZpbmFsbHkge1xuICAgIHJldHVybiByZXN1bHQ7XG4gIH1cbn07XG5cbmV4cG9ydCBmdW5jdGlvbiBnYW1lTG9nKGxhYmVsLCAuLi5hcmdzKSB7XG4gIGNvbnNvbGUubG9nKGBbJHtleHRlbnNpb25OYW1lfV0gJHtsYWJlbH1gLCAuLi5hcmdzKTtcbn07XG4iXSwibmFtZXMiOlsiZXh0ZW5zaW9uTmFtZSIsIl9pbXBvcnQiLCJ3aGF0Iiwid2hlcmUiLCJyZXN1bHQiLCJBcnJheSIsImlzQXJyYXkiLCJpIiwibGVuZ3RoIiwibW9kdWxlTmFtZSIsIm1vZHVsZSIsImVycm9yIiwiZ2FtZUxvZyIsImxhYmVsIiwiX2xlbiIsImFyZ3VtZW50cyIsImFyZ3MiLCJfa2V5IiwiY29uc29sZSIsImxvZyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/utils/utils.ts\n");
 
 /***/ })
 
@@ -688,22 +260,116 @@ throw new Error("Module parse failed: 'import' and 'export' may appear only with
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/async module */
+/******/ 	(() => {
+/******/ 		var webpackQueues = typeof Symbol === "function" ? Symbol("webpack queues") : "__webpack_queues__";
+/******/ 		var webpackExports = typeof Symbol === "function" ? Symbol("webpack exports") : "__webpack_exports__";
+/******/ 		var webpackError = typeof Symbol === "function" ? Symbol("webpack error") : "__webpack_error__";
+/******/ 		var resolveQueue = (queue) => {
+/******/ 			if(queue && queue.d < 1) {
+/******/ 				queue.d = 1;
+/******/ 				queue.forEach((fn) => (fn.r--));
+/******/ 				queue.forEach((fn) => (fn.r-- ? fn.r++ : fn()));
+/******/ 			}
+/******/ 		}
+/******/ 		var wrapDeps = (deps) => (deps.map((dep) => {
+/******/ 			if(dep !== null && typeof dep === "object") {
+/******/ 				if(dep[webpackQueues]) return dep;
+/******/ 				if(dep.then) {
+/******/ 					var queue = [];
+/******/ 					queue.d = 0;
+/******/ 					dep.then((r) => {
+/******/ 						obj[webpackExports] = r;
+/******/ 						resolveQueue(queue);
+/******/ 					}, (e) => {
+/******/ 						obj[webpackError] = e;
+/******/ 						resolveQueue(queue);
+/******/ 					});
+/******/ 					var obj = {};
+/******/ 					obj[webpackQueues] = (fn) => (fn(queue));
+/******/ 					return obj;
+/******/ 				}
+/******/ 			}
+/******/ 			var ret = {};
+/******/ 			ret[webpackQueues] = x => {};
+/******/ 			ret[webpackExports] = dep;
+/******/ 			return ret;
+/******/ 		}));
+/******/ 		__webpack_require__.a = (module, body, hasAwait) => {
+/******/ 			var queue;
+/******/ 			hasAwait && ((queue = []).d = -1);
+/******/ 			var depQueues = new Set();
+/******/ 			var exports = module.exports;
+/******/ 			var currentDeps;
+/******/ 			var outerResolve;
+/******/ 			var reject;
+/******/ 			var promise = new Promise((resolve, rej) => {
+/******/ 				reject = rej;
+/******/ 				outerResolve = resolve;
+/******/ 			});
+/******/ 			promise[webpackExports] = exports;
+/******/ 			promise[webpackQueues] = (fn) => (queue && fn(queue), depQueues.forEach(fn), promise["catch"](x => {}));
+/******/ 			module.exports = promise;
+/******/ 			body((deps) => {
+/******/ 				currentDeps = wrapDeps(deps);
+/******/ 				var fn;
+/******/ 				var getResult = () => (currentDeps.map((d) => {
+/******/ 					if(d[webpackError]) throw d[webpackError];
+/******/ 					return d[webpackExports];
+/******/ 				}))
+/******/ 				var promise = new Promise((resolve) => {
+/******/ 					fn = () => (resolve(getResult));
+/******/ 					fn.r = 0;
+/******/ 					var fnQueue = (q) => (q !== queue && !depQueues.has(q) && (depQueues.add(q), q && !q.d && (fn.r++, q.push(fn))));
+/******/ 					currentDeps.map((dep) => (dep[webpackQueues](fnQueue)));
+/******/ 				});
+/******/ 				return fn.r ? promise : getResult();
+/******/ 			}, (err) => ((err ? reject(promise[webpackError] = err) : outerResolve(exports)), resolveQueue(queue)));
+/******/ 			queue && queue.d < 0 && (queue.d = 0);
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	// This entry module is referenced by other modules so it can't be inlined
+/******/ 	// This entry module can't be inlined because the eval-source-map devtool is used.
 /******/ 	var __webpack_exports__ = __webpack_require__("./src/index.ts");
-/******/ 	var __webpack_export_target__ = exports;
-/******/ 	var __webpack_exports_export__ = __webpack_exports__["default"];
-/******/ 	for(var i in __webpack_exports_export__) __webpack_export_target__[i] = __webpack_exports_export__[i];
-/******/ 	if(__webpack_exports_export__.__esModule) Object.defineProperty(__webpack_export_target__, "__esModule", { value: true });
 /******/ 	
 /******/ })()
 ;

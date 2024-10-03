@@ -1,4 +1,4 @@
-import { Usable } from '../../interfaces/Ables/Usable.js';
+import { Usable } from "../../interfaces/Ables/Usable";
 
 export class Item extends Usable {
     constructor(name, description, effect, on_use, kangaeru_comment, count=0) {

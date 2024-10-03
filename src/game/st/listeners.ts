@@ -1,4 +1,4 @@
-import { getContext } from '../../../../../../extensions';
+import { getContext } from '../../st/st-imports';
 import { gameLog } from '../../utils/utils';
 import { loadGameState, saveGameState } from '../features/saveLoad';
 import { $state } from '../template/instances/Game/State';
@@ -15,7 +15,7 @@ export function registerListeners() {
         gameLog('chatLoaded Fired');
     });
     // e: game-state-save
-    context.eventSource.on('game-state-save', async () => {
+    context.eventSource.on('game-state-save', async() => {
         gameLog('Request for game save');
         saveGameState($state);
     });

@@ -1,5 +1,4 @@
-import { delay } from '../../../../../utils';
-import { executeSlashCommandsWithOptions } from '../../../../../slash-commands';
+import { executeSlashCommandsWithOptions } from "../st/st-imports";
 
 
 export function setvar(key: string, value: string, scope_local=true, parserOptions={}) {

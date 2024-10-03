@@ -1,15 +1,13 @@
-import { SlashCommandParser } from "../../../../../slash-commands/SlashCommandParser";
-import { SlashCommand } from "../../../../../slash-commands/SlashCommand";
 import {
   ARGUMENT_TYPE,
-  SlashCommandArgument,
-  SlashCommandNamedArgument,
-} from "../../../../../slash-commands/SlashCommandArgument";
-import { event_types, eventSource } from "../../../../../../script";
-import {
   enumTypes,
+  eventSource,
+  SlashCommand,
+  SlashCommandArgument,
   SlashCommandEnumValue,
-} from "../../../../../slash-commands/SlashCommandEnumValue";
+  SlashCommandNamedArgument,
+  SlashCommandParser,
+} from "./st-imports";
 
 const cmd_types = {
   GO: "GO",
@@ -30,8 +28,6 @@ async function slash_processCMD(pipe) {
 
   console.log(`TYPE:`, type);
   console.log(`TARGET:`, target);
-
-
 
   return "";
 }

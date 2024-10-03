@@ -1,15 +1,12 @@
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 
-const extensionConfig = {
-    devtool: false,
-    target: 'node',
-    entry: path.join(__dirname, 'src/index.ts'),
+module.exports = {
+    devtool: 'eval-source-map',
+    entry: './src/index.ts',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'panopticon.js',
-        libraryTarget: 'commonjs',
-        libraryExport: 'default',
     },
     resolve: {
         extensions: ['.ts', '.js'],
@@ -18,8 +15,32 @@ const extensionConfig = {
         rules: [
             {
                 test: /\.ts$/,
-                use: 'ts-loader',
                 exclude: /node_modules/,
+                use: [
+                    {
+                        loader: 'babel-loader',
+                        options: {
+                            cacheDirectory: true,
+                            presets: [
+                                '@babel/preset-env',
+                                ['@babel/preset-react', { runtime: 'automatic' }],
+                            ],
+                        },
+                    },
+                    {
+                        loader: 'ts-loader',
+                    },
+                ],
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env'],
+                    },
+                },
             },
         ],
     },
@@ -37,5 +58,3 @@ const extensionConfig = {
     },
     plugins: [],
 };
-
-module.exports = [extensionConfig];

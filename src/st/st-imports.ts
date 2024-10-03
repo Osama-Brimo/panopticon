@@ -7,7 +7,7 @@ const { event_types, eventSource } = await _import(
 );
 
 // utils
-const { delay } = await _import(["delay"], "../../../../../utils");
+const { delay } = await _import(["delay"], "../../../../../utils.js");
 
 // SlashCommand
 const { executeSlashCommandsWithOptions } = await _import(
@@ -29,7 +29,7 @@ const { ARGUMENT_TYPE, SlashCommandArgument, SlashCommandNamedArgument } =
   );
 const { enumTypes, SlashCommandEnumValue } = await _import(
   ["enumTypes", "SlashCommandEnumValue"],
-  "../../../../../slash-commands/SlashCommandEnumValue"
+  "../../../../../slash-commands/SlashCommandEnumValue.js"
 );
 
 // extensions

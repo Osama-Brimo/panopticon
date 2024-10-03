@@ -6,6 +6,7 @@ import { $char } from "../NPC/Char";
 import { $player } from "../Player/Player";
 import { DID_FIRST_TUTORIAL } from "./Flags";
 
+
 const startingArea = Area_MansionExterior;
 const startingInventory = new Inventory([Item_Camera], 5);
 const startingTime = "16:31";

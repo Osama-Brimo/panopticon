@@ -1,4 +1,4 @@
-import { Human } from "../Participants/Human.js";
+import { Human } from "../Participants/Human";
 
 export class Player extends Human {
     constructor(name) {

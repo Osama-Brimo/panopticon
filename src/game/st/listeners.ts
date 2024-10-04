@@ -1,7 +1,8 @@
-import { getContext } from '../../st/st-imports';
-import { gameLog } from '../../utils/utils';
-import { loadGameState, saveGameState } from '../features/saveLoad';
-import { $state } from '../template/instances/Game/State';
+import { getContext } from "@sillytavern/extensions";
+import { $state } from "../template/instances/Game/State";
+import { loadGameState, saveGameState } from "../features/saveLoad";
+import { gameLog } from "../../utils/utils";
+
 
 export function registerListeners() {
     const context = getContext();

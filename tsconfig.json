@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "target": "ESNext",
+        "target": "ES6",
         "module": "ESNext",
         "outDir": "./out",
         "esModuleInterop": true,
@@ -8,11 +8,17 @@
         "forceConsistentCasingInFileNames": true,
         "allowJs": true,
         "moduleResolution": "node",
+        "baseUrl": ".",
+        "paths": {
+            "@sillytavern/*": ["../../../*"],
+        }
+
+    },
+    "parserOptions": {
+        "sourceType": "module",
     },
     "include": [
-        "**/*",
-        "src/**/*.ts",
-        "../../../../**/*",
+        "./src/**/*.ts",
     ],
     "exclude": [
         "node_modules",

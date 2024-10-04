@@ -1,13 +1,8 @@
-import {
-  ARGUMENT_TYPE,
-  enumTypes,
-  eventSource,
-  SlashCommand,
-  SlashCommandArgument,
-  SlashCommandEnumValue,
-  SlashCommandNamedArgument,
-  SlashCommandParser,
-} from "./st-imports";
+import { eventSource } from '@sillytavern/../script';
+import { SlashCommand } from '@sillytavern/slash-commands/SlashCommand';
+import { SlashCommandArgument, ARGUMENT_TYPE, SlashCommandNamedArgument } from '@sillytavern/slash-commands/SlashCommandArgument';
+import { SlashCommandEnumValue, enumTypes } from '@sillytavern/slash-commands/SlashCommandEnumValue';
+import { SlashCommandParser } from '@sillytavern/slash-commands/SlashCommandParser';
 
 const cmd_types = {
   GO: "GO",

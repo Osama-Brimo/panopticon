@@ -1,4 +1,4 @@
-import { executeSlashCommandsWithOptions } from "../st/st-imports";
+import { executeSlashCommandsWithOptions } from "@sillytavern/slash-commands";
 
 
 export function setvar(key: string, value: string, scope_local=true, parserOptions={}) {
@@ -14,4 +14,3 @@ export function getvar(key: string, index: string, scope_local=true, parserOptio
         parserOptions,
     );
 }
-

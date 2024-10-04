@@ -10,6 +10,7 @@
         "moduleResolution": "node",
         "baseUrl": ".",
         "paths": {
+            "@sillytavern/script": ["../../../../script.js"],
             "@sillytavern/*": ["../../../*"],
         }
 

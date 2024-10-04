@@ -1,4 +1,4 @@
-import { eventSource } from '@sillytavern/../script';
+import { eventSource } from '@sillytavern/script';
 import { SlashCommand } from '@sillytavern/slash-commands/SlashCommand';
 import { SlashCommandArgument, ARGUMENT_TYPE, SlashCommandNamedArgument } from '@sillytavern/slash-commands/SlashCommandArgument';
 import { SlashCommandEnumValue, enumTypes } from '@sillytavern/slash-commands/SlashCommandEnumValue';

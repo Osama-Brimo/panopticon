@@ -1,5 +1,5 @@
-import * as __WEBPACK_EXTERNAL_MODULE__script_js_588e7203__ from "../../../../../script.js";
 import * as __WEBPACK_EXTERNAL_MODULE__extensions_js_e625da88__ from "../../../../extensions.js";
+import * as __WEBPACK_EXTERNAL_MODULE__script_js_c57e49fe__ from "../../../../script.js";
 import * as __WEBPACK_EXTERNAL_MODULE__slash_commands_SlashCommand_js_1b0d5616__ from "../../../../slash-commands/SlashCommand.js";
 import * as __WEBPACK_EXTERNAL_MODULE__slash_commands_SlashCommandArgument_js_a42b9371__ from "../../../../slash-commands/SlashCommandArgument.js";
 import * as __WEBPACK_EXTERNAL_MODULE__slash_commands_SlashCommandEnumValue_js_20f1c506__ from "../../../../slash-commands/SlashCommandEnumValue.js";
@@ -94,14 +94,45 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   Area: () => (/* binding */ Area)
 /* harmony export */ });
-/* harmony import */ var _interfaces_Ables_Goable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../interfaces/Ables/Goable */ "./src/game/template/interfaces/Ables/Goable.ts");
-
-class Area extends _interfaces_Ables_Goable__WEBPACK_IMPORTED_MODULE_0__.Goable {
-    constructor(name, is_godel, godel_type, godel_cycle_num, is_locked, unlocked_by, goables, inspectables, doables, npcs, on_enter, on_exit, is_saferoom) {
-        super(name, is_godel, godel_type, godel_cycle_num, is_locked, unlocked_by, goables, inspectables, doables, npcs, on_enter, on_exit);
+var GodelType;
+(function (GodelType) {
+    GodelType["A"] = "A";
+    GodelType["B"] = "B";
+})(GodelType || (GodelType = {}));
+class Area {
+    constructor(name, description, is_godel, godel_type, godel_cycle_num, is_locked, unlocked_by, goables, inspectables, doables, npcs, on_go, on_exit, is_saferoom) {
+        this.name = name;
+        this.description = description;
+        this.is_godel = is_godel;
+        this.godel_type = godel_type;
+        this.godel_cycle_num = godel_cycle_num;
+        this.is_locked = is_locked;
+        this.unlocked_by = unlocked_by;
+        this.goables = goables;
+        this.inspectables = inspectables;
+        this.doables = doables;
+        this.npcs = npcs;
+        this.on_go = on_go;
+        this.on_exit = on_exit;
         this.is_saferoom = is_saferoom;
     }
 }
+// const Foyer = new Area(
+//   "Foyer",
+//   "The Foyer.",
+//   false,
+//   null,
+//   null,
+//   false,
+//   [],
+//   [],
+//   [],
+//   [],
+//   [],
+//   null,
+//   null,
+//   false,
+// );
 
 
 /***/ }),
@@ -116,9 +147,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   Item: () => (/* binding */ Item)
 /* harmony export */ });
-/* harmony import */ var _interfaces_Ables_Usable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../interfaces/Ables/Usable */ "./src/game/template/interfaces/Ables/Usable.ts");
+Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../interfaces/Ables/Usable'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 
-class Item extends _interfaces_Ables_Usable__WEBPACK_IMPORTED_MODULE_0__.Usable {
+class Item extends Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../interfaces/Ables/Usable'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()) {
     constructor(name, description, effect, on_use, kangaeru_comment, count = 0) {
         super(name, description, effect, on_use);
         this.kangaeru_comment = kangaeru_comment;
@@ -166,27 +197,6 @@ __webpack_require__.r(__webpack_exports__);
 class Player extends _Participants_Human__WEBPACK_IMPORTED_MODULE_0__.Human {
     constructor(name) {
         super(name);
-    }
-}
-
-
-/***/ }),
-
-/***/ "./src/game/template/classes/Game/Event.ts":
-/*!*************************************************!*\
-  !*** ./src/game/template/classes/Game/Event.ts ***!
-  \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Event: () => (/* binding */ Event)
-/* harmony export */ });
-class Event {
-    constructor(name, description, on_event) {
-        this.name = name;
-        this.description = description;
-        this.on_event = on_event;
     }
 }
 
@@ -297,14 +307,9 @@ class Human {
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Area_Foyer: () => (/* binding */ Area_Foyer)
-/* harmony export */ });
 /* harmony import */ var _classes_Entities_Area__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../classes/Entities/Area */ "./src/game/template/classes/Entities/Area.ts");
-/* harmony import */ var _Game_Events__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Game/Events */ "./src/game/template/instances/Game/Events.ts");
 
-
-const Area_Foyer = new _classes_Entities_Area__WEBPACK_IMPORTED_MODULE_0__.Area("Foyer", false, null, null, false, null, [], [], [], [], [_Game_Events__WEBPACK_IMPORTED_MODULE_1__.Event_EnterMansion], null, false);
+const Foyer = new _classes_Entities_Area__WEBPACK_IMPORTED_MODULE_0__.Area("Foyer", "The Foyer.", false, null, null, false, [], [], [], [], [], null, null, false);
 
 
 /***/ }),
@@ -324,23 +329,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const Area_MansionExterior = new _classes_Entities_Area__WEBPACK_IMPORTED_MODULE_0__.Area("Mansion Exterior", false, null, null, false, null, [_Foyer__WEBPACK_IMPORTED_MODULE_1__.Area_Foyer], [], [], [], null, null, false);
-
-
-/***/ }),
-
-/***/ "./src/game/template/instances/Game/Events.ts":
-/*!****************************************************!*\
-  !*** ./src/game/template/instances/Game/Events.ts ***!
-  \****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Event_EnterMansion: () => (/* binding */ Event_EnterMansion)
-/* harmony export */ });
-/* harmony import */ var _classes_Game_Event__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../classes/Game/Event */ "./src/game/template/classes/Game/Event.ts");
-
-const Event_EnterMansion = new _classes_Game_Event__WEBPACK_IMPORTED_MODULE_0__.Event("Enter Mansion", "You enter the mansion.", () => { });
 
 
 /***/ }),
@@ -445,58 +433,6 @@ const $player = new _classes_Entities_Player__WEBPACK_IMPORTED_MODULE_0__.Player
 
 /***/ }),
 
-/***/ "./src/game/template/interfaces/Ables/Goable.ts":
-/*!******************************************************!*\
-  !*** ./src/game/template/interfaces/Ables/Goable.ts ***!
-  \******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Goable: () => (/* binding */ Goable)
-/* harmony export */ });
-class Goable {
-    constructor(name, is_godel, godel_type, godel_cycle_num, is_locked, unlocked_by, goables, inspectables, doables, npcs, on_enter, on_exit) {
-        this.name = name;
-        this.is_godel = is_godel;
-        this.godel_type = godel_type;
-        this.godel_cycle_num = godel_cycle_num;
-        this.is_locked = is_locked;
-        this.unlocked_by = unlocked_by;
-        this.goables = goables;
-        this.inspectables = inspectables;
-        this.doables = doables;
-        this.npcs = npcs;
-        this.on_enter = on_enter;
-        this.on_exit = on_exit;
-    }
-}
-
-
-/***/ }),
-
-/***/ "./src/game/template/interfaces/Ables/Usable.ts":
-/*!******************************************************!*\
-  !*** ./src/game/template/interfaces/Ables/Usable.ts ***!
-  \******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Usable: () => (/* binding */ Usable)
-/* harmony export */ });
-class Usable {
-    constructor(name, description, effect, on_use) {
-        this.name = name;
-        this.description = description;
-        this.effect = effect;
-        this.on_use = on_use;
-    }
-}
-
-
-/***/ }),
-
 /***/ "./src/st/slash-commands.ts":
 /*!**********************************!*\
   !*** ./src/st/slash-commands.ts ***!
@@ -507,7 +443,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   registerSlashCommands: () => (/* binding */ registerSlashCommands)
 /* harmony export */ });
-/* harmony import */ var _sillytavern_script__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @sillytavern/../script */ "@sillytavern/../script");
+/* harmony import */ var _sillytavern_script__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @sillytavern/script */ "@sillytavern/script");
 /* harmony import */ var _sillytavern_slash_commands_SlashCommand__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @sillytavern/slash-commands/SlashCommand */ "@sillytavern/slash-commands/SlashCommand");
 /* harmony import */ var _sillytavern_slash_commands_SlashCommandArgument__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @sillytavern/slash-commands/SlashCommandArgument */ "@sillytavern/slash-commands/SlashCommandArgument");
 /* harmony import */ var _sillytavern_slash_commands_SlashCommandEnumValue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @sillytavern/slash-commands/SlashCommandEnumValue */ "@sillytavern/slash-commands/SlashCommandEnumValue");
@@ -641,16 +577,6 @@ function gameLog(label, ...args) {
 
 /***/ }),
 
-/***/ "@sillytavern/../script":
-/*!*******************************************!*\
-  !*** external "../../../../../script.js" ***!
-  \*******************************************/
-/***/ ((module) => {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE__script_js_588e7203__;
-
-/***/ }),
-
 /***/ "@sillytavern/extensions":
 /*!********************************************!*\
   !*** external "../../../../extensions.js" ***!
@@ -658,6 +584,16 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__script_js_588e7203__;
 /***/ ((module) => {
 
 module.exports = __WEBPACK_EXTERNAL_MODULE__extensions_js_e625da88__;
+
+/***/ }),
+
+/***/ "@sillytavern/script":
+/*!****************************************!*\
+  !*** external "../../../../script.js" ***!
+  \****************************************/
+/***/ ((module) => {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE__script_js_c57e49fe__;
 
 /***/ }),
 

@@ -69,8 +69,6 @@ export class State {
 
   update() {
     // If theres CMDs; process
-    // If theres GameEvents; process
-
     this.processCmdQueue();
     // this.processEventQueue();
   }

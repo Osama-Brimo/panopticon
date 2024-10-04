@@ -3,8 +3,8 @@
 import { Message } from "../Game/Message";
 import { Generate } from "@sillytavern-script";
 import { sendMessageAs } from "@sillytavern/slash-commands";
-import { st_sendMessage } from "utils/st";
-import { gameLog } from "utils/utils";
+import { st_sendMessage } from "../../../../util/st";
+import { gameLog } from "../../../../util/utils";
 
 // Any response
 export class GameResponse {

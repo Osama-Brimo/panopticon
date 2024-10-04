@@ -15,9 +15,6 @@
         }
 
     },
-    "parserOptions": {
-        "sourceType": "module",
-    },
     "include": [
         "./src/**/*.ts",
     ],

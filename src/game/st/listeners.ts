@@ -1,7 +1,7 @@
 import { getContext } from "@sillytavern/extensions";
 import { $state } from "../template/instances/Game/State";
 import { loadGameState, saveGameState } from "../features/saveLoad";
-import { gameLog } from "../../utils/utils";
+import { gameLog } from "../../util/utils";
 
 
 export function registerListeners() {
@@ -25,4 +25,6 @@ export function registerListeners() {
         gameLog('Request for game load');
         loadGameState();
     });
+    // e: cmd-given
+    // context.eventSource.on('cmd-given')
 }

@@ -1,5 +1,6 @@
 import * as __WEBPACK_EXTERNAL_MODULE__script_js_588e7203__ from "../../../../../script.js";
 import * as __WEBPACK_EXTERNAL_MODULE__extensions_js_e625da88__ from "../../../../extensions.js";
+import * as __WEBPACK_EXTERNAL_MODULE__slash_commands_js_f5742a84__ from "../../../../slash-commands.js";
 import * as __WEBPACK_EXTERNAL_MODULE__slash_commands_SlashCommand_js_1b0d5616__ from "../../../../slash-commands/SlashCommand.js";
 import * as __WEBPACK_EXTERNAL_MODULE__slash_commands_SlashCommandArgument_js_a42b9371__ from "../../../../slash-commands/SlashCommandArgument.js";
 import * as __WEBPACK_EXTERNAL_MODULE__slash_commands_SlashCommandEnumValue_js_20f1c506__ from "../../../../slash-commands/SlashCommandEnumValue.js";
@@ -17,16 +18,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   loadGameState: () => (/* binding */ loadGameState),
 /* harmony export */   saveGameState: () => (/* binding */ saveGameState)
 /* harmony export */ });
-/* harmony import */ var _utils_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../utils/utils */ "./src/utils/utils.ts");
+/* harmony import */ var _util_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../util/utils */ "./src/util/utils.ts");
 
 function saveGameState(state) {
     const serializedState = JSON.stringify(state);
-    (0,_utils_utils__WEBPACK_IMPORTED_MODULE_0__.gameLog)('saveGameState', serializedState);
+    (0,_util_utils__WEBPACK_IMPORTED_MODULE_0__.gameLog)('saveGameState', serializedState);
     localStorage.setItem('panopticon_gameState', serializedState);
 }
 function loadGameState() {
     const serializedState = localStorage.getItem('panopticon_gameState');
-    (0,_utils_utils__WEBPACK_IMPORTED_MODULE_0__.gameLog)('loadGameState', serializedState);
+    (0,_util_utils__WEBPACK_IMPORTED_MODULE_0__.gameLog)('loadGameState', serializedState);
     return serializedState ? JSON.parse(serializedState) : null;
 }
 
@@ -46,7 +47,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sillytavern_extensions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @sillytavern/extensions */ "@sillytavern/extensions");
 /* harmony import */ var _template_instances_Game_State__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../template/instances/Game/State */ "./src/game/template/instances/Game/State.ts");
 /* harmony import */ var _features_saveLoad__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../features/saveLoad */ "./src/game/features/saveLoad.ts");
-/* harmony import */ var _utils_utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/utils */ "./src/utils/utils.ts");
+/* harmony import */ var _util_utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util/utils */ "./src/util/utils.ts");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -63,22 +64,104 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
 function registerListeners() {
     const context = (0,_sillytavern_extensions__WEBPACK_IMPORTED_MODULE_0__.getContext)();
     // Extension load
-    (0,_utils_utils__WEBPACK_IMPORTED_MODULE_3__.gameLog)('loaded');
-    (0,_utils_utils__WEBPACK_IMPORTED_MODULE_3__.gameLog)('Game State', _template_instances_Game_State__WEBPACK_IMPORTED_MODULE_1__.$state);
+    (0,_util_utils__WEBPACK_IMPORTED_MODULE_3__.gameLog)('loaded');
+    (0,_util_utils__WEBPACK_IMPORTED_MODULE_3__.gameLog)('Game State', _template_instances_Game_State__WEBPACK_IMPORTED_MODULE_1__.$state);
     // e: chatLoaded
     context.eventSource.on('chatLoaded', () => __awaiter(this, void 0, void 0, function* () {
-        (0,_utils_utils__WEBPACK_IMPORTED_MODULE_3__.gameLog)('chatLoaded Fired');
+        (0,_util_utils__WEBPACK_IMPORTED_MODULE_3__.gameLog)('chatLoaded Fired');
     }));
     // e: game-state-save
     context.eventSource.on('game-state-save', () => __awaiter(this, void 0, void 0, function* () {
-        (0,_utils_utils__WEBPACK_IMPORTED_MODULE_3__.gameLog)('Request for game save');
+        (0,_util_utils__WEBPACK_IMPORTED_MODULE_3__.gameLog)('Request for game save');
         (0,_features_saveLoad__WEBPACK_IMPORTED_MODULE_2__.saveGameState)(_template_instances_Game_State__WEBPACK_IMPORTED_MODULE_1__.$state);
     }));
     // e: game-state-load
     context.eventSource.on('game-state-load', () => __awaiter(this, void 0, void 0, function* () {
-        (0,_utils_utils__WEBPACK_IMPORTED_MODULE_3__.gameLog)('Request for game load');
+        (0,_util_utils__WEBPACK_IMPORTED_MODULE_3__.gameLog)('Request for game load');
         (0,_features_saveLoad__WEBPACK_IMPORTED_MODULE_2__.loadGameState)();
     }));
+    // e: cmd-given
+    // context.eventSource.on('cmd-given')
+}
+
+
+/***/ }),
+
+/***/ "./src/game/template/classes/CMD/CMD.ts":
+/*!**********************************************!*\
+  !*** ./src/game/template/classes/CMD/CMD.ts ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   CMD: () => (/* binding */ CMD),
+/* harmony export */   CMDTypes: () => (/* binding */ CMDTypes)
+/* harmony export */ });
+/* harmony import */ var _Game_Message__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Game/Message */ "./src/game/template/classes/Game/Message.ts");
+/* harmony import */ var _ST_GameResponse__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../ST/GameResponse */ "./src/game/template/classes/ST/GameResponse.ts");
+
+
+var CMDTypes;
+(function (CMDTypes) {
+    CMDTypes["GO"] = "GO";
+    CMDTypes["INSPECT"] = "INSPECT";
+    CMDTypes["TALK"] = "TALK";
+    CMDTypes["USE"] = "USE";
+    CMDTypes["DO"] = "DO";
+})(CMDTypes || (CMDTypes = {}));
+class CMD {
+    constructor(type, target) {
+        this.type = type;
+        this.target = target;
+    }
+    handleGO(state) {
+        // valid target?
+        const area = this.target;
+        if (state.goables.includes(area)) {
+            // Can you go?
+            // Locked? refuse.
+            if (area.is_locked) {
+                const GR = new _ST_GameResponse__WEBPACK_IMPORTED_MODULE_1__.GameResponse();
+                // TODO: shorthand func sendNarrator(...)
+                const refusal = new _Game_Message__WEBPACK_IMPORTED_MODULE_0__.Message("Locked...", _Game_Message__WEBPACK_IMPORTED_MODULE_0__.MessageStrategy.script, false, _Game_Message__WEBPACK_IMPORTED_MODULE_0__.Role.system, null);
+                GR.sendMessage(refusal);
+                // Follow ups. Char comments, or use key prompt, or.. etc.
+                // TODO: consider if we don't want a configuration at some point to let the player decide how this is handled.
+                // e.g: should Char comment if the door was locked? Don't waste player's resources, let them decide.
+            }
+            // Godel? handle.
+            // handleGodel();
+            // ...Go!
+        }
+    }
+    handleTALK(state) {
+        const talkable = this.target;
+        if (state.talkables.includes(talkable)) {
+            const GR = new _ST_GameResponse__WEBPACK_IMPORTED_MODULE_1__.GameResponse();
+        }
+    }
+    execute(state) {
+        switch (this.type) {
+            case "GO":
+                this.handleGO(state);
+                break;
+            case "TALK":
+                this.handleTALK(state);
+                break;
+            case "INSPECT":
+                //
+                break;
+            case "USE":
+                //
+                break;
+            case "DO":
+                //
+                break;
+            default:
+            //
+        }
+    }
 }
 
 
@@ -224,6 +307,55 @@ class Flag {
 
 /***/ }),
 
+/***/ "./src/game/template/classes/Game/Message.ts":
+/*!***************************************************!*\
+  !*** ./src/game/template/classes/Game/Message.ts ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Message: () => (/* binding */ Message),
+/* harmony export */   MessageStrategy: () => (/* binding */ MessageStrategy),
+/* harmony export */   Role: () => (/* binding */ Role)
+/* harmony export */ });
+// High level representation of any ST message relative to the game
+// Message can be any actual piece of the VN: a dialogue, an inspection result, an action scene, the outcome of using an item etc.
+// All text in the game is contained in some sub-set of Message.
+// text: Some piece of text provided as input. We might do various things with it: output it verbatim, give it as part of a prompt injection, or create a caged response, etc.
+// strategy: [script, assistant, caged]
+// Script: Verbatim. A piece of the games script shown to the user with no generation involved.
+// Assistant: Generate a response based on x
+// Caged: Given X, generate a variation or adehere to some goal in a generated response (e.g: "The key is old": char specifically talks about this, generate a summary, evaluate a puzzle). Similar to assistant, but with a specific output in mind.
+// Hidden: Whether to hide from AI and consider part of chat history. default false.
+// Role: ST role: assistant, user, system
+// Instruction: A piece of text used for some ai instruction
+// GameRequest ... [game logic] > State > Brain ... Message ... GameResponse
+var MessageStrategy;
+(function (MessageStrategy) {
+    MessageStrategy["script"] = "script";
+    MessageStrategy["assistant"] = "assistant";
+    MessageStrategy["cage"] = "cage";
+})(MessageStrategy || (MessageStrategy = {}));
+var Role;
+(function (Role) {
+    Role["user"] = "user";
+    Role["assistant"] = "assistant";
+    Role["system"] = "system";
+})(Role || (Role = {}));
+class Message {
+    constructor(text, strategy = MessageStrategy.script, hidden = false, role = Role.system, instruction) {
+        this.text = text;
+        this.strategy = strategy;
+        this.hidden = hidden;
+        this.role = role;
+        this.instruction = instruction;
+    }
+}
+
+
+/***/ }),
+
 /***/ "./src/game/template/classes/Game/State.ts":
 /*!*************************************************!*\
   !*** ./src/game/template/classes/Game/State.ts ***!
@@ -258,7 +390,6 @@ class State {
     }
     update() {
         // If theres CMDs; process
-        // If theres GameEvents; process
         this.processCmdQueue();
         // this.processEventQueue();
     }
@@ -321,6 +452,42 @@ __webpack_require__.r(__webpack_exports__);
 class Human {
     constructor(name) {
         this.name = name;
+    }
+}
+
+
+/***/ }),
+
+/***/ "./src/game/template/classes/ST/GameResponse.ts":
+/*!******************************************************!*\
+  !*** ./src/game/template/classes/ST/GameResponse.ts ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   GameResponse: () => (/* binding */ GameResponse)
+/* harmony export */ });
+/* harmony import */ var _sillytavern_script__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @sillytavern-script */ "@sillytavern-script");
+/* harmony import */ var _util_st__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../util/st */ "./src/util/st.ts");
+/* harmony import */ var _util_utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../util/utils */ "./src/util/utils.ts");
+// Type: type of message
+
+
+
+// Any response
+class GameResponse {
+    constructor() { }
+    sendMessage(message) {
+        if (!message)
+            throw new Error("No message provided.");
+        // Send a message if one is provided
+        const sent = (0,_util_st__WEBPACK_IMPORTED_MODULE_1__.st_sendMessage)(message);
+        (0,_util_utils__WEBPACK_IMPORTED_MODULE_2__.gameLog)('GameResponse', sent);
+    }
+    // Trigger a message generation with optional input
+    generate(text) {
+        (0,_sillytavern_script__WEBPACK_IMPORTED_MODULE_0__.Generate)(null);
     }
 }
 
@@ -462,6 +629,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sillytavern_slash_commands_SlashCommandArgument__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @sillytavern/slash-commands/SlashCommandArgument */ "@sillytavern/slash-commands/SlashCommandArgument");
 /* harmony import */ var _sillytavern_slash_commands_SlashCommandEnumValue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @sillytavern/slash-commands/SlashCommandEnumValue */ "@sillytavern/slash-commands/SlashCommandEnumValue");
 /* harmony import */ var _sillytavern_slash_commands_SlashCommandParser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @sillytavern/slash-commands/SlashCommandParser */ "@sillytavern/slash-commands/SlashCommandParser");
+/* harmony import */ var _game_template_classes_CMD_CMD__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../game/template/classes/CMD/CMD */ "./src/game/template/classes/CMD/CMD.ts");
+/* harmony import */ var _game_template_instances_Game_State__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../game/template/instances/Game/State */ "./src/game/template/instances/Game/State.ts");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -471,6 +640,8 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+
+
 
 
 
@@ -495,6 +666,10 @@ function slash_processCMD(pipe) {
         const { type, target } = pipe;
         console.log(`TYPE:`, type);
         console.log(`TARGET:`, target);
+        yield _sillytavern_script__WEBPACK_IMPORTED_MODULE_0__.eventSource.emit("cmd-given");
+        const newCmd = new _game_template_classes_CMD_CMD__WEBPACK_IMPORTED_MODULE_5__.CMD(type, target);
+        _game_template_instances_Game_State__WEBPACK_IMPORTED_MODULE_6__.$state.cmd_queue.push(newCmd);
+        _game_template_instances_Game_State__WEBPACK_IMPORTED_MODULE_6__.$state.update();
         return "";
     });
 }
@@ -572,10 +747,73 @@ function registerSlashCommands() {
 
 /***/ }),
 
-/***/ "./src/utils/utils.ts":
-/*!****************************!*\
-  !*** ./src/utils/utils.ts ***!
-  \****************************/
+/***/ "./src/util/st.ts":
+/*!************************!*\
+  !*** ./src/util/st.ts ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   st_getvar: () => (/* binding */ st_getvar),
+/* harmony export */   st_sendMessage: () => (/* binding */ st_sendMessage),
+/* harmony export */   st_setvar: () => (/* binding */ st_setvar)
+/* harmony export */ });
+/* harmony import */ var _sillytavern_slash_commands__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @sillytavern/slash-commands */ "@sillytavern/slash-commands");
+/* harmony import */ var _game_template_classes_Game_Message__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../game/template/classes/Game/Message */ "./src/game/template/classes/Game/Message.ts");
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
+
+function st_setvar(key, value, scope_local = true, parserOptions = {}) {
+    return (0,_sillytavern_slash_commands__WEBPACK_IMPORTED_MODULE_0__.executeSlashCommandsWithOptions)(`/set${scope_local ? "" : "global"}var key="${key}" ${value}`, parserOptions);
+}
+function st_getvar(key, index, scope_local = true, parserOptions = {}) {
+    return (0,_sillytavern_slash_commands__WEBPACK_IMPORTED_MODULE_0__.executeSlashCommandsWithOptions)(`/get${scope_local ? "" : "global"}var key="${key}"`, parserOptions);
+}
+// async function st_sendSystemMessage(
+//   text: string,
+//   compact = false,
+//   hidden = false
+// ) {
+//   return await executeSlashCommandsWithOptions(
+//     `/sys compact=${compact} ${text}`,
+//     {}
+//   );
+// }
+function st_sendMessage(message) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const { text, hidden, role, strategy, instruction } = message;
+        switch (message.role) {
+            case _game_template_classes_Game_Message__WEBPACK_IMPORTED_MODULE_1__.Role.system:
+                return yield (0,_sillytavern_slash_commands__WEBPACK_IMPORTED_MODULE_0__.sendNarratorMessage)({ compact: true }, text);
+                break;
+            case _game_template_classes_Game_Message__WEBPACK_IMPORTED_MODULE_1__.Role.user:
+                //   return await sendMessageAsUser(text, null, null, false);
+                break;
+            case _game_template_classes_Game_Message__WEBPACK_IMPORTED_MODULE_1__.Role.assistant:
+                //   return await sendMessageAs(null, text);
+                break;
+            default:
+                break;
+        }
+    });
+}
+
+
+/***/ }),
+
+/***/ "./src/util/utils.ts":
+/*!***************************!*\
+  !*** ./src/util/utils.ts ***!
+  \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -608,6 +846,16 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__script_js_588e7203__;
 /***/ ((module) => {
 
 module.exports = __WEBPACK_EXTERNAL_MODULE__extensions_js_e625da88__;
+
+/***/ }),
+
+/***/ "@sillytavern/slash-commands":
+/*!************************************************!*\
+  !*** external "../../../../slash-commands.js" ***!
+  \************************************************/
+/***/ ((module) => {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE__slash_commands_js_f5742a84__;
 
 /***/ }),
 
@@ -655,7 +903,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__slash_commands_SlashCommandParser_js
 /************************************************************************/
 /******/ // The module cache
 /******/ var __webpack_module_cache__ = {};
-/******/
+/******/ 
 /******/ // The require function
 /******/ function __webpack_require__(moduleId) {
 /******/ 	// Check if module is in cache
@@ -669,14 +917,14 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__slash_commands_SlashCommandParser_js
 /******/ 		// no module.loaded needed
 /******/ 		exports: {}
 /******/ 	};
-/******/
+/******/ 
 /******/ 	// Execute the module function
 /******/ 	__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/
+/******/ 
 /******/ 	// Return the exports of the module
 /******/ 	return module.exports;
 /******/ }
-/******/
+/******/ 
 /************************************************************************/
 /******/ /* webpack/runtime/define property getters */
 /******/ (() => {
@@ -689,12 +937,12 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__slash_commands_SlashCommandParser_js
 /******/ 		}
 /******/ 	};
 /******/ })();
-/******/
+/******/ 
 /******/ /* webpack/runtime/hasOwnProperty shorthand */
 /******/ (() => {
 /******/ 	__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ })();
-/******/
+/******/ 
 /******/ /* webpack/runtime/make namespace object */
 /******/ (() => {
 /******/ 	// define __esModule on exports
@@ -705,7 +953,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__slash_commands_SlashCommandParser_js
 /******/ 		Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 	};
 /******/ })();
-/******/
+/******/ 
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
@@ -717,7 +965,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _game_st_listeners__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./game/st/listeners */ "./src/game/st/listeners.ts");
 /* harmony import */ var _game_template_instances_Game_State__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./game/template/instances/Game/State */ "./src/game/template/instances/Game/State.ts");
 /* harmony import */ var _st_slash_commands__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./st/slash-commands */ "./src/st/slash-commands.ts");
-/* harmony import */ var _utils_utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./utils/utils */ "./src/utils/utils.ts");
+/* harmony import */ var _util_utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./util/utils */ "./src/util/utils.ts");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -735,7 +983,7 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
 jQuery(() => __awaiter(void 0, void 0, void 0, function* () {
     try {
         (0,_game_st_listeners__WEBPACK_IMPORTED_MODULE_0__.registerListeners)();
-        (0,_utils_utils__WEBPACK_IMPORTED_MODULE_3__.gameLog)("Gamestate:", _game_template_instances_Game_State__WEBPACK_IMPORTED_MODULE_1__.$state);
+        (0,_util_utils__WEBPACK_IMPORTED_MODULE_3__.gameLog)("Gamestate:", _game_template_instances_Game_State__WEBPACK_IMPORTED_MODULE_1__.$state);
     }
     catch (error) {
         console.error('[Panopticon] ERROR:', error);

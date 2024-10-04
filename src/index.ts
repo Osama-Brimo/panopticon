@@ -1,7 +1,7 @@
 import { registerListeners } from "./game/st/listeners";
 import { $state } from "./game/template/instances/Game/State";
 import { registerSlashCommands } from "./st/slash-commands";
-import { gameLog } from "./utils/utils";
+import { gameLog } from "./util/utils";
 
 
 registerSlashCommands();

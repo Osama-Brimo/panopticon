@@ -19,7 +19,7 @@ module.exports = {
         alias: {
             // TODO: add more aliases and paths to config later
             '@sillytavern-script': path.resolve(__dirname, '../../../../../script.js'),
-            '@sillytavern': path.resolve(__dirname, '../../..'),
+            '@sillytavern': path.resolve(__dirname, '../../../'),
         },
     },
     module: {
@@ -72,12 +72,9 @@ module.exports = {
                 // TODO: This externalizes all ST imports as .js files. Add your own implementation if needed.
                 return callback(null, `../../../../${match1[1]}.js`);
             }
-
             const regex2 = /^@sillytavern-script$/;
             const match2 = request.match(regex2);
             if (match2) {
-                // This will be the string verbatim in the final bundle.
-                // TODO: This externalizes all ST imports as .js files. Add your own implementation if needed.
                 return callback(null, `../../../../../script.js`);
             }
 

@@ -3,6 +3,9 @@ import { SlashCommand } from '@sillytavern/slash-commands/SlashCommand';
 import { SlashCommandArgument, ARGUMENT_TYPE, SlashCommandNamedArgument } from '@sillytavern/slash-commands/SlashCommandArgument';
 import { SlashCommandEnumValue, enumTypes } from '@sillytavern/slash-commands/SlashCommandEnumValue';
 import { SlashCommandParser } from '@sillytavern/slash-commands/SlashCommandParser';
+import { CMDTypes, CMD } from '../game/template/classes/CMD/CMD';
+import { $state } from '../game/template/instances/Game/State';
+import { Able } from '../game/template/interfaces/Ables';
 
 const cmd_types = {
   GO: "GO",
@@ -19,10 +22,16 @@ async function slash_emitEvent(pipe) {
 }
 
 async function slash_processCMD(pipe) {
-  const { type, target } = pipe;
+  const { type, target } : {type: CMDTypes, target: Able} = pipe;
 
   console.log(`TYPE:`, type);
   console.log(`TARGET:`, target);
+  await eventSource.emit("cmd-given");
+
+  const newCmd = new CMD(type, target);
+  $state.cmd_queue.push(newCmd);
+
+  $state.update();
 
   return "";
 }

@@ -5,7 +5,7 @@ import { Message, MessageStrategy, Role } from "../Game/Message";
 import { State } from "../Game/State";
 import { GameResponse } from "../ST/GameResponse";
 
-enum CMDTypes {
+export enum CMDTypes {
   GO = "GO",
   INSPECT = "INSPECT",
   TALK = "TALK",

@@ -1,4 +1,4 @@
-import { gameLog } from "../../utils/utils";
+import { gameLog } from "../../util/utils";
 import { State } from "../template/classes/Game/State";
 
 export function saveGameState(state: State) {

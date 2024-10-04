@@ -1,6 +1,11 @@
-interface Able {
+export interface Able {
   name: string;
   description: string;
+  // on_go?: () => {};
+  // on_do?: () => {};
+  // on_inpsect?: () => {};
+  // on_talk?: () => {};
+  // on_use?: () => {};
 }
 export interface Goable extends Able {
   on_go: () => {};

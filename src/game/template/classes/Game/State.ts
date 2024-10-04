@@ -1,19 +1,43 @@
+import { User } from "../../../../../../../../../../src/users";
+import { Doable, Goable, Inspectable, Talkable } from "../../interfaces/Ables";
+import { CMD } from "../CMD/CMD";
+import { Area } from "../Entities/Area";
+import { NPC } from "../Entities/NPC";
+import { Cycle } from "../Mechanics/Cycle";
+import { Inventory } from "../Mechanics/Inventory";
+import { GameEvent } from "./Event";
+import { Flag } from "./Flag";
+
 export class State {
+  user: User;
+  char: NPC;
+  area: Area;
+  inventory: Inventory;
+  frozen_tear_count: number;
+  inspectables: Inspectable[];
+  goables: Goable[];
+  doables: Doable[];
+  talkables: Talkable[];
+  cycle: Cycle;
+  time: string;
+  flags: Flag[];
+  event_queue: GameEvent[];
+  cmd_queue: CMD[];
   constructor(
-    user,
-    char,
-    area,
-    inventory,
-    frozen_tear_count,
-    inspectables,
-    goables,
-    doables,
-    talkables,
-    cycle,
-    time,
-    flags,
-    event_queue,
-    cmd_queue
+    user: User,
+    char: NPC,
+    area: Area,
+    inventory: Inventory,
+    frozen_tear_count: number,
+    inspectables: Inspectable[],
+    goables: Goable[],
+    doables: Doable[],
+    talkables: Talkable[],
+    cycle: Cycle,
+    time: string,
+    flags: Flag[],
+    event_queue: GameEvent[],
+    cmd_queue: CMD[]
   ) {
     this.user = user;
     this.char = char;
@@ -37,8 +61,16 @@ export class State {
   }
 
   processCmdQueue() {
-    this.cmd_queue.forEach((CMD) => {
-      let { type, target } = CMD;
+    this.cmd_queue.forEach((Cmd) => {
+      Cmd.execute(this);
     });
+  }
+
+  update() {
+    // If theres CMDs; process
+    // If theres GameEvents; process
+
+    this.processCmdQueue();
+    // this.processEventQueue();
   }
 }

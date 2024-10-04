@@ -251,9 +251,15 @@ class State {
         this.cmd_queue = cmd_queue;
     }
     processCmdQueue() {
-        this.cmd_queue.forEach((CMD) => {
-            let { type, target } = CMD;
+        this.cmd_queue.forEach((Cmd) => {
+            Cmd.execute(this);
         });
+    }
+    update() {
+        // If theres CMDs; process
+        // If theres GameEvents; process
+        this.processCmdQueue();
+        // this.processEventQueue();
     }
 }
 

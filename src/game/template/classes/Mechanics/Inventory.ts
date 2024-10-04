@@ -1,5 +1,9 @@
+import { Item } from "../Entities/Item";
+
 export class Inventory {
-    constructor(items, size) {
+    items: Item[];
+    size: number;
+    constructor(items: Item[], size: number) {
         this.items = items;
         this.size = size;
     }

@@ -1,6 +1,7 @@
 // Represents the human player
 export class Human {
-    constructor(name) {
+    name:string;
+    constructor(name: string) {
         this.name = name;
     }
 }

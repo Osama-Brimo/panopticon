@@ -1,14 +1,14 @@
-import { Talkable } from "../../interfaces/Ables/Talkable";
+import { Talkable } from "../../interfaces/Ables";
 
 // NPC is always an AI assistant.
 export class NPC implements Talkable {
     description: string;
     name: string;
-    onTalk: () => {};
+    on_talk: () => {};
 
-    constructor(name, description, onTalk) {
+    constructor(name: string, description: string, on_talk: () => {}) {
         this.name = name;
         this.description = description;
-        this.onTalk = onTalk;
+        this.on_talk = on_talk;
     }
 }

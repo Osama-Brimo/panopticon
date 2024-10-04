@@ -1,7 +1,7 @@
 // A timeline or cycle, containing its event, number, etc.
-
 export class Cycle {
-    constructor(number, events) {
+    number: number;
+    constructor(number: number) {
         this.number = number;
     }
 }

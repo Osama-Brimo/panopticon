@@ -1,4 +1,4 @@
-import { Talkable } from "../../interfaces/Ables/Talkable";
+import { Talkable } from "../../interfaces/Ables";
 import { NPC } from "./NPC";
 
 // NPC is always an AI assistant.

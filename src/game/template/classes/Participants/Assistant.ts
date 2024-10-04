@@ -1,6 +1,7 @@
 // Represents the AI
 export class Assistant {
-    constructor(model) {
+    model: string;
+    constructor(model: string) {
         this.model = model;
     }
 }

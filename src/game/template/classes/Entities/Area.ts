@@ -18,7 +18,7 @@ export class Area implements Goable {
   godel_type: ofGodelType;
   godel_cycle_num: ofGodelCycle;
   is_locked: boolean;
-  unlocked_by?: Item;
+  unlocked_by?: Item[];
   goables: Goable[];
   inspectables: Inspectable[];
   doables: Doable[];

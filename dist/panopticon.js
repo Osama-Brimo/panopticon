@@ -147,12 +147,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   Item: () => (/* binding */ Item)
 /* harmony export */ });
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../interfaces/Ables/Usable'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-
-class Item extends Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../interfaces/Ables/Usable'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()) {
-    constructor(name, description, effect, on_use, kangaeru_comment, count = 0) {
-        super(name, description, effect, on_use);
-        this.kangaeru_comment = kangaeru_comment;
+class Item {
+    constructor(name, description, effect, on_use, item_comment, count = 0) {
+        this.name = name;
+        this.description = description;
+        this.effect = effect;
+        this.on_use = on_use;
+        this.item_comment = item_comment;
         this.count = count;
     }
 }
@@ -172,10 +173,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 // NPC is always an AI assistant.
 class NPC {
-    constructor(name, description, onTalk) {
+    constructor(name, description, on_talk) {
         this.name = name;
         this.description = description;
-        this.onTalk = onTalk;
+        this.on_talk = on_talk;
     }
 }
 
@@ -266,6 +267,26 @@ class State {
 
 /***/ }),
 
+/***/ "./src/game/template/classes/Mechanics/Cycle.ts":
+/*!******************************************************!*\
+  !*** ./src/game/template/classes/Mechanics/Cycle.ts ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Cycle: () => (/* binding */ Cycle)
+/* harmony export */ });
+// A timeline or cycle, containing its event, number, etc.
+class Cycle {
+    constructor(number) {
+        this.number = number;
+    }
+}
+
+
+/***/ }),
+
 /***/ "./src/game/template/classes/Mechanics/Inventory.ts":
 /*!**********************************************************!*\
   !*** ./src/game/template/classes/Mechanics/Inventory.ts ***!
@@ -313,28 +334,12 @@ class Human {
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _classes_Entities_Area__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../classes/Entities/Area */ "./src/game/template/classes/Entities/Area.ts");
-
-const Foyer = new _classes_Entities_Area__WEBPACK_IMPORTED_MODULE_0__.Area("Foyer", "The Foyer.", false, null, null, false, [], [], [], [], [], null, null, false);
-
-
-/***/ }),
-
-/***/ "./src/game/template/instances/Area/MansionExterior.ts":
-/*!*************************************************************!*\
-  !*** ./src/game/template/instances/Area/MansionExterior.ts ***!
-  \*************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Area_MansionExterior: () => (/* binding */ Area_MansionExterior)
+/* harmony export */   Area_Foyer: () => (/* binding */ Area_Foyer)
 /* harmony export */ });
 /* harmony import */ var _classes_Entities_Area__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../classes/Entities/Area */ "./src/game/template/classes/Entities/Area.ts");
-/* harmony import */ var _Foyer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Foyer */ "./src/game/template/instances/Area/Foyer.ts");
 
-
-const Area_MansionExterior = new _classes_Entities_Area__WEBPACK_IMPORTED_MODULE_0__.Area("Mansion Exterior", false, null, null, false, null, [_Foyer__WEBPACK_IMPORTED_MODULE_1__.Area_Foyer], [], [], [], null, null, false);
+const Area_Foyer = new _classes_Entities_Area__WEBPACK_IMPORTED_MODULE_0__.Area("Foyer", "The Foyer.", false, null, null, false, [], [], [], [], [], null, null, false);
 
 
 /***/ }),
@@ -367,12 +372,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   $state: () => (/* binding */ $state)
 /* harmony export */ });
 /* harmony import */ var _classes_Game_State__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../classes/Game/State */ "./src/game/template/classes/Game/State.ts");
-/* harmony import */ var _classes_Mechanics_Inventory__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../classes/Mechanics/Inventory */ "./src/game/template/classes/Mechanics/Inventory.ts");
-/* harmony import */ var _Area_MansionExterior__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Area/MansionExterior */ "./src/game/template/instances/Area/MansionExterior.ts");
-/* harmony import */ var _Item_Camera__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Item/Camera */ "./src/game/template/instances/Item/Camera.ts");
-/* harmony import */ var _NPC_Char__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../NPC/Char */ "./src/game/template/instances/NPC/Char.ts");
-/* harmony import */ var _Player_Player__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Player/Player */ "./src/game/template/instances/Player/Player.ts");
-/* harmony import */ var _Flags__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Flags */ "./src/game/template/instances/Game/Flags.ts");
+/* harmony import */ var _classes_Mechanics_Cycle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../classes/Mechanics/Cycle */ "./src/game/template/classes/Mechanics/Cycle.ts");
+/* harmony import */ var _classes_Mechanics_Inventory__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../classes/Mechanics/Inventory */ "./src/game/template/classes/Mechanics/Inventory.ts");
+/* harmony import */ var _Area_Foyer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Area/Foyer */ "./src/game/template/instances/Area/Foyer.ts");
+/* harmony import */ var _Item_Camera__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Item/Camera */ "./src/game/template/instances/Item/Camera.ts");
+/* harmony import */ var _NPC_Char__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../NPC/Char */ "./src/game/template/instances/NPC/Char.ts");
+/* harmony import */ var _Player_Player__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Player/Player */ "./src/game/template/instances/Player/Player.ts");
+/* harmony import */ var _Flags__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Flags */ "./src/game/template/instances/Game/Flags.ts");
 
 
 
@@ -380,10 +386,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const startingArea = _Area_MansionExterior__WEBPACK_IMPORTED_MODULE_2__.Area_MansionExterior;
-const startingInventory = new _classes_Mechanics_Inventory__WEBPACK_IMPORTED_MODULE_1__.Inventory([_Item_Camera__WEBPACK_IMPORTED_MODULE_3__.Item_Camera], 5);
+
+const startingArea = _Area_Foyer__WEBPACK_IMPORTED_MODULE_3__.Area_Foyer;
+const startingInventory = new _classes_Mechanics_Inventory__WEBPACK_IMPORTED_MODULE_2__.Inventory([_Item_Camera__WEBPACK_IMPORTED_MODULE_4__.Item_Camera], 5);
 const startingTime = "16:31";
-const $state = new _classes_Game_State__WEBPACK_IMPORTED_MODULE_0__.State(_Player_Player__WEBPACK_IMPORTED_MODULE_5__.$player, _NPC_Char__WEBPACK_IMPORTED_MODULE_4__.$char, startingArea, startingInventory, 0, startingArea.inspectables, startingArea.goables, startingArea.doables, [_NPC_Char__WEBPACK_IMPORTED_MODULE_4__.$char], 0, startingTime, [_Flags__WEBPACK_IMPORTED_MODULE_6__.DID_FIRST_TUTORIAL], [], []);
+const startingCycle = new _classes_Mechanics_Cycle__WEBPACK_IMPORTED_MODULE_1__.Cycle(0);
+const $state = new _classes_Game_State__WEBPACK_IMPORTED_MODULE_0__.State(_Player_Player__WEBPACK_IMPORTED_MODULE_6__.$player, _NPC_Char__WEBPACK_IMPORTED_MODULE_5__.$char, startingArea, startingInventory, 0, startingArea.inspectables, startingArea.goables, startingArea.doables, [_NPC_Char__WEBPACK_IMPORTED_MODULE_5__.$char], startingCycle, startingTime, [_Flags__WEBPACK_IMPORTED_MODULE_7__.DID_FIRST_TUTORIAL], [], []);
 
 
 /***/ }),
@@ -400,7 +408,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _classes_Entities_Item__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../classes/Entities/Item */ "./src/game/template/classes/Entities/Item.ts");
 
-const Item_Camera = new _classes_Entities_Item__WEBPACK_IMPORTED_MODULE_0__.Item("Camera", "A regular camera.", "It's a camera.", () => { }, "You take a picture.", 1);
+const Item_Camera = new _classes_Entities_Item__WEBPACK_IMPORTED_MODULE_0__.Item("Camera", "A regular camera.", "It's a camera.", () => null, "You take a picture.", 1);
 
 
 /***/ }),
@@ -417,7 +425,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _classes_Entities_NPC__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../classes/Entities/NPC */ "./src/game/template/classes/Entities/NPC.ts");
 
-const $char = new _classes_Entities_NPC__WEBPACK_IMPORTED_MODULE_0__.NPC("char's name from ST", "char is... something.", () => { console.log("you talked to char."); });
+const $char = new _classes_Entities_NPC__WEBPACK_IMPORTED_MODULE_0__.NPC("char's name from ST", "char is... something.", () => { console.log("you talked to char."); return null; });
 
 
 /***/ }),

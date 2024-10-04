@@ -1,5 +1,5 @@
+import * as __WEBPACK_EXTERNAL_MODULE__script_js_588e7203__ from "../../../../../script.js";
 import * as __WEBPACK_EXTERNAL_MODULE__extensions_js_e625da88__ from "../../../../extensions.js";
-import * as __WEBPACK_EXTERNAL_MODULE__script_js_c57e49fe__ from "../../../../script.js";
 import * as __WEBPACK_EXTERNAL_MODULE__slash_commands_SlashCommand_js_1b0d5616__ from "../../../../slash-commands/SlashCommand.js";
 import * as __WEBPACK_EXTERNAL_MODULE__slash_commands_SlashCommandArgument_js_a42b9371__ from "../../../../slash-commands/SlashCommandArgument.js";
 import * as __WEBPACK_EXTERNAL_MODULE__slash_commands_SlashCommandEnumValue_js_20f1c506__ from "../../../../slash-commands/SlashCommandEnumValue.js";
@@ -457,7 +457,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   registerSlashCommands: () => (/* binding */ registerSlashCommands)
 /* harmony export */ });
-/* harmony import */ var _sillytavern_script__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @sillytavern/script */ "@sillytavern/script");
+/* harmony import */ var _sillytavern_script__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @sillytavern-script */ "@sillytavern-script");
 /* harmony import */ var _sillytavern_slash_commands_SlashCommand__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @sillytavern/slash-commands/SlashCommand */ "@sillytavern/slash-commands/SlashCommand");
 /* harmony import */ var _sillytavern_slash_commands_SlashCommandArgument__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @sillytavern/slash-commands/SlashCommandArgument */ "@sillytavern/slash-commands/SlashCommandArgument");
 /* harmony import */ var _sillytavern_slash_commands_SlashCommandEnumValue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @sillytavern/slash-commands/SlashCommandEnumValue */ "@sillytavern/slash-commands/SlashCommandEnumValue");
@@ -591,6 +591,16 @@ function gameLog(label, ...args) {
 
 /***/ }),
 
+/***/ "@sillytavern-script":
+/*!*******************************************!*\
+  !*** external "../../../../../script.js" ***!
+  \*******************************************/
+/***/ ((module) => {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE__script_js_588e7203__;
+
+/***/ }),
+
 /***/ "@sillytavern/extensions":
 /*!********************************************!*\
   !*** external "../../../../extensions.js" ***!
@@ -598,16 +608,6 @@ function gameLog(label, ...args) {
 /***/ ((module) => {
 
 module.exports = __WEBPACK_EXTERNAL_MODULE__extensions_js_e625da88__;
-
-/***/ }),
-
-/***/ "@sillytavern/script":
-/*!****************************************!*\
-  !*** external "../../../../script.js" ***!
-  \****************************************/
-/***/ ((module) => {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE__script_js_c57e49fe__;
 
 /***/ }),
 
@@ -655,7 +655,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__slash_commands_SlashCommandParser_js
 /************************************************************************/
 /******/ // The module cache
 /******/ var __webpack_module_cache__ = {};
-/******/ 
+/******/
 /******/ // The require function
 /******/ function __webpack_require__(moduleId) {
 /******/ 	// Check if module is in cache
@@ -669,14 +669,14 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__slash_commands_SlashCommandParser_js
 /******/ 		// no module.loaded needed
 /******/ 		exports: {}
 /******/ 	};
-/******/ 
+/******/
 /******/ 	// Execute the module function
 /******/ 	__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 
+/******/
 /******/ 	// Return the exports of the module
 /******/ 	return module.exports;
 /******/ }
-/******/ 
+/******/
 /************************************************************************/
 /******/ /* webpack/runtime/define property getters */
 /******/ (() => {
@@ -689,12 +689,12 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__slash_commands_SlashCommandParser_js
 /******/ 		}
 /******/ 	};
 /******/ })();
-/******/ 
+/******/
 /******/ /* webpack/runtime/hasOwnProperty shorthand */
 /******/ (() => {
 /******/ 	__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ })();
-/******/ 
+/******/
 /******/ /* webpack/runtime/make namespace object */
 /******/ (() => {
 /******/ 	// define __esModule on exports
@@ -705,7 +705,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__slash_commands_SlashCommandParser_js
 /******/ 		Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 	};
 /******/ })();
-/******/ 
+/******/
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.

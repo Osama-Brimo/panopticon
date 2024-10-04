@@ -18,7 +18,7 @@ module.exports = {
         extensions: ['.ts', '.js'],
         alias: {
             // TODO: add more aliases and paths to config later
-            '@sillytavern/script': path.resolve(__dirname, '../../../../script.js'),
+            '@sillytavern-script': path.resolve(__dirname, '../../../../../script.js'),
             '@sillytavern': path.resolve(__dirname, '../../..'),
         },
     },
@@ -63,15 +63,24 @@ module.exports = {
     },
     externalsType: 'module',
     externals: [
-        // Consider any '@sillytavern/*' alias import external
+        // Consider any import aliased under '@sillytavern/*' external
         function ({ context, request }, callback) {
-            const regex = /^@sillytavern\/(.+)$/;
-            const match = request.match(regex);
-            if (match) {
+            const regex1 = /^@sillytavern\/(.+)$/;
+            const match1 = request.match(regex1);
+            if (match1) {
                 // This will be the string verbatim in the final bundle.
                 // TODO: This externalizes all ST imports as .js files. Add your own implementation if needed.
-                return callback(null, `../../../../${match[1]}.js`);
+                return callback(null, `../../../../${match1[1]}.js`);
             }
+
+            const regex2 = /^@sillytavern-script$/;
+            const match2 = request.match(regex2);
+            if (match2) {
+                // This will be the string verbatim in the final bundle.
+                // TODO: This externalizes all ST imports as .js files. Add your own implementation if needed.
+                return callback(null, `../../../../../script.js`);
+            }
+
             return callback();
         },
     ],

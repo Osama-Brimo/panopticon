@@ -1,10 +1,10 @@
 // Type: type of message
 
-import { st_sendMessage } from "src/utils/st";
 import { Message } from "../Game/Message";
-import { gameLog } from "src/utils/utils";
-import { Generate } from "@sillytavern/script";
+import { Generate } from "@sillytavern-script";
 import { sendMessageAs } from "@sillytavern/slash-commands";
+import { st_sendMessage } from "utils/st";
+import { gameLog } from "utils/utils";
 
 // Any response
 export class GameResponse {

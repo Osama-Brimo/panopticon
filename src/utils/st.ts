@@ -1,10 +1,10 @@
-import { sendMessageAsUser } from "@sillytavern/script";
+import { sendMessageAsUser } from "@sillytavern-script";
 import {
   executeSlashCommandsWithOptions,
   sendMessageAs,
   sendNarratorMessage,
 } from "@sillytavern/slash-commands";
-import { Message, Role } from "src/game/template/classes/Game/Message";
+import { Message, Role } from "game/template/classes/Game/Message";
 
 export function st_setvar(
   key: string,

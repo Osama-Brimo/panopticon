@@ -8,10 +8,10 @@
         "forceConsistentCasingInFileNames": true,
         "allowJs": true,
         "moduleResolution": "node",
-        "baseUrl": ".",
+        "baseUrl": "src/",
         "paths": {
-            "@sillytavern/script": ["../../../../script.js"],
-            "@sillytavern/*": ["../../../*"],
+            "@sillytavern-script": ["../../../../../script.js"],
+            "@sillytavern/*": ["../../../../*"],
         }
 
     },

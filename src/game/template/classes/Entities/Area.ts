@@ -2,7 +2,7 @@ import { Doable, Goable, Inspectable } from "../../interfaces/Ables";
 import { Item } from "./Item";
 import { NPC } from "./NPC";
 
-enum GodelType {
+export enum GodelType {
   A = "A",
   B = "B",
 }
@@ -12,6 +12,7 @@ export type ofGodelType = GodelType | null;
 export type ofGodelCycle = number | null;
 
 export class Area implements Goable {
+  id: string;
   name: string;
   description: string;
   is_godel: boolean;
@@ -26,8 +27,10 @@ export class Area implements Goable {
   on_go: () => {};
   on_exit: () => {};
   is_saferoom: boolean;
+  should_be_goable?: boolean | (() => boolean);
 
   constructor(
+    id: string,
     name: string,
     description: string,
     is_godel: boolean,
@@ -41,8 +44,10 @@ export class Area implements Goable {
     npcs: NPC[],
     on_go: () => {},
     on_exit: () => {},
-    is_saferoom: boolean
+    is_saferoom: boolean,
+    should_be_goable?: () => boolean,
   ) {
+    this.id = id;
     this.name = name;
     this.description = description;
     this.is_godel = is_godel;
@@ -57,22 +62,6 @@ export class Area implements Goable {
     this.on_go = on_go;
     this.on_exit = on_exit;
     this.is_saferoom = is_saferoom;
+    this.should_be_goable = should_be_goable ?? true;
   }
 }
-
-// const Foyer = new Area(
-//   "Foyer",
-//   "The Foyer.",
-//   false,
-//   null,
-//   null,
-//   false,
-//   [],
-//   [],
-//   [],
-//   [],
-//   [],
-//   null,
-//   null,
-//   false,
-// );

@@ -3,7 +3,6 @@ import { $state } from "./game/template/instances/Game/State";
 import { registerSlashCommands } from "./st/slash-commands";
 import { gameLog } from "./util/utils";
 
-
 registerSlashCommands();
 
 jQuery(async () => {

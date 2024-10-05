@@ -1,3 +1,4 @@
+import { sendNarratorMessage } from "@sillytavern/slash-commands";
 import { Able, Goable } from "../../interfaces/Ables";
 import { Area } from "../Entities/Area";
 import { NPC } from "../Entities/NPC";
@@ -21,7 +22,7 @@ export class CMD {
     this.target = target;
   }
 
-  private handleGO(state: State) {
+  private async handleGO(state: State) {
     // valid target?
     const area = this.target as Area;
     if (state.goables.includes(area)) {
@@ -29,13 +30,13 @@ export class CMD {
       // Locked? refuse.
       if (area.is_locked) {
         const GR = new GameResponse();
-        // TODO: shorthand func sendNarrator(...)
+        // TODO: shorthand func sendNarrator(...);
+        await sendNarratorMessage(null, "hello.");
         const refusal = new Message(
           "Locked...",
           MessageStrategy.script,
           false,
           Role.system,
-          null
         );
         GR.sendMessage(refusal);
         // Follow ups. Char comments, or use key prompt, or.. etc.
@@ -44,32 +45,35 @@ export class CMD {
       }
       // Godel? handle.
       // handleGodel();
+
       // ...Go!
+      // We need to update current area in state + new goables.
+      // consider case where we have a hidden door only in goables after inspection/puzzle. Still needs to be in goables, but must be conditional. Every Area should have a way to know if it should show up at the moment. Flag check?
     }
   }
 
-  private handleTALK(state: State) {
-    const talkable = this.target as NPC;
-    if(state.talkables.includes(talkable)) {
-        const GR = new GameResponse();
-    }
-  }
+  // private async handleTALK(state: State) {
+  //   const talkable = this.target as NPC;
+  //   if(state.talkables.includes(talkable)) {
+  //       const GR = new GameResponse();
+  //   }
+  // }
 
-  execute(state: State) {
+  public async execute(state: State) {
     switch (this.type) {
-      case "GO":
-        this.handleGO(state);
+      case CMDTypes.GO:
+        await this.handleGO(state);
         break;
-      case "TALK":
-        this.handleTALK(state);
+      case CMDTypes.TALK:
+        // await this.handleTALK(state);
         break;
-      case "INSPECT":
+      case CMDTypes.INSPECT:
         //
         break;
-      case "USE":
+      case CMDTypes.USE:
         //
         break;
-      case "DO":
+      case CMDTypes.DO:
         //
         break;
       default:

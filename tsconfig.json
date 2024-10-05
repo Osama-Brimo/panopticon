@@ -2,6 +2,7 @@
     "compilerOptions": {
         "target": "ES6",
         "module": "ESNext",
+        "strict": true,
         "outDir": "./out",
         "esModuleInterop": true,
         "sourceMap": true,
@@ -23,4 +24,5 @@
         "dist",
         "bin"
     ],
+
 }

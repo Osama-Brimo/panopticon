@@ -98,8 +98,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   CMD: () => (/* binding */ CMD),
 /* harmony export */   CMDTypes: () => (/* binding */ CMDTypes)
 /* harmony export */ });
-/* harmony import */ var _Game_Message__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Game/Message */ "./src/game/template/classes/Game/Message.ts");
-/* harmony import */ var _ST_GameResponse__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../ST/GameResponse */ "./src/game/template/classes/ST/GameResponse.ts");
+/* harmony import */ var _sillytavern_slash_commands__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @sillytavern/slash-commands */ "@sillytavern/slash-commands");
+/* harmony import */ var _Game_Message__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Game/Message */ "./src/game/template/classes/Game/Message.ts");
+/* harmony import */ var _ST_GameResponse__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../ST/GameResponse */ "./src/game/template/classes/ST/GameResponse.ts");
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
 
 
 var CMDTypes;
@@ -116,51 +127,58 @@ class CMD {
         this.target = target;
     }
     handleGO(state) {
-        // valid target?
-        const area = this.target;
-        if (state.goables.includes(area)) {
-            // Can you go?
-            // Locked? refuse.
-            if (area.is_locked) {
-                const GR = new _ST_GameResponse__WEBPACK_IMPORTED_MODULE_1__.GameResponse();
-                // TODO: shorthand func sendNarrator(...)
-                const refusal = new _Game_Message__WEBPACK_IMPORTED_MODULE_0__.Message("Locked...", _Game_Message__WEBPACK_IMPORTED_MODULE_0__.MessageStrategy.script, false, _Game_Message__WEBPACK_IMPORTED_MODULE_0__.Role.system, null);
-                GR.sendMessage(refusal);
-                // Follow ups. Char comments, or use key prompt, or.. etc.
-                // TODO: consider if we don't want a configuration at some point to let the player decide how this is handled.
-                // e.g: should Char comment if the door was locked? Don't waste player's resources, let them decide.
+        return __awaiter(this, void 0, void 0, function* () {
+            // valid target?
+            const area = this.target;
+            if (state.goables.includes(area)) {
+                // Can you go?
+                // Locked? refuse.
+                if (area.is_locked) {
+                    const GR = new _ST_GameResponse__WEBPACK_IMPORTED_MODULE_2__.GameResponse();
+                    // TODO: shorthand func sendNarrator(...);
+                    yield (0,_sillytavern_slash_commands__WEBPACK_IMPORTED_MODULE_0__.sendNarratorMessage)(null, "hello.");
+                    const refusal = new _Game_Message__WEBPACK_IMPORTED_MODULE_1__.Message("Locked...", _Game_Message__WEBPACK_IMPORTED_MODULE_1__.MessageStrategy.script, false, _Game_Message__WEBPACK_IMPORTED_MODULE_1__.Role.system);
+                    GR.sendMessage(refusal);
+                    // Follow ups. Char comments, or use key prompt, or.. etc.
+                    // TODO: consider if we don't want a configuration at some point to let the player decide how this is handled.
+                    // e.g: should Char comment if the door was locked? Don't waste player's resources, let them decide.
+                }
+                // Godel? handle.
+                // handleGodel();
+                // ...Go!
+                // We need to update current area in state + new goables.
+                // consider case where we have a hidden door only in goables after inspection/puzzle. Still needs to be in goables, but must be conditional. Every Area should have a way to know if it should show up at the moment. Flag check?
             }
-            // Godel? handle.
-            // handleGodel();
-            // ...Go!
-        }
+        });
     }
-    handleTALK(state) {
-        const talkable = this.target;
-        if (state.talkables.includes(talkable)) {
-            const GR = new _ST_GameResponse__WEBPACK_IMPORTED_MODULE_1__.GameResponse();
-        }
-    }
+    // private async handleTALK(state: State) {
+    //   const talkable = this.target as NPC;
+    //   if(state.talkables.includes(talkable)) {
+    //       const GR = new GameResponse();
+    //   }
+    // }
     execute(state) {
-        switch (this.type) {
-            case "GO":
-                this.handleGO(state);
-                break;
-            case "TALK":
-                this.handleTALK(state);
-                break;
-            case "INSPECT":
+        return __awaiter(this, void 0, void 0, function* () {
+            switch (this.type) {
+                case CMDTypes.GO:
+                    yield this.handleGO(state);
+                    break;
+                case CMDTypes.TALK:
+                    // await this.handleTALK(state);
+                    break;
+                case CMDTypes.INSPECT:
+                    //
+                    break;
+                case CMDTypes.USE:
+                    //
+                    break;
+                case CMDTypes.DO:
+                    //
+                    break;
+                default:
                 //
-                break;
-            case "USE":
-                //
-                break;
-            case "DO":
-                //
-                break;
-            default:
-            //
-        }
+            }
+        });
     }
 }
 
@@ -175,7 +193,8 @@ class CMD {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Area: () => (/* binding */ Area)
+/* harmony export */   Area: () => (/* binding */ Area),
+/* harmony export */   GodelType: () => (/* binding */ GodelType)
 /* harmony export */ });
 var GodelType;
 (function (GodelType) {
@@ -183,7 +202,8 @@ var GodelType;
     GodelType["B"] = "B";
 })(GodelType || (GodelType = {}));
 class Area {
-    constructor(name, description, is_godel, godel_type, godel_cycle_num, is_locked, unlocked_by, goables, inspectables, doables, npcs, on_go, on_exit, is_saferoom) {
+    constructor(id, name, description, is_godel, godel_type, godel_cycle_num, is_locked, unlocked_by, goables, inspectables, doables, npcs, on_go, on_exit, is_saferoom, should_be_goable) {
+        this.id = id;
         this.name = name;
         this.description = description;
         this.is_godel = is_godel;
@@ -198,24 +218,9 @@ class Area {
         this.on_go = on_go;
         this.on_exit = on_exit;
         this.is_saferoom = is_saferoom;
+        this.should_be_goable = should_be_goable !== null && should_be_goable !== void 0 ? should_be_goable : true;
     }
 }
-// const Foyer = new Area(
-//   "Foyer",
-//   "The Foyer.",
-//   false,
-//   null,
-//   null,
-//   false,
-//   [],
-//   [],
-//   [],
-//   [],
-//   [],
-//   null,
-//   null,
-//   false,
-// );
 
 
 /***/ }),
@@ -231,7 +236,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   Item: () => (/* binding */ Item)
 /* harmony export */ });
 class Item {
-    constructor(name, description, effect, on_use, item_comment, count = 0) {
+    constructor(id, name, description, effect, on_use, item_comment, count = 0) {
+        this.id = id;
         this.name = name;
         this.description = description;
         this.effect = effect;
@@ -256,7 +262,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 // NPC is always an AI assistant.
 class NPC {
-    constructor(name, description, on_talk) {
+    constructor(id, name, description, on_talk) {
+        this.id = id;
         this.name = name;
         this.description = description;
         this.on_talk = on_talk;
@@ -391,6 +398,7 @@ class State {
     update() {
         // If theres CMDs; process
         this.processCmdQueue();
+        //
         // this.processEventQueue();
     }
 }
@@ -472,22 +480,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _util_st__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../util/st */ "./src/util/st.ts");
 /* harmony import */ var _util_utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../util/utils */ "./src/util/utils.ts");
 // Type: type of message
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 
 
 
 // Any response
 class GameResponse {
-    constructor() { }
+    // constructor() {}
     sendMessage(message) {
-        if (!message)
-            throw new Error("No message provided.");
         // Send a message if one is provided
         const sent = (0,_util_st__WEBPACK_IMPORTED_MODULE_1__.st_sendMessage)(message);
-        (0,_util_utils__WEBPACK_IMPORTED_MODULE_2__.gameLog)('GameResponse', sent);
+        (0,_util_utils__WEBPACK_IMPORTED_MODULE_2__.gameLog)("GameResponse", sent);
     }
     // Trigger a message generation with optional input
     generate(text) {
-        (0,_sillytavern_script__WEBPACK_IMPORTED_MODULE_0__.Generate)(null);
+        return __awaiter(this, void 0, void 0, function* () {
+            yield (0,_sillytavern_script__WEBPACK_IMPORTED_MODULE_0__.Generate)("");
+        });
     }
 }
 
@@ -506,7 +523,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _classes_Entities_Area__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../classes/Entities/Area */ "./src/game/template/classes/Entities/Area.ts");
 
-const Area_Foyer = new _classes_Entities_Area__WEBPACK_IMPORTED_MODULE_0__.Area("Foyer", "The Foyer.", false, null, null, false, [], [], [], [], [], null, null, false);
+const Area_Foyer = new _classes_Entities_Area__WEBPACK_IMPORTED_MODULE_0__.Area("foyer", "Foyer", "The Foyer.", false, null, null, false, [], [], [], [], [], null, null, false);
 
 
 /***/ }),
@@ -575,7 +592,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _classes_Entities_Item__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../classes/Entities/Item */ "./src/game/template/classes/Entities/Item.ts");
 
-const Item_Camera = new _classes_Entities_Item__WEBPACK_IMPORTED_MODULE_0__.Item("Camera", "A regular camera.", "It's a camera.", () => null, "You take a picture.", 1);
+const Item_Camera = new _classes_Entities_Item__WEBPACK_IMPORTED_MODULE_0__.Item("camera", "Camera", "A regular camera.", "It's a camera.", () => null, "You take a picture.", 1);
 
 
 /***/ }),
@@ -592,7 +609,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _classes_Entities_NPC__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../classes/Entities/NPC */ "./src/game/template/classes/Entities/NPC.ts");
 
-const $char = new _classes_Entities_NPC__WEBPACK_IMPORTED_MODULE_0__.NPC("char's name from ST", "char is... something.", () => { console.log("you talked to char."); return null; });
+const $char = new _classes_Entities_NPC__WEBPACK_IMPORTED_MODULE_0__.NPC("char", "char's name from ST", "char is... something.", () => { console.log("you talked to char."); return null; });
 
 
 /***/ }),

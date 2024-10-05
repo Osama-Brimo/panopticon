@@ -3,8 +3,8 @@ import { NPC } from "./NPC";
 
 // NPC is always an AI assistant.
 export class Doppelganger extends NPC implements Talkable {
-    constructor(name, description, onTalk) {
-        super(name, description, onTalk);
+    constructor(id, name, description, on_talk) {
+        super(id, name, description, on_talk);
     }
 }
 

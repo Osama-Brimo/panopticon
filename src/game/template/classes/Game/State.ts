@@ -1,4 +1,3 @@
-import { User } from "../../../../../../../../../../src/users";
 import { Doable, Goable, Inspectable, Talkable } from "../../interfaces/Ables";
 import { CMD } from "../CMD/CMD";
 import { Area } from "../Entities/Area";
@@ -61,15 +60,16 @@ export class State {
     this.cmd_queue = cmd_queue;
   }
 
-  processCmdQueue() {
+  private processCmdQueue() {
     this.cmd_queue.forEach((Cmd) => {
       Cmd.execute(this);
     });
   }
 
-  update() {
+  public update() {
     // If theres CMDs; process
     this.processCmdQueue();
+    //
     // this.processEventQueue();
   }
 }
